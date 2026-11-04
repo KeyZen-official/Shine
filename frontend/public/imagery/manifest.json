@@ -1,0 +1,26 @@
+{
+  "panels": [
+    "sage",
+    "ivory",
+    "navy-split",
+    "light"
+  ],
+  "keys": {
+    "campus": "navy-split",
+    "library": "sage",
+    "study": "light",
+    "lecture": "sage",
+    "architecture": "navy-split",
+    "city": "navy-split",
+    "arrival": "light",
+    "advice": "light",
+    "documents": "ivory"
+  },
+  "widths": [
+    360,
+    768,
+    1024,
+    1920
+  ],
+  "aspect": 1.6
+}

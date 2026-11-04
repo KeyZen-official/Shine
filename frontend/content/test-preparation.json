@@ -1,0 +1,222 @@
+[
+  {
+    "code": "ielts",
+    "name": "IELTS",
+    "slug": "ielts",
+    "fullName": "International English Language Testing System",
+    "family": "english",
+    "displayOrder": 1,
+    "status": "published",
+    "summary": "Coaching for both IELTS forms, across all four skills, with mock tests and a study plan built around your current level.",
+    "description": "",
+    "whoItIsFor": "",
+    "variants": [
+      {
+        "name": "Academic IELTS",
+        "suitableFor": "Applicants to higher education and professional registration.",
+        "displayOrder": 1
+      },
+      {
+        "name": "General Training IELTS",
+        "suitableFor": "Applicants for migration and for work or training below degree level.",
+        "displayOrder": 2
+      }
+    ],
+    "modules": [
+      {
+        "name": "Listening",
+        "focus": "Question-type drills, note-taking and accent exposure.",
+        "displayOrder": 1
+      },
+      {
+        "name": "Reading",
+        "focus": "Skimming, scanning and timing strategy for each question type.",
+        "displayOrder": 2
+      },
+      {
+        "name": "Writing",
+        "focus": "Task structure, task response and corrected drafts for both tasks.",
+        "displayOrder": 3
+      },
+      {
+        "name": "Speaking",
+        "focus": "All three parts, rehearsed and reviewed with a teacher.",
+        "displayOrder": 4
+      }
+    ],
+    "preparationFeatures": [
+      "Mock tests under timed conditions",
+      "Practice sessions for each of the four skills",
+      "Qualified, experienced teachers",
+      "A personalised study plan based on a diagnostic test",
+      "Tips and strategies for each question type",
+      "Written feedback on your Writing tasks"
+    ],
+    "scoreImprovementApproach": "We begin with a diagnostic test to find where you are losing marks, then concentrate teaching time on those question types rather than covering everything evenly. Progress is re-measured with further mock tests.\n\nWe do not promise a band score. No honest teacher can.",
+    "howToEnrol": "",
+    "faqs": []
+  },
+  {
+    "code": "pte",
+    "name": "PTE",
+    "slug": "pte",
+    "fullName": "Pearson Test of English Academic",
+    "family": "english",
+    "displayOrder": 2,
+    "status": "published",
+    "summary": "PTE Academic coaching across the integrated skills, with practice and mock tests on the computer-based format.",
+    "description": "",
+    "whoItIsFor": "",
+    "variants": [],
+    "modules": [
+      {
+        "name": "Speaking & Writing",
+        "focus": "The integrated tasks, with feedback on both delivery and structure.",
+        "displayOrder": 1
+      },
+      {
+        "name": "Reading",
+        "focus": "Question-type strategy and time management.",
+        "displayOrder": 2
+      },
+      {
+        "name": "Listening",
+        "focus": "Note-taking and the summarising task types.",
+        "displayOrder": 3
+      }
+    ],
+    "preparationFeatures": [
+      "Practice tests on the computer-based format",
+      "Mock tests under timed conditions",
+      "Qualified, experienced teachers",
+      "A personalised study plan",
+      "Strategy work on the integrated task types"
+    ],
+    "scoreImprovementApproach": "PTE scores several tasks across more than one skill at once, so marks are often lost in a different place from where the problem is. We diagnose first and teach to that, then re-measure with mock tests. No score is promised.",
+    "howToEnrol": "",
+    "faqs": []
+  },
+  {
+    "code": "toefl",
+    "name": "TOEFL",
+    "slug": "toefl",
+    "fullName": "Test of English as a Foreign Language",
+    "family": "english",
+    "displayOrder": 3,
+    "status": "published",
+    "summary": "TOEFL coaching across all four sections, with practice sessions and timed mock tests.",
+    "description": "",
+    "whoItIsFor": "",
+    "variants": [],
+    "modules": [
+      {
+        "name": "Reading",
+        "focus": "Academic passage strategy and question-type drills.",
+        "displayOrder": 1
+      },
+      {
+        "name": "Listening",
+        "focus": "Lecture and conversation note-taking.",
+        "displayOrder": 2
+      },
+      {
+        "name": "Speaking",
+        "focus": "Response structure and timing, rehearsed and reviewed.",
+        "displayOrder": 3
+      },
+      {
+        "name": "Writing",
+        "focus": "Essay structure and the integrated task, with corrected drafts.",
+        "displayOrder": 4
+      }
+    ],
+    "preparationFeatures": [
+      "Practice sessions for each section",
+      "Mock tests under timed conditions",
+      "Qualified, experienced teachers",
+      "A personalised study plan",
+      "Written feedback on your Writing responses"
+    ],
+    "scoreImprovementApproach": "",
+    "howToEnrol": "",
+    "faqs": []
+  },
+  {
+    "code": "gre",
+    "name": "GRE",
+    "slug": "gre",
+    "fullName": "Graduate Record Examinations",
+    "family": "entrance",
+    "displayOrder": 4,
+    "status": "published",
+    "summary": "GRE coaching across verbal reasoning, quantitative reasoning and analytical writing, with practice tests.",
+    "description": "",
+    "whoItIsFor": "",
+    "variants": [],
+    "modules": [
+      {
+        "name": "Verbal Reasoning",
+        "focus": "Reading comprehension and text completion strategy, with vocabulary work.",
+        "displayOrder": 1
+      },
+      {
+        "name": "Quantitative Reasoning",
+        "focus": "Concept revision and problem-solving method, not formula memorisation.",
+        "displayOrder": 2
+      },
+      {
+        "name": "Analytical Writing",
+        "focus": "Argument analysis and essay structure, with corrected drafts.",
+        "displayOrder": 3
+      }
+    ],
+    "preparationFeatures": [
+      "Practice tests under timed conditions",
+      "Qualified, experienced teachers",
+      "A personalised study plan based on a diagnostic test",
+      "Section-wise strategy and error review"
+    ],
+    "scoreImprovementApproach": "",
+    "howToEnrol": "",
+    "faqs": []
+  },
+  {
+    "code": "gmat",
+    "name": "GMAT",
+    "slug": "gmat",
+    "fullName": "Graduate Management Admission Test",
+    "family": "entrance",
+    "displayOrder": 5,
+    "status": "published",
+    "summary": "GMAT coaching across quantitative reasoning, verbal reasoning and data insights, with practice tests.",
+    "description": "",
+    "whoItIsFor": "",
+    "variants": [],
+    "modules": [
+      {
+        "name": "Quantitative Reasoning",
+        "focus": "Problem-solving method and accuracy under time pressure.",
+        "displayOrder": 1
+      },
+      {
+        "name": "Verbal Reasoning",
+        "focus": "Critical reasoning and reading comprehension strategy.",
+        "displayOrder": 2
+      },
+      {
+        "name": "Data Insights",
+        "focus": "Data interpretation and sufficiency reasoning across sources.",
+        "displayOrder": 3
+      }
+    ],
+    "preparationFeatures": [
+      "Practice tests under timed conditions",
+      "Qualified, experienced teachers",
+      "A personalised study plan based on a diagnostic test",
+      "Error-log review after every practice test"
+    ],
+    "scoreImprovementApproach": "",
+    "howToEnrol": "",
+    "faqs": []
+  }
+]

@@ -1,0 +1,43 @@
+{
+  "introduction": "Shine Consultant is an overseas education, migration consultancy and training organisation based in Mumbai. We provide honest, unbiased and professional guidance to people looking to broaden their academic and professional horizons overseas.",
+  "vision": "To be India’s leading organization in the domain of overseas education, migration consultancy and training.",
+  "mission": "Provide honest, unbiased and professional guidance to people desirous of broadening their academic and professional horizons in overseas countries.",
+  "values": [
+    {
+      "title": "Ethical practices",
+      "description": "We believe in ethical practices, and that belief sets the limits of what we will advise."
+    },
+    {
+      "title": "Professionalism in practice",
+      "description": "We employ people who demonstrate professionalism and commitment in their work."
+    },
+    {
+      "title": "Transparency in operations",
+      "description": "You should be able to see how a recommendation was arrived at."
+    },
+    {
+      "title": "Accountability in services",
+      "description": "We answer for the advice we give and the applications we prepare."
+    }
+  ],
+  "leadership": {
+    "name": "Mrs. Bhadika Mehta",
+    "role": "Founder and Head",
+    "note": "Shine Consultant is headed by Mrs. Bhadika Mehta, who has more than 20 years of experience in overseas education and migration counselling."
+  },
+  "team": [
+    "Qualified, experienced, trained and professional counsellors who offer unbiased and honest opinions to students and professionals",
+    "Experienced teachers who help students achieve desirable scores in English proficiency and admission-based tests",
+    "Administrative staff who coordinate operations among various departments"
+  ],
+  "withheldClaims": [
+    {
+      "claim": "over 95% of successful visa applications",
+      "reason": "A quantified visa-outcome claim is the likeliest regulatory problem on a consultancy site, and the profile does not state the period or sample it was measured over."
+    },
+    {
+      "claim": "thousands of individuals and families have settled",
+      "reason": "Unverified, and unfalsifiable as written."
+    }
+  ]
+}

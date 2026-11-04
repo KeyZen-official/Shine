@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+
+# Environment — never commit real credentials.
+# `frontend/.env.example` is the template that IS committed.
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# Build output
+frontend/.next/
+frontend/out/
+
+# Logs and caches
+*.log
+npm-debug.log*
+.npm/
+.eslintcache
+
+# Editor and OS
+.DS_Store
+Thumbs.db
+.idea/
+*.swp

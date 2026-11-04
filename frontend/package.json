@@ -1,0 +1,51 @@
+{
+  "name": "shineconsultant-web",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Shine Consultant website. A single Next.js app: content in files, no database, no admin panel.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "check:terms": "node scripts/check-forbidden-terms.mjs",
+    "check:pages": "node scripts/check-rendered-pages.mjs",
+    "check:site": "node scripts/check-site.mjs",
+    "check:spacing": "node scripts/check-spacing-scale.mjs",
+    "check:hero": "node scripts/check-hero-layout.mjs",
+    "check": "npm run check:terms && npm run check:spacing && npm run check:pages && npm run check:hero && npm run check:site",
+    "verify": "npm run check:terms && npm run check:spacing && npm run build",
+    "build:hero": "node scripts/build-hero-image.mjs",
+    "build:brand": "node scripts/build-brand-assets.mjs",
+    "build:imagery": "node scripts/build-placeholder-imagery.mjs"
+  },
+  "dependencies": {
+    "@radix-ui/react-accordion": "^1.3.1",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "framer-motion": "^11.15.0",
+    "lucide-react": "^0.469.0",
+    "next": "^15.1.6",
+    "nodemailer": "^6.10.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "resend": "^6.37.0",
+    "tailwind-merge": "^3.7.0"
+  },
+  "browserslist": [
+    ">0.3%",
+    "last 2 versions",
+    "Safari >= 15",
+    "iOS >= 15",
+    "not dead",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "^15.1.6",
+    "postcss": "^8.4.49",
+    "sharp": "^0.33.5",
+    "tailwindcss": "^3.4.17"
+  }
+}

@@ -1,0 +1,44 @@
+[
+  {
+    "question": "How does overseas education counselling work?",
+    "answer": "It begins with a career counselling conversation about your academic record, your work experience and what you want next. From there we evaluate your profile, shortlist countries and universities that fit it, and work through the application, documentation and visa stages with you. Pre- and post-departure sessions follow once you have an offer.",
+    "displayOrder": 1,
+    "status": "published"
+  },
+  {
+    "question": "Which countries can students explore?",
+    "answer": "The destinations we have published are listed on our Study Destinations page. Australia, Canada and New Zealand are among the countries we work with most. If a country you are considering is not listed, ask us during your consultation.",
+    "displayOrder": 2,
+    "status": "published"
+  },
+  {
+    "question": "What documents are required?",
+    "answer": "Requirements differ by country, institution and course, so we give you a checklist specific to your shortlist rather than a generic list. In most cases it includes academic transcripts and certificates, English language test results, a passport, a statement of purpose and academic or professional references.",
+    "displayOrder": 3,
+    "status": "published"
+  },
+  {
+    "question": "How do students choose a university?",
+    "answer": "We shortlist against your past profile, your needs and your career goals — looking at course content, whether you meet the entry requirements, cost, location and intake timing. We say which options are ambitious and which are realistic, so the final choice is yours and it is informed.",
+    "displayOrder": 4,
+    "status": "published"
+  },
+  {
+    "question": "Does Shine Consultant assist with student visa applications?",
+    "answer": "Yes. We offer visa guidance across study, tourism and business categories, and we help you assemble a complete and internally consistent application. We are a consultancy, not an immigration authority, so we do not make decisions on visas and we do not guarantee outcomes.",
+    "displayOrder": 5,
+    "status": "published"
+  },
+  {
+    "question": "Do you offer test preparation?",
+    "answer": "Yes — personalised coaching for GMAT, GRE, SAT, ACT, TOEFL, IELTS and PTE, taught by qualified teachers with extensive professional experience. Nothing is sold or booked through this website; enquire for current batch timings and availability.",
+    "displayOrder": 6,
+    "status": "published"
+  },
+  {
+    "question": "How can students book a consultation?",
+    "answer": "Use the Book Free Consultation page to choose a date and time, or send an enquiry and we will reply with the next available slots. The first consultation is free and carries no obligation.",
+    "displayOrder": 7,
+    "status": "published"
+  }
+]

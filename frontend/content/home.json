@@ -1,0 +1,106 @@
+{
+  "hero": {
+    "headline": "Your Global Education Journey Starts Here.",
+    "supportingLine": "Discover the right courses, universities and international opportunities with expert guidance at every step.\n\nHonest, unbiased and professional guidance for people looking to broaden their academic and professional horizons overseas.",
+    "primaryCtaLabel": "Book Free Consultation",
+    "secondaryCtaLabel": "Explore Study Destinations"
+  },
+  "introduction": {
+    "eyebrow": "Who we are",
+    "heading": "Honest, unbiased, professional guidance.",
+    "body": "Shine Consultant is an overseas education, migration consultancy and training organisation based in Mumbai. Our mission is to provide honest, unbiased and professional guidance to people looking to broaden their academic and professional horizons in overseas countries.\n\nWe are led by Mrs. Bhadika Mehta, and our team brings together qualified counsellors, experienced teachers for test preparation, and administrative staff who coordinate across departments.",
+    "ctaLabel": "More about us"
+  },
+  "whyChooseUs": [
+    {
+      "icon": "Compass",
+      "title": "Career counselling",
+      "description": "Career options discussed against your academic record, work experience and own aspirations.",
+      "displayOrder": 1
+    },
+    {
+      "icon": "ListChecks",
+      "title": "University selection",
+      "description": "Countries and institutions shortlisted around your profile, needs and career goals.",
+      "displayOrder": 2
+    },
+    {
+      "icon": "FileText",
+      "title": "Application support",
+      "description": "Error-free applications, because a shortcoming can delay the process or cause a rejection.",
+      "displayOrder": 3
+    },
+    {
+      "icon": "Award",
+      "title": "Scholarship guidance",
+      "description": "Help identifying and applying for the scholarships and financial aid you are eligible for.",
+      "displayOrder": 4
+    },
+    {
+      "icon": "Plane",
+      "title": "Visa assistance",
+      "description": "Expert guidance across study, tourism and business visa categories.",
+      "displayOrder": 5
+    },
+    {
+      "icon": "Luggage",
+      "title": "Pre- and post-departure",
+      "description": "Sessions either side of departure, to ease the transition and stay reachable after you arrive.",
+      "displayOrder": 6
+    }
+  ],
+  "process": [
+    {
+      "order": 1,
+      "title": "Career Counselling",
+      "description": "Options discussed against your academic record, experience and aspirations."
+    },
+    {
+      "order": 2,
+      "title": "Profile Evaluation",
+      "description": "Where your grades, scores and experience place you today."
+    },
+    {
+      "order": 3,
+      "title": "University Selection",
+      "description": "Countries and institutions shortlisted around your profile and goals."
+    },
+    {
+      "order": 4,
+      "title": "University Application",
+      "description": "Error-free applications prepared and reviewed before submission."
+    },
+    {
+      "order": 5,
+      "title": "Offer & Documentation",
+      "description": "Offers compared on their conditions, and the paperwork assembled."
+    },
+    {
+      "order": 6,
+      "title": "Visa Assistance",
+      "description": "A complete, internally consistent application prepared with you."
+    },
+    {
+      "order": 7,
+      "title": "Pre- & Post-Departure",
+      "description": "Sessions before you fly and after you arrive."
+    }
+  ],
+  "finalCta": {
+    "headline": "Your Future Has No Borders.",
+    "supportingLine": "Take the first step towards your international education journey with Shine Consultant.",
+    "ctaLabel": "Book Your Free Consultation"
+  },
+  "sectionHeadings": {
+    "destinations": "Explore study destinations",
+    "destinationsIntro": "Each country runs its admissions and immigration differently. Start where your course and your profile fit.",
+    "courses": "Find your course",
+    "coursesIntro": "Search by subject, filter by country and degree level, and compare programmes side by side.",
+    "whyChooseUs": "What we help with",
+    "process": "How the process works",
+    "processIntro": "Seven steps from the first conversation to the week after you arrive.",
+    "universities": "Universities we work with",
+    "testimonials": "Student success stories",
+    "faq": "Frequently asked questions"
+  }
+}

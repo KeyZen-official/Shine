@@ -1,0 +1,373 @@
+[
+  {
+    "name": "Career Counselling",
+    "slug": "career-counselling",
+    "icon": "Compass",
+    "layoutVariant": "a-left-media",
+    "displayOrder": 1,
+    "status": "published",
+    "summary": "We help students decide career options depending on their past academic records, work experience and future aspirations.",
+    "description": "The first conversation is about direction, not destinations. We look at what you have studied, what you have done since, and what you want the next few years to lead to.\n\nGetting this stage right is what makes every later decision — country, institution, programme — follow from something rather than from a brochure.",
+    "howWeHelp": [
+      "A structured review of your academic record and work experience",
+      "Career options discussed against your own aspirations, not a shortlist of products",
+      "An honest view of which directions your profile currently supports"
+    ],
+    "processSteps": [
+      {
+        "order": 1,
+        "title": "Share your background",
+        "description": "Transcripts, test scores and any work experience."
+      },
+      {
+        "order": 2,
+        "title": "Talk through the options",
+        "description": "Where your record can realistically take you."
+      },
+      {
+        "order": 3,
+        "title": "Agree a direction",
+        "description": "So the country and course decisions that follow have a basis."
+      }
+    ],
+    "faqs": []
+  },
+  {
+    "name": "University Selection",
+    "slug": "university-selection",
+    "icon": "ListChecks",
+    "layoutVariant": "b-right-media",
+    "displayOrder": 2,
+    "status": "published",
+    "summary": "We assist students in shortlisting and deciding on countries and universities based on their past profiles, needs and career goals.",
+    "description": "A shortlist is only useful if it is built around your profile. We work through countries and institutions against your academic record, your budget and what you want the qualification to do for you.",
+    "howWeHelp": [
+      "Countries compared on their education systems, entry requirements and costs",
+      "Institutions shortlisted against your actual profile rather than a ranking table",
+      "The trade-offs made explicit, including where a choice is ambitious"
+    ],
+    "processSteps": [
+      {
+        "order": 1,
+        "title": "Set the criteria",
+        "description": "What you need from the country, the institution and the city."
+      },
+      {
+        "order": 2,
+        "title": "Build the shortlist",
+        "description": "With the reasoning attached to each option."
+      },
+      {
+        "order": 3,
+        "title": "Decide together",
+        "description": "You choose; our job is to make the choice an informed one."
+      }
+    ],
+    "faqs": []
+  },
+  {
+    "name": "University Application",
+    "slug": "university-application",
+    "icon": "FileText",
+    "layoutVariant": "c-stacked-banner",
+    "displayOrder": 3,
+    "status": "published",
+    "summary": "We aid students in creating error-free applications. Any shortcoming in the application process can delay the entire process and result in possible rejection.",
+    "description": "Most avoidable rejections and delays come from the application itself: a statement that answers the wrong question, a reference that arrives late, a form field left incomplete.\n\nWe work through each application before it is submitted.",
+    "howWeHelp": [
+      "Every form checked for completeness before submission",
+      "Statements of purpose reviewed against what the institution actually asks",
+      "References requested early and followed up",
+      "Deadlines tracked across your whole shortlist"
+    ],
+    "processSteps": [
+      {
+        "order": 1,
+        "title": "Prepare",
+        "description": "Documents assembled and the statement drafted."
+      },
+      {
+        "order": 2,
+        "title": "Review",
+        "description": "A full check against each institution’s requirements."
+      },
+      {
+        "order": 3,
+        "title": "Submit and track",
+        "description": "Filed on time, then followed through to the decision."
+      }
+    ],
+    "faqs": []
+  },
+  {
+    "name": "Scholarship Help",
+    "slug": "scholarship-help",
+    "icon": "Award",
+    "layoutVariant": "a-left-media",
+    "displayOrder": 4,
+    "status": "published",
+    "summary": "We guide students in applying for various scholarships and financial aid.",
+    "description": "Scholarship opportunities are more often lost to deadlines than to competition. We identify what your profile is eligible for and build those applications into your timeline from the start.\n\nWe cannot promise an award, and we will not suggest otherwise.",
+    "howWeHelp": [
+      "Eligibility checked against institutional and external awards",
+      "Funding deadlines mapped alongside your admission deadlines",
+      "Applications reviewed before they are submitted"
+    ],
+    "processSteps": [
+      {
+        "order": 1,
+        "title": "Check eligibility",
+        "description": "What you can realistically apply for."
+      },
+      {
+        "order": 2,
+        "title": "Plan the timeline",
+        "description": "Funding deadlines usually fall before admission ones."
+      },
+      {
+        "order": 3,
+        "title": "Apply",
+        "description": "Prepared and reviewed like any other application."
+      }
+    ],
+    "faqs": []
+  },
+  {
+    "name": "Visa Assistance",
+    "slug": "visa-assistance",
+    "icon": "Plane",
+    "layoutVariant": "b-right-media",
+    "displayOrder": 5,
+    "status": "published",
+    "summary": "We offer expert visa guidance in various domains such as studies, tourism and business.",
+    "description": "We help you assemble a complete and internally consistent application, and explain what each stage of the process expects of you.\n\nWe are a consultancy, not an immigration authority. We do not make visa decisions and we do not guarantee outcomes. We will also not assist with any application that misrepresents your position.",
+    "howWeHelp": [
+      "A document checklist specific to your destination and purpose",
+      "Your application read for internal consistency before it is filed",
+      "Each stage of the process explained in advance",
+      "Interview preparation where one is required"
+    ],
+    "processSteps": [
+      {
+        "order": 1,
+        "title": "Checklist",
+        "description": "Exactly what your destination requires from you."
+      },
+      {
+        "order": 2,
+        "title": "Assemble",
+        "description": "Documents gathered and checked against one another."
+      },
+      {
+        "order": 3,
+        "title": "Final review",
+        "description": "A last read before you submit."
+      }
+    ],
+    "faqs": []
+  },
+  {
+    "name": "Pre- and Post-Departure Sessions",
+    "slug": "pre-and-post-departure-sessions",
+    "icon": "Luggage",
+    "layoutVariant": "c-stacked-banner",
+    "displayOrder": 6,
+    "status": "published",
+    "summary": "We conduct pre- and post-departure sessions with our clients to facilitate their transition to overseas countries.",
+    "description": "The weeks either side of departure are where most practical problems appear, usually because nobody planned the unglamorous parts. We go through them with you — and we stay reachable after you have arrived.",
+    "howWeHelp": [
+      "Accommodation options compared, including the institution’s own",
+      "Travel, insurance and arrival planned in the right order",
+      "Banking, mobile connectivity and registration covered",
+      "A follow-up session after you arrive, not just before you leave"
+    ],
+    "processSteps": [
+      {
+        "order": 1,
+        "title": "Before you fly",
+        "description": "Accommodation, travel, insurance and finances settled."
+      },
+      {
+        "order": 2,
+        "title": "Arrival briefing",
+        "description": "What to expect in your first week."
+      },
+      {
+        "order": 3,
+        "title": "After you land",
+        "description": "A post-departure session once you are settling in."
+      }
+    ],
+    "faqs": []
+  },
+  {
+    "name": "Test Preparation",
+    "slug": "test-preparation",
+    "icon": "BookOpen",
+    "layoutVariant": "a-left-media",
+    "displayOrder": 7,
+    "status": "published",
+    "summary": "Result-oriented and personalised coaching for GMAT, GRE, SAT, ACT, TOEFL, IELTS and PTE, taught by qualified teachers with extensive professional experience.",
+    "description": "Scores in these standardised examinations go a long way in securing admission and in obtaining scholarships and financial aid.\n\nCoaching is personalised rather than delivered to a fixed syllabus, and is imparted by qualified teachers who possess extensive professional experience in the field.\n\nThis is a coaching service. Enquire for current batch timings and availability — nothing is sold or booked through this website.",
+    "howWeHelp": [
+      "GMAT, GRE, SAT and ACT preparation for admission-based tests",
+      "TOEFL, IELTS and PTE preparation for English proficiency",
+      "Coaching shaped around your starting level and target score",
+      "Taught by qualified teachers with extensive professional experience"
+    ],
+    "processSteps": [
+      {
+        "order": 1,
+        "title": "Assess the starting point",
+        "description": "Which test suits your plans, and where you stand today."
+      },
+      {
+        "order": 2,
+        "title": "Agree a target",
+        "description": "The score your shortlist actually requires."
+      },
+      {
+        "order": 3,
+        "title": "Coaching",
+        "description": "Personalised sessions with a qualified teacher."
+      }
+    ],
+    "faqs": []
+  },
+  {
+    "name": "Corporate Training",
+    "slug": "corporate-training",
+    "icon": "Users",
+    "layoutVariant": "b-right-media",
+    "displayOrder": 8,
+    "status": "published",
+    "summary": "Courses to suit individual and group needs that help people succeed in professional environments.",
+    "description": "Delivered by highly qualified and experienced corporate trainers with extensive professional experience in the field, for individuals and for groups.",
+    "howWeHelp": [
+      "Etiquette training",
+      "Personality development",
+      "Business communication",
+      "Programmes shaped to individual or group needs"
+    ],
+    "processSteps": [
+      {
+        "order": 1,
+        "title": "Understand the need",
+        "description": "Whether the programme is for an individual or a team."
+      },
+      {
+        "order": 2,
+        "title": "Shape the programme",
+        "description": "Content and duration agreed around that need."
+      },
+      {
+        "order": 3,
+        "title": "Deliver",
+        "description": "Sessions run by an experienced corporate trainer."
+      }
+    ],
+    "faqs": []
+  },
+  {
+    "name": "Migration Counselling",
+    "slug": "migration-counselling",
+    "icon": "ShieldCheck",
+    "layoutVariant": "c-stacked-banner",
+    "displayOrder": 9,
+    "status": "published",
+    "summary": "An immigration consultancy with expertise in visa processing, and a Super Visa specialist.",
+    "description": "We have assisted people in settling abroad, with Australia, Canada and New Zealand among the destinations we work with most.\n\nA dedicated research team evaluates and processes each case according to the latest updated rules and regulations of the relevant high commissions — which is the part of this work that changes most often and matters most.\n\nWe do not make immigration decisions and we do not guarantee outcomes.",
+    "howWeHelp": [
+      "Case assessment against current rules rather than last year’s",
+      "Super Visa applications",
+      "Australia, Canada and New Zealand among the destinations covered",
+      "A research team tracking high commission rule changes"
+    ],
+    "processSteps": [
+      {
+        "order": 1,
+        "title": "Assess the case",
+        "description": "Against the rules as they currently stand."
+      },
+      {
+        "order": 2,
+        "title": "Prepare",
+        "description": "Documentation assembled and checked for consistency."
+      },
+      {
+        "order": 3,
+        "title": "File and follow",
+        "description": "Submitted, then tracked through the process."
+      }
+    ],
+    "faqs": []
+  },
+  {
+    "name": "Visa Counselling",
+    "slug": "visa-counselling",
+    "icon": "FolderCheck",
+    "layoutVariant": "a-left-media",
+    "displayOrder": 10,
+    "status": "published",
+    "summary": "Documentation, application and filing services for study, tourist, business and dependent visas.",
+    "description": "We have been helping people file their visa applications for many years, across study, tourism, business and dependent categories.\n\nOur work here is documentation processing, application preparation and filing. The decision rests with the authority concerned.",
+    "howWeHelp": [
+      "Documentation processing",
+      "Visa application preparation",
+      "Application filing services",
+      "Study, tourist, business and dependent categories"
+    ],
+    "processSteps": [
+      {
+        "order": 1,
+        "title": "Identify the category",
+        "description": "Study, tourist, business or dependent."
+      },
+      {
+        "order": 2,
+        "title": "Documentation",
+        "description": "Assembled and checked against the category’s requirements."
+      },
+      {
+        "order": 3,
+        "title": "File",
+        "description": "Submitted on your behalf and tracked."
+      }
+    ],
+    "faqs": []
+  },
+  {
+    "name": "Institutional Services",
+    "slug": "institutional-services",
+    "icon": "Briefcase",
+    "layoutVariant": "b-right-media",
+    "displayOrder": 11,
+    "status": "published",
+    "summary": "Helping academic and professional institutions overseas build relations with institutions in India, and vice versa.",
+    "description": "We help institutions initiate academic and professional contacts across borders.\n\n**Institutional tie-ups.** We engage higher education institutions in India and around the world to foster and enhance links among them — through collaborative research, study abroad programmes, faculty exchanges, and seminars for higher education administrators from participating countries.\n\n**Study exchange programmes.** We guide students and institutions in facilitating student exchange: helping students find global institutions to study at under exchange programmes, and helping institutions find students who can benefit from what they offer.\n\n**Study tours.** We guide and facilitate academic tours abroad, generally lasting seven to eleven days. They include visits to educational institutions, so students can learn about courses and requirements, see life in and around campuses, explore employment opportunities and understand the culture and society of the destination. These tours are generally self-funded.\n\n**International cell.** We assist international schools and colleges in expanding opportunities beyond their academic confines, with in-house counselling and support for their students.",
+    "howWeHelp": [
+      "Institutional tie-ups: collaborative research, faculty exchanges and administrator seminars",
+      "Study exchange programmes for both students and institutions",
+      "Academic study tours of seven to eleven days, generally self-funded",
+      "An international cell providing in-house counselling inside schools and colleges"
+    ],
+    "processSteps": [
+      {
+        "order": 1,
+        "title": "Establish the contact",
+        "description": "Introductions between institutions in India and overseas."
+      },
+      {
+        "order": 2,
+        "title": "Agree the programme",
+        "description": "Exchange, tie-up, study tour or in-house cell."
+      },
+      {
+        "order": 3,
+        "title": "Run it",
+        "description": "Coordinated end to end on both sides."
+      }
+    ],
+    "faqs": []
+  }
+]

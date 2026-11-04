@@ -1,0 +1,79 @@
+[
+  {
+    "id": "parth-gala",
+    "author": "Parth Gala",
+    "meta": "Local Reviewer · 6 reviews",
+    "rating": 5,
+    "time": "5 months ago",
+    "destination": "Germany & Global",
+    "testimonial": "I had an excellent experience with Shine Consultant Borivali. In my opinion, it is one of the best agencies for students who are planning to study abroad. The entire team is extremely professional, supportive, and genuinely cares about students.",
+    "imageSrc": "/reviews/review-parth-gala.jpg",
+    "status": "published"
+  },
+  {
+    "id": "krishnasagar-thakkar",
+    "author": "Krishnasagar Thakkar",
+    "meta": "Verified Student · 1 review",
+    "rating": 5,
+    "time": "2 months ago",
+    "destination": "United Kingdom",
+    "testimonial": "Had a really great experience with Shine Consultant. They helped me sort out my entire UK university application and visa process in just 2 months. The team was extremely supportive, responsive, and professional throughout.",
+    "imageSrc": "/reviews/review-krishnasagar-thakkar.jpg",
+    "status": "published"
+  },
+  {
+    "id": "ashwin-singh",
+    "author": "Ashwin Singh",
+    "meta": "Verified Applicant · 6 reviews",
+    "rating": 5,
+    "time": "1 month ago",
+    "destination": "Global Advisory",
+    "testimonial": "I had a really good experience with shine consultant. They supported and guided me at every step and also helped me decide which country would be best for my studies and future growth. They were always in touch and regularly followed up.",
+    "imageSrc": "/reviews/review-ashwin-singh.jpg",
+    "status": "published"
+  },
+  {
+    "id": "dolwin-menezes",
+    "author": "Dolwin Menezes",
+    "meta": "Macquarie University · 5 reviews",
+    "rating": 5,
+    "time": "1 year ago",
+    "destination": "Australia",
+    "testimonial": "I am extremely grateful to Shine Consultancy for their outstanding support in helping me secure admission to Macquarie University for my Master's in Information Systems and Management. From university selection to visa processing and post-arrival.",
+    "imageSrc": "/reviews/review-dolwin-menezes.jpg",
+    "status": "published"
+  },
+  {
+    "id": "raj-ajmera",
+    "author": "Raj Ajmera",
+    "meta": "Local Guide · 12 reviews",
+    "rating": 5,
+    "time": "Long-standing Alumnus",
+    "destination": "Overseas Admissions",
+    "testimonial": "Studying abroad is on your mind then Shine consultancy is the place to be at. No other person than Mr. Parag Mehta could guide you better through the process. The entire process of College and visa application was as smooth as silk. The personal attention has no match.",
+    "imageSrc": "/reviews/review-raj-ajmera.jpg",
+    "status": "published"
+  },
+  {
+    "id": "madan-panth",
+    "author": "Madan Panth",
+    "meta": "Local Guide · 11 reviews",
+    "rating": 5,
+    "time": "Alumnus",
+    "destination": "Higher Studies Abroad",
+    "testimonial": "All the staff members are very cooperative and friendly. They guided me with ease during my entire process. A special thanks to the team for going through all the odds and helping us. I would recommend Shine Consulting to all students looking for Higher Studies.",
+    "imageSrc": "/reviews/review-madan-panth.jpg",
+    "status": "published"
+  },
+  {
+    "id": "apurv-nerurkar",
+    "author": "Apurv Nerurkar",
+    "meta": "Test Prep & Admissions · 2 reviews",
+    "rating": 5,
+    "time": "Alumnus",
+    "destination": "Test Preparation",
+    "testimonial": "They help you for studying for the test which you are preparing for. The service provided is quite good and the staff here is also polite. They help you with your queries and other problems. Overall it was good and convenient for me to do my admission abroad through this agency.",
+    "imageSrc": "/reviews/review-apurv-nerurkar.jpg",
+    "status": "published"
+  }
+]
