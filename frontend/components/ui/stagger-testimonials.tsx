@@ -1,7 +1,7 @@
 "use client"
 
-import React, { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import React, { useState, useEffect, useCallback } from 'react';
+import { ChevronLeft, ChevronRight, X, Image as ImageIcon } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const SQRT_5000 = Math.sqrt(5000);
@@ -17,66 +17,51 @@ export const TESTIMONIALS: TestimonialItem[] = [
   {
     tempId: 0,
     testimonial:
-      'Shine Consultant gave me transparent, unbiased advice when selecting universities in the UK. Guided every step from SOP to visa approval.',
-    by: 'Rohan M., MSc Data Science, University of Manchester',
-    imgSrc:
-      'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80',
+      'They help you for studying for the test which you are preparing for. The service provided is quite good and the staff here is also polite. They help you with your queries and also other problems which you face. Overall it was good and convenient for me to do my admission abroad through this agency.',
+    by: 'Apurv Nerurkar',
+    imgSrc: '/Reviews/review-apurv-nerurkar.jpg',
   },
   {
     tempId: 1,
     testimonial:
-      'Clear explanations of visa requirements and course modules without any confusion. Highly recommended for study abroad counselling.',
-    by: 'Kevin V., University of Sydney, Australia',
-    imgSrc:
-      'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=300&q=80',
+      'I had a really good experience with Shine Consultant. They supported and guided me at every step and also helped me decide which country would be best for my studies and future growth. They were always in touch and regularly followed up.',
+    by: 'Ashwin Singh',
+    imgSrc: '/Reviews/review-ashwin-singh.jpg',
   },
   {
     tempId: 2,
     testimonial:
-      'The career counselling was an eye-opener. They evaluated my past academic records accurately and recommended universities in Canada that truly suited my profile.',
-    by: 'Ananya S., University of Toronto, Canada',
-    imgSrc:
-      'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=300&q=80',
+      'I am extremely grateful to Shine Consultancy for their outstanding support in helping me secure admission to Macquarie University for my Master\'s in Information Systems and Management. From university selection to visa processing, they guided me every step of the way.',
+    by: 'Dolwin Menezes, Macquarie University, Australia',
+    imgSrc: '/Reviews/review-dolwin-menezes.jpg',
   },
   {
     tempId: 3,
     testimonial:
-      'Transparent and ethical. No false promises, just clear checklists, thorough IELTS coaching, and realistic timeline planning.',
-    by: 'Siddharth P., University of Melbourne, Australia',
-    imgSrc:
-      'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=300&q=80',
+      'Had a really great experience with Shine Consultant. They helped me sort out my entire UK university application and visa process in just 2 months. The team was extremely supportive, responsive, and professional throughout.',
+    by: 'Krishnasagar Thakkar',
+    imgSrc: '/Reviews/review-krishnasagar-thakkar.jpg',
   },
   {
     tempId: 4,
     testimonial:
-      'Mrs. Bhadika Mehta and the team answered every query with unmatched patience. Secured admission for MS in Germany with complete documentation support.',
-    by: 'Pooja K., Technical University of Munich, Germany',
-    imgSrc:
-      'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=300&q=80',
+      'All the staff members are very cooperative and friendly. They guided me with ease during my entire process. A special thanks to Priyanka Mam, Neelam Mam, Manoj Sir and Deeksha Mam for going through all the odds and helping us. I would recommend Shine Consulting to all the students looking for Higher Studies.',
+    by: 'Madan Panth',
+    imgSrc: '/Reviews/review-madan-panth.jpg',
   },
   {
     tempId: 5,
     testimonial:
-      'From university selection to visa interview prep, their attention to detail and accountability set them apart.',
-    by: 'Simran B., University of British Columbia, Canada',
-    imgSrc:
-      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=300&q=80',
+      'I had an excellent experience with Shine Consultant Borivali. In my opinion, it is one of the best agencies for students who are planning to study abroad. The entire team is extremely professional, supportive, and genuinely cares about every student.',
+    by: 'Parth Gala',
+    imgSrc: '/Reviews/review-parth-gala.jpg',
   },
   {
     tempId: 6,
     testimonial:
-      'Honest guidance from their Borivali office made the whole overseas admissions process stress-free and straightforward.',
-    by: 'Neil D., MS Computer Science, USA',
-    imgSrc:
-      'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80',
-  },
-  {
-    tempId: 7,
-    testimonial:
-      'The coaching for GRE and IELTS was exceptional. Dedicated teachers who genuinely care about individual student progress and score improvement.',
-    by: 'Priyesh T., Trinity College Dublin, Ireland',
-    imgSrc:
-      'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80',
+      'Studying abroad is on your mind then Shine Consultancy is the place to be at. No other person than Mr. Parag Mehta could guide you better through the process. The entire process of College and visa application was as smooth as silk, entire credits to Parag sir and his team. The personal attention and guidance I have received has no match.',
+    by: 'Raj Ajmera',
+    imgSrc: '/Reviews/review-raj-ajmera.jpg',
   },
 ];
 
@@ -85,6 +70,7 @@ interface TestimonialCardProps {
   testimonial: TestimonialItem;
   handleMove: (steps: number) => void;
   cardSize: number;
+  onShowProof: (src: string) => void;
 }
 
 const TestimonialCard: React.FC<TestimonialCardProps> = ({
@@ -92,8 +78,16 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
   testimonial,
   handleMove,
   cardSize,
+  onShowProof,
 }) => {
   const isCenter = position === 0;
+  const initials = testimonial.by
+    .split(',')[0]
+    .split(' ')
+    .slice(0, 2)
+    .map((w) => w[0])
+    .join('')
+    .toUpperCase();
 
   return (
     <div
@@ -129,20 +123,24 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
           height: 2,
         }}
       />
-      <img
-        src={testimonial.imgSrc}
-        alt={testimonial.by.split(',')[0]}
-        className="mb-4 h-14 w-12 rounded-sm bg-sage object-cover object-top border border-navy/20"
+      <div
+        className={cn(
+          'mb-4 flex h-12 w-12 items-center justify-center rounded-sm text-sm font-bold border',
+          isCenter
+            ? 'bg-white/20 text-white border-white/30'
+            : 'bg-navy/10 text-navy border-navy/20',
+        )}
         style={{
           boxShadow: isCenter
             ? '3px 3px 0px rgba(255,255,255,0.3)'
             : '3px 3px 0px rgba(20,36,58,0.1)',
         }}
-        loading="lazy"
-      />
+      >
+        {initials}
+      </div>
       <h3
         className={cn(
-          'text-caption sm:text-body font-medium leading-relaxed',
+          'text-caption sm:text-body font-medium leading-relaxed line-clamp-5',
           isCenter ? 'text-white' : 'text-charcoal',
         )}
       >
@@ -150,12 +148,28 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
       </h3>
       <p
         className={cn(
-          'absolute bottom-8 left-8 right-8 text-caption font-heading font-semibold',
+          'absolute bottom-8 left-8 right-16 text-caption font-heading font-semibold truncate',
           isCenter ? 'text-white/80' : 'text-navy',
         )}
       >
         — {testimonial.by}
       </p>
+      <button
+        onClick={(e) => {
+          e.stopPropagation();
+          onShowProof(testimonial.imgSrc);
+        }}
+        className={cn(
+          'absolute bottom-7 right-8 flex h-7 w-7 items-center justify-center rounded-full transition-colors',
+          isCenter
+            ? 'bg-white/20 hover:bg-white/30 text-white'
+            : 'bg-navy/10 hover:bg-navy/20 text-navy',
+        )}
+        aria-label="View review proof"
+        title="View original review"
+      >
+        <ImageIcon className="h-3.5 w-3.5" />
+      </button>
     </div>
   );
 };
@@ -168,6 +182,9 @@ export interface StaggerTestimonialsProps {
 export function StaggerTestimonials({ items = TESTIMONIALS, className }: StaggerTestimonialsProps) {
   const [cardSize, setCardSize] = useState(365);
   const [testimonialsList, setTestimonialsList] = useState(items);
+  const [proofImage, setProofImage] = useState<string | null>(null);
+
+  const closeProof = useCallback(() => setProofImage(null), []);
 
   const handleMove = (steps: number) => {
     const newList = [...testimonialsList];
@@ -215,6 +232,7 @@ export function StaggerTestimonials({ items = TESTIMONIALS, className }: Stagger
             handleMove={handleMove}
             position={position}
             cardSize={cardSize}
+            onShowProof={setProofImage}
           />
         );
       })}
@@ -234,6 +252,31 @@ export function StaggerTestimonials({ items = TESTIMONIALS, className }: Stagger
           <ChevronRight className="h-5 w-5" />
         </button>
       </div>
+      {/* Proof Lightbox Modal */}
+      {proofImage && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm p-4"
+          onClick={closeProof}
+        >
+          <div
+            className="relative max-h-[90vh] max-w-[90vw] sm:max-w-xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={closeProof}
+              className="absolute -top-3 -right-3 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-white text-charcoal shadow-lg transition-colors hover:bg-gray-100"
+              aria-label="Close proof"
+            >
+              <X className="h-4 w-4" />
+            </button>
+            <img
+              src={proofImage}
+              alt="Original review screenshot"
+              className="max-h-[85vh] w-full rounded-lg shadow-2xl object-contain"
+            />
+          </div>
+        </div>
+      )}
     </div>
   );
 }
