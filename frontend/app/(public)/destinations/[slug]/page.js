@@ -155,6 +155,7 @@ export default async function DestinationPage({ params }) {
         socialLinks={socialLinks}
         image={{
           src: `/destinations/${destination.slug}.jpg`,
+          fallbackUrl: `/destinations/${destination.slug}.jpg`,
           alt: `Study in ${destination.name} — University Campus`,
           width: 1920,
           height: 1080,

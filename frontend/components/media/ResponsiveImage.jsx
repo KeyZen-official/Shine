@@ -26,15 +26,17 @@ export function ResponsiveImage({
 }) {
   const [failed, setFailed] = useState(false);
 
-  if (!image?.fallbackUrl && !image?.variants?.w1024) return null;
+  const fallbackUrl = image?.fallbackUrl ?? image?.src ?? image?.url ?? image?.variants?.w1024;
 
-  const variants = image.variants ?? {};
+  if (!fallbackUrl && !image?.variants?.w1024) return null;
+
+  const variants = image?.variants ?? {};
   const srcSet = [360, 768, 1024, 1920]
     .map((width) => (variants[`w${width}`] ? `${variants[`w${width}`]} ${width}w` : null))
     .filter(Boolean)
     .join(', ');
 
-  const style = image.width && image.height
+  const style = image?.width && image?.height
     ? { aspectRatio: `${image.width} / ${image.height}` }
     : { aspectRatio: aspect };
 
@@ -44,7 +46,7 @@ export function ResponsiveImage({
         className={`flex items-center justify-center overflow-hidden bg-navy-fade p-6 ${rounded} ${className}`}
         style={{ ...style, aspectRatio: aspect }}
       >
-        <p className="max-w-measure text-center text-caption text-white/70">{image.alt}</p>
+        <p className="max-w-measure text-center text-caption text-white/70">{image?.alt}</p>
       </div>
     );
   }
@@ -53,9 +55,9 @@ export function ResponsiveImage({
     <picture className={`block overflow-hidden ${rounded} ${className}`}>
       {srcSet ? <source type="image/webp" srcSet={srcSet} sizes={sizes} /> : null}
       <img
-        src={image.fallbackUrl ?? variants.w1024}
-        alt={image.alt ?? ''}
-        {...(image.width && image.height ? { width: image.width, height: image.height } : {})}
+        src={fallbackUrl}
+        alt={image?.alt ?? ''}
+        {...(image?.width && image?.height ? { width: image.width, height: image.height } : {})}
         loading={priority ? 'eager' : 'lazy'}
         decoding={priority ? 'sync' : 'async'}
         {...(priority ? { fetchPriority: 'high' } : {})}

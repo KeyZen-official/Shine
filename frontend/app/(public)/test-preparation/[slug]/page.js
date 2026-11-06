@@ -36,6 +36,10 @@ import { TeachingApproachSection } from '../../../../components/sections/test-pr
 import { WhyChooseIeltsAndFaqSection } from '../../../../components/sections/test-prep/WhyChooseIeltsAndFaqSection';
 import { IeltsFinalCta } from '../../../../components/sections/test-prep/IeltsFinalCta';
 
+/* Premium Test Preparation Layout for PTE, TOEFL, GRE, GMAT matching IELTS design */
+import { TEST_PREP_DATA } from '../../../../lib/test-prep-data';
+import { TestProgrammeDetailLayout } from '../../../../components/sections/test-prep/TestProgrammeDetailLayout';
+
 const FAMILY_ICON = {
   english: Languages,
   entrance: Target,
@@ -47,7 +51,10 @@ export function generateStaticParams() {
 
 function load(slug) {
   const test = getTestPreparationProgramme(slug);
-  return test ? { test, faqs: test.faqs ?? [] } : null;
+  if (!test) return null;
+  const prepData = TEST_PREP_DATA[slug];
+  const faqs = prepData?.faqs?.length > 0 ? prepData.faqs : (test.faqs ?? []);
+  return { test, faqs, prepData };
 }
 
 export async function generateMetadata({ params }) {
@@ -55,15 +62,16 @@ export async function generateMetadata({ params }) {
   const payload = load(slug);
   if (!payload) return { title: 'Test preparation not found' };
 
-  const { test } = payload;
+  const { test, prepData } = payload;
   return metadataForRecord(test, {
     path: `/test-preparation/${test.slug}`,
     fallbackTitle: `${test.name} Preparation`,
     fallbackDescription:
+      prepData?.heroContent?.supportingLine ||
       test.summary ||
       truncate(test.description ?? '', 155) ||
       `${test.name} coaching at Shine Consultant — how we prepare candidates and what the programme covers.`,
-    image: test.heroImage,
+    image: test.heroImage ?? `/imagery/${test.slug}-hero.jpg`,
   });
 }
 
@@ -85,7 +93,7 @@ export default async function TestPreparationDetailPage({ params }) {
   const payload = load(slug);
   if (!payload) notFound();
 
-  const { test, faqs = [] } = payload;
+  const { test, faqs = [], prepData } = payload;
   const settings = getSettings();
   const socialLinks = settings?.socialLinks ?? [];
 
@@ -164,6 +172,7 @@ export default async function TestPreparationDetailPage({ params }) {
           socialLinks={socialLinks}
           image={{
             src: '/imagery/ielts-hero.jpg',
+            fallbackUrl: '/imagery/ielts-hero.jpg',
             alt: 'Indian student holding IELTS preparation books in natural daylight with global landmarks',
             width: 1920,
             height: 1080,
@@ -220,11 +229,30 @@ export default async function TestPreparationDetailPage({ params }) {
   }
 
   /* ------------------------------------------------------------------ */
-  /* Fallback for other test prep programmes (TOEFL, PTE, etc.)         */
+  /* PTE, TOEFL, GRE, GMAT: Full-Page Layout matching IELTS             */
+  /* ------------------------------------------------------------------ */
+  if (prepData) {
+    return (
+      <>
+        <JsonLd data={breadcrumbJsonLd(trail)} />
+        {faqs.length > 0 && <JsonLd data={faqJsonLd(faqs)} />}
+
+        <TestProgrammeDetailLayout
+          test={test}
+          data={prepData}
+          socialLinks={socialLinks}
+          heroImage={test.heroImage ?? `/imagery/${test.slug}-hero.jpg`}
+        />
+      </>
+    );
+  }
+
+  /* ------------------------------------------------------------------ */
+  /* Fallback for other test prep programmes                            */
   /* ------------------------------------------------------------------ */
   const services = getServiceOptions();
   const FamilyIcon = FAMILY_ICON[test.family] ?? Target;
-  const image = pickImage(test.heroImage, {
+  const image = pickImage(test.heroImage ?? `/imagery/${test.slug}-hero.jpg`, {
     fallbackKey: test.family === 'english' ? 'study' : 'library',
     alt: `${test.name} preparation at Shine Consultant`,
   });

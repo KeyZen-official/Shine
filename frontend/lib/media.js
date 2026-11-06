@@ -117,16 +117,28 @@ function defaultImage(key, alt) {
  * its path; supply `variants` as well if you have generated widths.
  */
 export function pickImage(recordImage, { fallbackKey, alt } = {}) {
-  if (recordImage?.fallbackUrl || recordImage?.variants?.w1024) {
+  if (typeof recordImage === 'string' && recordImage) {
+    const resolved = resolveMediaUrl(recordImage);
+    return {
+      src: resolved,
+      fallbackUrl: resolved,
+      alt: alt ?? '',
+    };
+  }
+
+  if (recordImage?.fallbackUrl || recordImage?.src || recordImage?.url || recordImage?.variants?.w1024) {
+    const fallbackUrl = resolveMediaUrl(recordImage.fallbackUrl ?? recordImage.src ?? recordImage.url);
     return {
       ...recordImage,
+      src: fallbackUrl,
+      fallbackUrl,
+      alt: recordImage.alt ?? alt ?? '',
       variants: Object.fromEntries(
         Object.entries(recordImage.variants ?? {}).map(([key, value]) => [
           key,
           resolveMediaUrl(value),
         ]),
       ),
-      fallbackUrl: resolveMediaUrl(recordImage.fallbackUrl),
     };
   }
 

@@ -54,7 +54,8 @@
     ],
     "scoreImprovementApproach": "We begin with a diagnostic test to find where you are losing marks, then concentrate teaching time on those question types rather than covering everything evenly. Progress is re-measured with further mock tests.\n\nWe do not promise a band score. No honest teacher can.",
     "howToEnrol": "",
-    "faqs": []
+    "faqs": [],
+    "heroImage": "/imagery/ielts-hero.jpg"
   },
   {
     "code": "pte",
@@ -94,7 +95,8 @@
     ],
     "scoreImprovementApproach": "PTE scores several tasks across more than one skill at once, so marks are often lost in a different place from where the problem is. We diagnose first and teach to that, then re-measure with mock tests. No score is promised.",
     "howToEnrol": "",
-    "faqs": []
+    "faqs": [],
+    "heroImage": "/imagery/pte-hero.jpg"
   },
   {
     "code": "toefl",
@@ -139,7 +141,8 @@
     ],
     "scoreImprovementApproach": "",
     "howToEnrol": "",
-    "faqs": []
+    "faqs": [],
+    "heroImage": "/imagery/toefl-hero.jpg"
   },
   {
     "code": "gre",
@@ -178,7 +181,8 @@
     ],
     "scoreImprovementApproach": "",
     "howToEnrol": "",
-    "faqs": []
+    "faqs": [],
+    "heroImage": "/imagery/gre-hero.jpg"
   },
   {
     "code": "gmat",
@@ -217,6 +221,7 @@
     ],
     "scoreImprovementApproach": "",
     "howToEnrol": "",
-    "faqs": []
+    "faqs": [],
+    "heroImage": "/imagery/gmat-hero.jpg"
   }
 ]
