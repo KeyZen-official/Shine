@@ -223,5 +223,41 @@
     "howToEnrol": "",
     "faqs": [],
     "heroImage": "/imagery/gmat-hero.jpg"
+  },
+  {
+    "code": "sat",
+    "name": "SAT",
+    "slug": "sat",
+    "fullName": "Scholastic Assessment Test",
+    "family": "entrance",
+    "displayOrder": 6,
+    "status": "published",
+    "summary": "SAT coaching across evidence-based reading, writing and mathematics, with practice tests and score improvement strategies.",
+    "description": "",
+    "whoItIsFor": "",
+    "variants": [],
+    "modules": [
+      {
+        "name": "Reading & Writing",
+        "focus": "Passage comprehension, vocabulary in context, and grammar and expression.",
+        "displayOrder": 1
+      },
+      {
+        "name": "Mathematics",
+        "focus": "Algebra, problem-solving, data analysis and advanced maths concepts.",
+        "displayOrder": 2
+      }
+    ],
+    "preparationFeatures": [
+      "Practice tests under timed conditions",
+      "Qualified, experienced teachers",
+      "A personalised study plan based on a diagnostic test",
+      "Section-wise strategy and error review",
+      "Tips and strategies for the digital SAT format"
+    ],
+    "scoreImprovementApproach": "",
+    "howToEnrol": "",
+    "faqs": [],
+    "heroImage": "/imagery/sat-hero.jpg"
   }
 ]

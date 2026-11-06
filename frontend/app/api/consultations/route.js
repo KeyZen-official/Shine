@@ -57,18 +57,32 @@ export async function POST(request) {
 
   const value = verdict.value;
 
-  const match = getDestinations().find(
-    (destination) =>
-      destination.name.toLowerCase() === String(value.preferredCountry).toLowerCase() ||
-      destination.slug === String(value.preferredCountry).toLowerCase(),
-  );
+  // Handle multi-destination selection (array or comma-separated string)
+  const publishedDestinations = getDestinations();
+  let selectedCountries = [];
+  if (Array.isArray(value.preferredCountry)) {
+    selectedCountries = value.preferredCountry;
+  } else if (typeof value.preferredCountry === 'string') {
+    selectedCountries = value.preferredCountry.split(',').map((s) => s.trim()).filter(Boolean);
+  }
 
-  if (!match) {
-    return fail(400, 'VALIDATION_FAILED', 'Choose one of our published study destinations.', {
-      fields: [{ field: 'preferredCountry', message: 'Select a destination from the list.' }],
+  const matchedDestinations = selectedCountries
+    .map((c) =>
+      publishedDestinations.find(
+        (dest) =>
+          dest.name.toLowerCase() === c.toLowerCase() ||
+          dest.slug === c.toLowerCase(),
+      ),
+    )
+    .filter(Boolean);
+
+  if (matchedDestinations.length === 0) {
+    return fail(400, 'VALIDATION_FAILED', 'Choose at least one of our published study destinations.', {
+      fields: [{ field: 'preferredCountry', message: 'Select at least one destination from the list.' }],
     });
   }
 
+  const destinationSummary = matchedDestinations.map((d) => d.name).join(', ');
   const reference = buildReference('CON');
 
   await notify({
@@ -80,11 +94,10 @@ export async function POST(request) {
       ['Student', value.studentName],
       ['Email', value.email],
       ['Phone', value.phone],
-      ['Preferred destination', match.name],
+      ['Preferred destination(s)', destinationSummary],
+      ['Preferred study level', value.preferredLevel || 'Not specified'],
       ['Preferred course', value.preferredCourse],
       ['Current qualification', value.currentQualification],
-      ['Requested date', value.preferredDate],
-      ['Requested time', value.preferredTime],
       ['Challenge', spam.challenge ?? 'n/a'],
     ],
   });
@@ -92,9 +105,8 @@ export async function POST(request) {
   return ok(
     {
       reference,
-      preferredDate: value.preferredDate,
-      preferredTime: value.preferredTime,
-      preferredCountry: match.name,
+      preferredCountry: destinationSummary,
+      preferredLevel: value.preferredLevel,
     },
     201,
   );

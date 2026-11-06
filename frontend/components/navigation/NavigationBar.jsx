@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { ChevronDown } from 'lucide-react';
+import { ChevronDown, Mail, Phone } from 'lucide-react';
 import {
   MobileNav,
   MobileNavHeader,
@@ -38,16 +38,42 @@ const MOBILE_MENU_ID = 'primary-mobile-navigation';
  * 1152px — which is precisely what pushed "Contact" underneath "Explore
  * Courses". Reading the contraction state is the only correct test.
  */
-function NavbarActions() {
+function TopContactBar() {
   const { visible } = useNavbarState();
+  if (visible) return null;
 
   return (
+    <div className="hidden border-b border-navy/10 bg-[#FAF8F5] py-2 text-caption text-charcoal-70 xl:block">
+      <div className="shell flex items-center justify-between">
+        <div className="flex items-center gap-2 text-micro">
+          <span className="font-bold text-navy">Shine Consultant</span>
+          <span className="text-navy/30">•</span>
+          <span>Overseas Education, Migration & Training — Borivali West, Mumbai</span>
+        </div>
+        <div className="flex items-center gap-6">
+          <a
+            href="tel:+917303890969"
+            className="inline-flex items-center gap-2 font-heading text-caption font-semibold text-navy transition-colors hover:text-accent"
+          >
+            <Phone className="h-3.5 w-3.5 text-accent" aria-hidden="true" />
+            <span>+91 73038 90969</span>
+          </a>
+          <a
+            href="mailto:enquiry@shineconsultant.co.in"
+            className="inline-flex items-center gap-2 font-heading text-caption font-semibold text-navy transition-colors hover:text-accent"
+          >
+            <Mail className="h-3.5 w-3.5 text-accent" aria-hidden="true" />
+            <span>enquiry@shineconsultant.co.in</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function NavbarActions() {
+  return (
     <div className="flex shrink-0 items-center gap-2">
-      {!visible ? (
-        <NavbarButton href="/destinations" variant="secondary">
-          Study Destinations
-        </NavbarButton>
-      ) : null}
       <NavbarButton href="/book-consultation" variant="primary">
         Book Free Consultation
       </NavbarButton>
@@ -110,11 +136,13 @@ export function NavigationBar({ destinations = [], services = [], testPreparatio
 
   return (
     <Navbar threshold={80}>
+      <TopContactBar />
+
       {/* Desktop */}
       <NavBody>
         <NavbarLogo />
 
-        <nav aria-label="Primary" className="flex min-w-0 flex-1 justify-center">
+        <nav aria-label="Primary" className="flex min-w-0 flex-1 justify-center px-2">
           <NavItems items={items} isActive={(href) => isActivePath(pathname, href)} />
         </nav>
 
@@ -222,6 +250,22 @@ export function NavigationBar({ destinations = [], services = [], testPreparatio
           </nav>
 
           <div className="flex w-full flex-col gap-3 border-t border-navy/10 pt-5">
+            <div className="flex flex-col gap-2 pb-2">
+              <a
+                href="tel:+917303890969"
+                className="inline-flex items-center gap-2 text-caption font-semibold text-navy"
+              >
+                <Phone className="h-4 w-4 text-accent" aria-hidden="true" />
+                +91 73038 90969
+              </a>
+              <a
+                href="mailto:enquiry@shineconsultant.co.in"
+                className="inline-flex items-center gap-2 text-caption font-semibold text-navy"
+              >
+                <Mail className="h-4 w-4 text-accent" aria-hidden="true" />
+                enquiry@shineconsultant.co.in
+              </a>
+            </div>
             <NavbarButton
               href="/book-consultation"
               variant="primary"

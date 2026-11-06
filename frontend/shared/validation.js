@@ -7,7 +7,6 @@
  * rather than an interpretation difference.
  */
 
-import { CONSULTATION_TIME_SLOTS } from './constants';
 
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i;
 const PHONE_ALLOWED = /^[0-9+\-()\s]+$/;
@@ -124,19 +123,10 @@ export const consultationDescriptor = {
     { name: 'studentName', label: 'Student name', rules: { required: true, minLength: 2, maxLength: 100 } },
     { name: 'email', label: 'Email address', rules: { required: true, email: true, maxLength: 254 } },
     { name: 'phone', label: 'Phone number', rules: { required: true, phone: true } },
-    { name: 'preferredCountry', label: 'Preferred country', rules: { required: true, maxLength: 120 } },
+    { name: 'preferredCountry', label: 'Preferred country', rules: { required: true, maxLength: 500 } },
     { name: 'preferredCourse', label: 'Preferred course', rules: { maxLength: 120 } },
     { name: 'currentQualification', label: 'Current qualification', rules: { maxLength: 120 } },
-    {
-      name: 'preferredDate',
-      label: 'Preferred date',
-      rules: { required: true, isoDate: true, notBeforeToday: BOOKING_TIMEZONE },
-    },
-    {
-      name: 'preferredTime',
-      label: 'Preferred time',
-      rules: { required: true, oneOf: CONSULTATION_TIME_SLOTS },
-    },
+    { name: 'preferredLevel', label: 'Preferred level', rules: { maxLength: 120 } },
   ],
 };
 

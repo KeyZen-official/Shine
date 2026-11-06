@@ -1,5 +1,3 @@
-import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
 import {
   getContact,
   getDestinations,
@@ -15,13 +13,12 @@ import { EditorialHero } from '../../components/sections/EditorialHero';
 import { WhoWeAreSection } from '../../components/sections/WhoWeAreSection';
 import { pickImage } from '../../lib/media';
 import { SectionShell } from '../../components/ui/SectionShell';
-import { DestinationCard } from '../../components/cards/DestinationCard';
+import { ExpandableDestinations } from '../../components/sections/ExpandableDestinations';
 import { ValueMatrix } from '../../components/sections/ValueMatrix';
 import { ProcessTimeline } from '../../components/sections/ProcessTimeline';
 import { FinalCta } from '../../components/sections/FinalCta';
 import { StudentFeedbackSection } from '../../components/sections/StudentFeedbackSection';
 import { FaqAccordion } from '../../components/ui/faq-chat-accordion';
-import { Button } from '../../components/ui/Button';
 import { ServicesSection } from '../../components/sections/ServicesSection';
 import { TestPrepSection } from '../../components/sections/TestPrepSection';
 
@@ -56,7 +53,7 @@ export default function HomePage() {
   const sections = home ?? {};
   const headings = sections.sectionHeadings ?? {};
 
-  const destinations = getDestinations().slice(0, 6);
+  const destinations = getDestinations();
   const services = getServices();
   const testPreparation = getTestPreparation();
   const faqs = getSiteFaqs();
@@ -140,23 +137,9 @@ export default function HomePage() {
         title={headings.destinations ?? 'Explore study destinations'}
         intro={headings.destinationsIntro}
         surface="white"
-        action={
-          destinations.length > 0 ? (
-            <Button href="/destinations" variant="secondary">
-              All destinations
-              <ArrowRight className="h-4 w-4" aria-hidden="true" />
-            </Button>
-          ) : null
-        }
       >
         {destinations.length > 0 ? (
-          <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {destinations.map((destination, index) => (
-              <li key={destination.slug}>
-                <DestinationCard destination={destination} index={index} />
-              </li>
-            ))}
-          </ul>
+          <ExpandableDestinations destinations={destinations} />
         ) : null}
       </SectionShell>
 

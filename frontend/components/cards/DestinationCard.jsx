@@ -19,6 +19,8 @@ const GENERATED_DESTINATION_IMAGES = {
   dubai: '/destinations/dubai.jpg',
   europe: '/destinations/europe.jpg',
   malaysia: '/destinations/malaysia.jpg',
+  singapore: '/destinations/singapore.jpg',
+  france: '/destinations/france.jpg',
 };
 
 const DESTINATION_TAGS = {
@@ -32,6 +34,8 @@ const DESTINATION_TAGS = {
   dubai: ['Global Campus Hub', 'Tax-Free Career', 'Fast Visa'],
   europe: ['Schengen Mobility', 'Bologna System', 'Multilingual'],
   malaysia: ['Twinning Degrees', 'Affordable Living', 'Asian Gateway'],
+  singapore: ['World-Class Unis', 'Safe City', 'Asian Hub'],
+  france: ['Grande École', 'EU Mobility', 'Low Tuition'],
 };
 
 const DESTINATION_DESCRIPTIONS = {
@@ -45,6 +49,8 @@ const DESTINATION_DESCRIPTIONS = {
   dubai: 'Branch campuses of premier global universities, thriving economic hub, tax-free earnings, and rapid visa turnaround.',
   europe: 'Rich academic heritage across European nations, affordable tuition fees, and seamless continental mobility.',
   malaysia: 'Cost-effective international degree twinning from British and Australian universities in a vibrant Asian hub.',
+  singapore: 'World-class universities in a thriving global city, strong industry links, and excellent post-study career pathways.',
+  france: 'Prestigious Grande Écoles and public universities, affordable tuition, and access to the wider European job market.',
 };
 
 const DISC = 64; // the arrow disc, px
@@ -82,6 +88,7 @@ export function DestinationCard({
   accent = '#D00100',
   accentForeground = '#FFFFFF',
   className,
+  showRegionBadge = true,
 }) {
   const resolvedSurface = resolveSurfaceColor(surface);
 
@@ -139,7 +146,7 @@ export function DestinationCard({
           />
 
           {/* Region or Popularity Badge */}
-          {regionLabel && (
+          {showRegionBadge && regionLabel && (
             <div className="pointer-events-none absolute left-4 top-4 z-10 flex items-center">
               <span className="inline-flex items-center gap-1.5 rounded-full border border-white/30 bg-navy/85 px-3 py-1 font-heading text-micro font-semibold uppercase tracking-[0.1em] text-white shadow-sm backdrop-blur-md">
                 <MapPin className="h-3 w-3 text-accent-onNavy" aria-hidden="true" />

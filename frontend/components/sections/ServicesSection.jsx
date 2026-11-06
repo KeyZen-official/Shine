@@ -328,13 +328,12 @@ export function ServicesSection({ services }) {
               {items.map((service) => {
                 const IconComponent = service.icon;
                 return (
-                  <Link
+                  <div
                     key={service.id}
-                    href={service.href}
-                    className="group relative flex items-center gap-4 sm:gap-5 bg-white rounded-[28px] sm:rounded-[36px] py-4 sm:py-4.5 px-5 sm:px-7 border border-navy/5 shadow-[0_4px_24px_rgba(20,40,64,0.06)] hover:shadow-[0_12px_32px_rgba(20,40,64,0.12)] hover:-translate-y-1 transition-all duration-250 w-full"
+                    className="group relative flex items-center gap-4 sm:gap-5 bg-white rounded-[28px] sm:rounded-[36px] py-4 sm:py-4.5 px-5 sm:px-7 border border-navy/5 shadow-[0_4px_24px_rgba(20,40,64,0.06)] w-full"
                   >
                     {/* Left Icon Pill with Mint Background */}
-                    <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#E5F2EC] flex items-center justify-center shrink-0 transition-transform duration-250 group-hover:scale-105">
+                    <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#E5F2EC] flex items-center justify-center shrink-0">
                       <IconComponent className="h-7 w-7 sm:h-8 sm:w-8 text-navy stroke-[1.8]" />
                     </div>
 
@@ -343,19 +342,14 @@ export function ServicesSection({ services }) {
 
                     {/* Title & Description */}
                     <div className="flex-1 min-w-0 pr-1">
-                      <h3 className="font-heading font-extrabold text-base sm:text-[1.18rem] text-navy leading-snug group-hover:text-accent transition-colors">
+                      <h3 className="font-heading font-extrabold text-base sm:text-[1.18rem] text-navy leading-snug">
                         {service.title}
                       </h3>
                       <p className="text-xs sm:text-[0.915rem] text-charcoal/70 leading-normal line-clamp-2 mt-0.5 sm:mt-1">
                         {service.description}
                       </p>
                     </div>
-
-                    {/* Right Outlined Arrow Circle Button */}
-                    <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full border-2 border-accent flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-white transition-all shrink-0 ml-1">
-                      <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5 group-hover:translate-x-0.5 transition-transform stroke-[2.2]" />
-                    </div>
-                  </Link>
+                  </div>
                 );
               })}
             </div>

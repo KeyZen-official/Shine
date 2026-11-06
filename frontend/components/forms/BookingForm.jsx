@@ -1,23 +1,29 @@
 'use client';
 
-import { CalendarCheck, Clock } from 'lucide-react';
+import { AlertCircle, CalendarCheck, Check, Clock } from 'lucide-react';
 import { FormErrorSummary, FormField, SpamGuardFields } from './FormField';
 import { Turnstile } from './Turnstile';
 import { useLeadForm } from './useLeadForm';
 import { Button } from '../ui/Button';
-import { consultationDescriptor, todayInZone } from '../../shared/validation';
-import { CONSULTATION_TIME_SLOTS } from '../../shared/constants';
-import { formatDate, formatTime } from '../../lib/format';
+import { consultationDescriptor } from '../../shared/validation';
+
+const STUDY_LEVEL_OPTIONS = [
+  "Bachelor's Degree (Undergraduate)",
+  "Master's Degree (Postgraduate)",
+  'Diploma / Advanced Diploma',
+  'Doctorate / PhD',
+  'Certificate / Vocational',
+  'Other',
+];
 
 const EMPTY = {
   studentName: '',
   email: '',
   phone: '',
-  preferredCountry: '',
+  preferredCountry: [],
+  preferredLevel: '',
   preferredCourse: '',
   currentQualification: '',
-  preferredDate: '',
-  preferredTime: '',
 };
 
 export function BookingForm({ countries = [] }) {
@@ -27,9 +33,18 @@ export function BookingForm({ countries = [] }) {
     initialValues: EMPTY,
   });
 
-  // The native date picker enforces the floor too, so a past date is hard
-  // to enter as well as rejected if it is.
-  const minDate = todayInZone();
+  const selectedCountries = Array.isArray(form.values.preferredCountry)
+    ? form.values.preferredCountry
+    : form.values.preferredCountry
+    ? [form.values.preferredCountry]
+    : [];
+
+  const toggleCountry = (countryName) => {
+    const next = selectedCountries.includes(countryName)
+      ? selectedCountries.filter((c) => c !== countryName)
+      : [...selectedCountries, countryName];
+    form.setValue('preferredCountry', next);
+  };
 
   if (form.result) {
     return (
@@ -41,8 +56,7 @@ export function BookingForm({ countries = [] }) {
         <CalendarCheck className="h-10 w-10 text-[#1F6B4A]" aria-hidden="true" />
         <h2 className="mt-4 text-h2 font-bold">Your consultation is requested</h2>
         <p className="mt-3 max-w-prose text-body text-charcoal-70">
-          A counsellor will confirm the slot by email or phone. If the time you chose is
-          unavailable we will offer the nearest alternatives.
+          A counsellor will contact you shortly by email or phone to arrange your session.
         </p>
 
         {/* The confirmation echoes exactly what was submitted, so the
@@ -54,22 +68,20 @@ export function BookingForm({ countries = [] }) {
               {form.result.reference}
             </dd>
           </div>
+          {form.result.preferredLevel ? (
+            <div className="flex items-center justify-between gap-4 py-3">
+              <dt className="text-caption text-charcoal-70">Preferred level</dt>
+              <dd className="font-heading text-caption font-semibold text-navy">
+                {form.result.preferredLevel}
+              </dd>
+            </div>
+          ) : null}
           <div className="flex items-center justify-between gap-4 py-3">
-            <dt className="text-caption text-charcoal-70">Requested date</dt>
-            <dd className="font-heading text-caption font-semibold text-navy">
-              {formatDate(form.result.preferredDate)}
-            </dd>
-          </div>
-          <div className="flex items-center justify-between gap-4 py-3">
-            <dt className="text-caption text-charcoal-70">Requested time</dt>
-            <dd className="font-heading text-caption font-semibold text-navy">
-              {formatTime(form.result.preferredTime)}
-            </dd>
-          </div>
-          <div className="flex items-center justify-between gap-4 py-3">
-            <dt className="text-caption text-charcoal-70">Destination</dt>
-            <dd className="font-heading text-caption font-semibold text-navy">
-              {form.result.preferredCountry}
+            <dt className="text-caption text-charcoal-70">Destination(s)</dt>
+            <dd className="font-heading text-caption font-semibold text-navy text-right">
+              {Array.isArray(form.result.preferredCountry)
+                ? form.result.preferredCountry.join(', ')
+                : form.result.preferredCountry}
             </dd>
           </div>
         </dl>
@@ -130,22 +142,53 @@ export function BookingForm({ countries = [] }) {
         error={form.fieldErrors.phone}
       />
 
+      {/* Multi-destination selector */}
+      <div>
+        <label className="mb-2 block font-heading text-caption font-semibold text-navy">
+          Preferred destinations
+          <span className="ml-1 text-accent" aria-hidden="true">*</span>
+          <span className="ml-2 font-normal text-charcoal-50">(Select one or more)</span>
+        </label>
+        <div className="flex flex-wrap gap-2 pt-1">
+          {countries.map((country) => {
+            const isSelected = selectedCountries.includes(country.name);
+            return (
+              <button
+                type="button"
+                key={country.slug || country.name}
+                onClick={() => toggleCountry(country.name)}
+                className={`inline-flex items-center gap-1.5 rounded-full px-3.5 py-1.5 font-heading text-caption font-semibold transition-all duration-150 ${
+                  isSelected
+                    ? 'bg-navy text-white shadow-sm ring-2 ring-accent'
+                    : 'border border-navy/15 bg-white text-charcoal hover:border-navy/40 hover:bg-sage/20'
+                }`}
+              >
+                {isSelected && <Check className="h-3.5 w-3.5 text-accent" aria-hidden="true" />}
+                {country.name}
+              </button>
+            );
+          })}
+        </div>
+        {form.fieldErrors.preferredCountry && (
+          <p className="mt-2 flex items-start gap-1.5 text-caption text-accent">
+            <AlertCircle className="mt-0.5 h-3.5 w-3.5 shrink-0" aria-hidden="true" />
+            {form.fieldErrors.preferredCountry}
+          </p>
+        )}
+      </div>
+
+      {/* Preferred Level with dropdown */}
       <FormField
-        label="Preferred country"
-        name="preferredCountry"
+        label="Preferred study level"
+        name="preferredLevel"
         as="select"
         required
-        options={countries.map((country) => country.name)}
-        placeholder="Select a destination"
-        hint={
-          countries.length === 0
-            ? 'No destinations are published yet. Send us an enquiry instead and we will advise directly.'
-            : undefined
-        }
-        value={form.values.preferredCountry}
+        options={STUDY_LEVEL_OPTIONS}
+        placeholder="Select your preferred study level"
+        value={form.values.preferredLevel}
         onChange={form.handleChange}
         onBlur={form.handleBlur}
-        error={form.fieldErrors.preferredCountry}
+        error={form.fieldErrors.preferredLevel}
       />
 
       <FormField
@@ -167,35 +210,6 @@ export function BookingForm({ countries = [] }) {
         onBlur={form.handleBlur}
         error={form.fieldErrors.currentQualification}
       />
-
-      <div className="grid gap-5 sm:grid-cols-2">
-        <FormField
-          label="Preferred date"
-          name="preferredDate"
-          type="date"
-          required
-          min={minDate}
-          value={form.values.preferredDate}
-          onChange={form.handleChange}
-          onBlur={form.handleBlur}
-          error={form.fieldErrors.preferredDate}
-        />
-        <FormField
-          label="Preferred time"
-          name="preferredTime"
-          as="select"
-          required
-          options={CONSULTATION_TIME_SLOTS.map((slot) => ({
-            value: slot,
-            label: formatTime(slot),
-          }))}
-          placeholder="Select a slot"
-          value={form.values.preferredTime}
-          onChange={form.handleChange}
-          onBlur={form.handleBlur}
-          error={form.fieldErrors.preferredTime}
-        />
-      </div>
 
       <SpamGuardFields honeypot={form.honeypot} onHoneypotChange={form.setHoneypot} />
       <Turnstile onToken={form.setTurnstileToken} />

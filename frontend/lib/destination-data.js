@@ -2736,6 +2736,486 @@ export const DESTINATION_DATA = {
 ],
   },
 
+  singapore: {
+    heroIntro: "Study in Asia's premier education and financial hub, home to world-renowned research universities and high-growth global industries.",
+    heroBenefits: [
+      { icon: 'GraduationCap', label: 'Top Asian Universities', sub: 'NUS & NTU in Global Top 30' },
+      { icon: 'Briefcase', label: 'Global Tech & Finance Hub', sub: 'Thriving MNC Headquarters' },
+      { icon: 'Users', label: 'Safe & Multicultural City', sub: 'High Quality of Living' },
+      { icon: 'Compass', label: 'English-Taught Degrees', sub: 'Globally Recognized' },
+    ],
+    overview: {
+      eyebrow: 'OVERVIEW',
+      title: 'Why Choose Singapore?',
+      image: '/destinations/singapore.jpg',
+      imageBadge: 'Asia’s Global Gateway to Innovation, Research & Careers',
+      points: [
+        {
+          title: "World-class academic standards",
+          description: "Home to National University of Singapore (NUS) and Nanyang Technological University (NTU), consistently ranked in the global top 30.",
+          icon: "Award"
+        },
+        {
+          title: "Global financial and business capital",
+          description: "Over 7,000 multinational corporations have regional headquarters in Singapore, offering exceptional internship and job pathways.",
+          icon: "TrendingUp"
+        },
+        {
+          title: "English-taught curriculums",
+          description: "English is the primary language of instruction and administration, ensuring smooth transition for international students.",
+          icon: "BookOpen"
+        },
+        {
+          title: "Safe, clean, and vibrant lifestyle",
+          description: "Ranked among the safest, greenest, and most technologically advanced cities in the world.",
+          icon: "Users"
+        },
+        {
+          title: "Tuition Grant Scheme",
+          description: "Eligible international students can receive tuition subsidies from the Singapore Ministry of Education in exchange for working 3 years in Singapore.",
+          icon: "Compass"
+        },
+        {
+          title: "Proximity to India",
+          description: "Just a 4.5 to 5-hour direct flight from Mumbai and other major Indian metros, enabling easy home visits.",
+          icon: "FlaskConical"
+        }
+      ],
+    },
+    popularCourses: [
+      {
+        title: "Computer Science & Artificial Intelligence",
+        shortTitle: "Computer Science & AI",
+        description: "Study cutting-edge computing, machine learning, and fintech at Asia's premier tech research labs.",
+        icon: "Code2",
+        image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=600&q=80",
+        href: "/services"
+      },
+      {
+        title: "Business & Management",
+        description: "Develop global business leadership, supply chain management, and entrepreneurship in a top corporate hub.",
+        icon: "Briefcase",
+        image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80",
+        href: "/services"
+      },
+      {
+        title: "Finance & Quantitative Economics",
+        description: "Access world-leading financial institutions, investment banking, and capital markets analytics.",
+        icon: "TrendingUp",
+        image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=600&q=80",
+        href: "/services"
+      },
+      {
+        title: "Engineering (Mechanical, Electrical, Civil)",
+        description: "Advanced engineering programs with world-class laboratory facilities and strong industry collaboration.",
+        icon: "Cpu",
+        image: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80",
+        href: "/services"
+      },
+      {
+        title: "Biomedical Sciences & Biotechnology",
+        description: "Leverage Singapore's massive Biopolis ecosystem for pharmaceutical, biomedical, and clinical research.",
+        icon: "HeartPulse",
+        image: "https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?auto=format&fit=crop&w=600&q=80",
+        href: "/services"
+      },
+      {
+        title: "Data Science & Business Analytics",
+        description: "Combine statistical modeling, machine learning, and decision sciences for digital business leadership.",
+        icon: "Database",
+        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80",
+        href: "/services"
+      }
+    ],
+    topUniversities: [
+      {
+        name: "National University of Singapore (NUS)",
+        location: "Kent Ridge, Singapore",
+        badge: "NUS",
+        color: "#EF7C00",
+        difficulty: "#1 in Asia | Top 10 Globally",
+        creators: "Flagship Comprehensive Research University",
+        imageUrl: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=800&q=80",
+        stat1Label: "Intakes",
+        stat1Value: "August & January",
+        stat2Label: "Degrees",
+        stat2Value: "BSc, BEng, MSc, MBA",
+        stat3Label: "Advisory",
+        stat3Value: "Full Support",
+        href: "/contact"
+      },
+      {
+        name: "Nanyang Technological University (NTU)",
+        location: "Jurong West, Singapore",
+        badge: "NTU",
+        color: "#C1272D",
+        difficulty: "Global Top 20 for Engineering & Tech",
+        creators: "Renowned Smart Campus & Innovation",
+        imageUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=800&q=80",
+        stat1Label: "Intakes",
+        stat1Value: "August Intake",
+        stat2Label: "Degrees",
+        stat2Value: "BEng, BSc, MSc",
+        stat3Label: "Advisory",
+        stat3Value: "Full Support",
+        href: "/contact"
+      },
+      {
+        name: "Singapore Management University (SMU)",
+        location: "City Centre, Singapore",
+        badge: "SMU",
+        color: "#002F6C",
+        difficulty: "Premier Specialized Business School",
+        creators: "Interactive Seminar-Style Pedagogy",
+        imageUrl: "https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=800&q=80",
+        stat1Label: "Intakes",
+        stat1Value: "August & January",
+        stat2Label: "Degrees",
+        stat2Value: "BBA, BSc, MSc, MBA",
+        stat3Label: "Advisory",
+        stat3Value: "Full Support",
+        href: "/contact"
+      },
+      {
+        name: "Singapore University of Technology and Design (SUTD)",
+        location: "Changi, Singapore",
+        badge: "SUTD",
+        color: "#008080",
+        difficulty: "Established in Collaboration with MIT",
+        creators: "Design-Centric Technology & AI",
+        imageUrl: "https://images.unsplash.com/photo-1576495199011-eb94736d05d6?auto=format&fit=crop&w=800&q=80",
+        stat1Label: "Intakes",
+        stat1Value: "May & September",
+        stat2Label: "Degrees",
+        stat2Value: "BEng, BSc, MDes",
+        stat3Label: "Advisory",
+        stat3Value: "Full Support",
+        href: "/contact"
+      },
+      {
+        name: "James Cook University Singapore (JCU)",
+        location: "Sims Drive, Singapore",
+        badge: "JCU Singapore",
+        color: "#004B87",
+        difficulty: "Direct Australian Degree in Singapore",
+        creators: "EduTrust Star Accredited Campus",
+        imageUrl: "https://images.unsplash.com/photo-1583373834259-46cc92173cb7?auto=format&fit=crop&w=800&q=80",
+        stat1Label: "Intakes",
+        stat1Value: "March, July, Nov",
+        stat2Label: "Degrees",
+        stat2Value: "BBus, MIT, MBA",
+        stat3Label: "Advisory",
+        stat3Value: "Full Support",
+        href: "/contact"
+      }
+    ],
+    admissionRequirements: {
+      eyebrow: 'ADMISSION REQUIREMENTS',
+      title: 'What Do You Need to Apply to Singapore?',
+      items: [
+        'Class 12 academic transcripts / Bachelor’s degree degree transcripts',
+        'English proficiency scores (IELTS / TOEFL / PTE)',
+        'Standardized entrance test scores (SAT for UG / GRE or GMAT for PG, depending on university)',
+        'Statement of Purpose (SOP) tailored to course focus',
+        'Two Letters of Recommendation (LOR)',
+        'Detailed resume or academic CV',
+        'Valid passport',
+      ],
+      note: 'Requirements vary by university and level of study. Contact Shine Consultant for profile evaluation.',
+    },
+    visaAssistance: {
+      eyebrow: 'VISA SUPPORT',
+      title: 'Student’s Pass (STP) Application Guidance',
+      image: '/imagery/usa-visa-passport.jpg',
+      items: [
+        'Solar+ / ICA student pass system filing',
+        'In-Principle Approval (IPA) letter application',
+        'Financial solvency and bank balance documentation',
+        'Health check and medical examination coordination',
+        'E-appointment and biometric booking at ICA Singapore',
+        'Pre-departure orientation & accommodation guidance',
+      ],
+      ctaText: 'Talk to Our Singapore Visa Experts',
+      ctaHref: '/services/visa-assistance',
+    },
+    scholarships: {
+      eyebrow: 'SCHOLARSHIPS',
+      title: 'Singapore Scholarships & Tuition Grants',
+      image: '/imagery/usa-student-scholarship.jpg',
+      items: [
+        "Singapore MOE Tuition Grant (up to 50% tuition subsidy)",
+        "NUS & NTU Global Merit Undergraduate Scholarships",
+        "Singapore International Graduate Award (SINGA)",
+        "ASEAN Undergraduate Scholarships",
+        "University-specific postgraduate research scholarships"
+      ],
+      ctaText: 'Explore Singapore Scholarships',
+      ctaHref: '/contact',
+    },
+    faqs: [
+      {
+        question: "Why should Indian students choose Singapore for higher education?",
+        answer: "Singapore offers world-leading university rankings (NUS and NTU in global top 30), English-taught curriculums, proximity to India (only 4.5 hours flight), and unmatched career opportunities across Asia's largest MNC hub."
+      },
+      {
+        question: "What is the Singapore MOE Tuition Grant Scheme?",
+        answer: "The Tuition Grant Scheme is provided by the Singapore Government to help international students subsidize their tuition fees. In return, recipients sign a bond committing to work for a Singapore-registered company for 3 years upon graduation."
+      },
+      {
+        question: "Can international students work part-time in Singapore?",
+        answer: "Students registered with approved public institutions (like NUS, NTU, SMU, SUTD) can work part-time for up to 16 hours per week during term time and full-time during official vacation periods without a separate work permit."
+      },
+      {
+        question: "What are the English requirements for Singapore universities?",
+        answer: "Most undergraduate and graduate programmes require IELTS (typically 6.5 or higher), TOEFL (90+), or PTE Academic (62+). Some universities may waive test requirements for students with high English marks in Class 12."
+      },
+      {
+        question: "How long does a Singapore Student's Pass take to process?",
+        answer: "Once the university submits your application via the ICA SOLAR system, the In-Principle Approval (IPA) typically takes between 2 to 4 weeks to be issued."
+      }
+    ],
+  },
+
+  france: {
+    heroIntro: "Experience academic prestige, affordable tuition, and rich European culture at France's world-leading public universities and Grande Écoles.",
+    heroBenefits: [
+      { icon: 'GraduationCap', label: 'Prestigious Grande Écoles', sub: 'World-Renowned Business & Engineering' },
+      { icon: 'Briefcase', label: 'Up to 5-Yr Post-Study Work', sub: 'Dedicated Indian Alumni Visa' },
+      { icon: 'Users', label: 'Low Public Tuition Fees', sub: 'Heavily Subsidized by State' },
+      { icon: 'Compass', label: 'English-Taught Programs', sub: '1,500+ Fully in English' },
+    ],
+    overview: {
+      eyebrow: 'OVERVIEW',
+      title: 'Why Choose France?',
+      image: '/destinations/france.jpg',
+      imageBadge: 'European Excellence in Education, Research, Arts & Industry',
+      points: [
+        {
+          title: "World-class business & engineering institutions",
+          description: "France is home to globally top-ranked business schools (HEC Paris, INSEAD, ESSEC) and prestigious engineering Grande Écoles.",
+          icon: "Award"
+        },
+        {
+          title: "Special 5-year post-study work visa for Indians",
+          description: "Indian students completing a master's degree in France are eligible for a 5-year short-stay Schengen visa to maintain business and career ties.",
+          icon: "TrendingUp"
+        },
+        {
+          title: "1,500+ programs taught entirely in English",
+          description: "You do not need to be fluent in French to pursue degrees in business, management, computer science, and engineering.",
+          icon: "BookOpen"
+        },
+        {
+          title: "Government subsidized housing and healthcare",
+          description: "International students receive CAF housing allowances (up to 30-40% rent refund) and free French national healthcare (Sécurité Sociale).",
+          icon: "Compass"
+        },
+        {
+          title: "Gateway to the European Union (Schengen)",
+          description: "Travel freely across 29 Schengen member countries for study, internships, conferences, and leisure.",
+          icon: "Users"
+        },
+        {
+          title: "Generous post-study stay back permit (APS)",
+          description: "Graduates are granted a 2-year post-study job seeker visa (Autorisation Provisoire de Séjour / RECE) to find qualified employment.",
+          icon: "FlaskConical"
+        }
+      ],
+    },
+    popularCourses: [
+      {
+        title: "International Management & MBA",
+        shortTitle: "Management & MBA",
+        description: "Study at the world's most acclaimed business schools with elite corporate recruitment networks.",
+        icon: "Briefcase",
+        image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80",
+        href: "/services"
+      },
+      {
+        title: "Computer Science, Data Science & AI",
+        description: "Leverage France's booming tech startup ecosystem, Station F in Paris, and leading research institutes.",
+        icon: "Code2",
+        image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=600&q=80",
+        href: "/services"
+      },
+      {
+        title: "Luxury Brand Management & Fashion",
+        description: "Learn in the fashion and luxury capital of the world, home to LVMH, Kering, Chanel, and Hermès.",
+        icon: "Award",
+        image: "https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&w=600&q=80",
+        href: "/services"
+      },
+      {
+        title: "Aerospace, Mechanical & Automotive Engineering",
+        description: "France leads European aerospace (Airbus, Safran, Dassault) with cutting-edge engineering programs.",
+        icon: "Cpu",
+        image: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80",
+        href: "/services"
+      },
+      {
+        title: "Culinary Arts & Hospitality Management",
+        description: "Train at prestigious academies in gastronomy, wine tourism, and luxury hospitality.",
+        icon: "HeartPulse",
+        image: "https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?auto=format&fit=crop&w=600&q=80",
+        href: "/services"
+      },
+      {
+        title: "Finance & Quantitative Economics",
+        description: "Top-ranked master's in finance programs preparing students for international investment banking in Paris and London.",
+        icon: "TrendingUp",
+        image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=600&q=80",
+        href: "/services"
+      }
+    ],
+    topUniversities: [
+      {
+        name: "Sorbonne University",
+        location: "Paris, France",
+        badge: "Sorbonne",
+        color: "#0F2042",
+        difficulty: "Historic World-Ranked Public University",
+        creators: "Pioneering Arts, Humanities & Sciences",
+        imageUrl: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=800&q=80",
+        stat1Label: "Intakes",
+        stat1Value: "September Intake",
+        stat2Label: "Degrees",
+        stat2Value: "Licence, Master, PhD",
+        stat3Label: "Advisory",
+        stat3Value: "Full Support",
+        href: "/contact"
+      },
+      {
+        name: "HEC Paris",
+        location: "Jouy-en-Josas, Paris",
+        badge: "HEC Paris",
+        color: "#C2002F",
+        difficulty: "#1 Business School in Europe (FT)",
+        creators: "Elite Global Corporate Network",
+        imageUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=800&q=80",
+        stat1Label: "Intakes",
+        stat1Value: "September & January",
+        stat2Label: "Degrees",
+        stat2Value: "MIM, MSc, MBA",
+        stat3Label: "Advisory",
+        stat3Value: "Full Support",
+        href: "/contact"
+      },
+      {
+        name: "École Polytechnique (Institut Polytechnique de Paris)",
+        location: "Palaiseau, Paris",
+        badge: "Polytechnique",
+        color: "#002B49",
+        difficulty: "France's Foremost Engineering Grande École",
+        creators: "World-Class Science, Tech & Math",
+        imageUrl: "https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=800&q=80",
+        stat1Label: "Intakes",
+        stat1Value: "September Intake",
+        stat2Label: "Degrees",
+        stat2Value: "BSc, Ingénieur, MSc",
+        stat3Label: "Advisory",
+        stat3Value: "Full Support",
+        href: "/contact"
+      },
+      {
+        name: "INSEAD",
+        location: "Fontainebleau, France",
+        badge: "INSEAD",
+        color: "#006633",
+        difficulty: "Top-Ranked Global Business School",
+        creators: "The Business School for the World",
+        imageUrl: "https://images.unsplash.com/photo-1576495199011-eb94736d05d6?auto=format&fit=crop&w=800&q=80",
+        stat1Label: "Intakes",
+        stat1Value: "Jan & Aug Intakes",
+        stat2Label: "Degrees",
+        stat2Value: "MIM, MBA, Executive MBA",
+        stat3Label: "Advisory",
+        stat3Value: "Full Support",
+        href: "/contact"
+      },
+      {
+        name: "Sciences Po Paris",
+        location: "Paris, France",
+        badge: "Sciences Po",
+        color: "#E2001A",
+        difficulty: "World Leader in Social Sciences & Politics",
+        creators: "International Public Policy & Law",
+        imageUrl: "https://images.unsplash.com/photo-1583373834259-46cc92173cb7?auto=format&fit=crop&w=800&q=80",
+        stat1Label: "Intakes",
+        stat1Value: "September Intake",
+        stat2Label: "Degrees",
+        stat2Value: "BA, Master, MPA",
+        stat3Label: "Advisory",
+        stat3Value: "Full Support",
+        href: "/contact"
+      }
+    ],
+    admissionRequirements: {
+      eyebrow: 'ADMISSION REQUIREMENTS',
+      title: 'What Do You Need to Apply to France?',
+      items: [
+        'Academic mark sheets and transcripts (translated if required)',
+        'English proficiency scores (IELTS / TOEFL / PTE) for English-taught programs',
+        'Campus France dossier and Etudes en France registration',
+        'Statement of Purpose (SOP) emphasizing career motivation',
+        'Two Letters of Recommendation (LOR)',
+        'Detailed curriculum vitae (CV)',
+        'Valid passport',
+      ],
+      note: 'Campus France interview is mandatory for Indian applicants. Shine Consultant provides complete interview preparation.',
+    },
+    visaAssistance: {
+      eyebrow: 'VISA SUPPORT',
+      title: 'VLS-TS Long-Stay Student Visa & Campus France Support',
+      image: '/imagery/usa-visa-passport.jpg',
+      items: [
+        'Etudes en France (Campus France) online portal completion',
+        'Campus France interview coaching and prep',
+        'VFS France appointment booking and file preparation',
+        'Financial proof and blocked account guidance (minimum €615/month)',
+        'Long-stay student visa (VLS-TS) validation support',
+        'CAF housing subsidy registration guidance',
+      ],
+      ctaText: 'Talk to Our France Visa Specialists',
+      ctaHref: '/services/visa-assistance',
+    },
+    scholarships: {
+      eyebrow: 'SCHOLARSHIPS',
+      title: 'France Scholarships for Indian Students',
+      image: '/imagery/usa-student-scholarship.jpg',
+      items: [
+        "Charpak Scholarship Programme (Excellence & Master’s)",
+        "Eiffel Excellence Scholarship Programme",
+        "Erasmus+ European Union Scholarships",
+        "Franco-Indian Education Trust Scholarships",
+        "Institution-specific merit scholarships (HEC, ESSEC, EDHEC)"
+      ],
+      ctaText: 'Explore French Scholarships',
+      ctaHref: '/contact',
+    },
+    faqs: [
+      {
+        question: "Do I need to speak French to study in France?",
+        answer: "No. France offers more than 1,500 programs fully taught in English, especially at master's level in business, engineering, sciences, and hospitality. Basic French is helpful for everyday life and can be learned during your studies."
+      },
+      {
+        question: "What is the 5-year post-study visa benefit for Indian students?",
+        answer: "Under the bilateral agreement between France and India, Indian students who hold a master's degree or higher from a French institution are eligible for a 5-year short-stay Schengen circulation visa to travel, network, and maintain professional connections in France."
+      },
+      {
+        question: "What is the Campus France process?",
+        answer: "Campus France is the official agency for international students in France. Indian students must register on the 'Etudes en France' portal, upload their documents, and complete a short academic interview before applying for their student visa."
+      },
+      {
+        question: "Can international students work while studying in France?",
+        answer: "Yes. French law permits international students with a valid student visa to work up to 964 hours per year (approximately 60% of normal full-time working hours), earning at least the French minimum wage (SMIC)."
+      },
+      {
+        question: "What is the CAF housing allowance?",
+        answer: "CAF (Caisse d’Allocations Familiales) is a French government welfare program that provides financial assistance to all students, including international students, covering roughly 20% to 40% of monthly accommodation rent."
+      }
+    ],
+  },
+
 };
 
 /**

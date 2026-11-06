@@ -16,6 +16,8 @@ const FLAG_MAP = {
   'new-zealand': '🇳🇿',
   dubai: '🇦🇪',
   europe: '🇪🇺',
+  singapore: '🇸🇬',
+  france: '🇫🇷',
 };
 
 export function DestinationHero({ destination, pageData }) {

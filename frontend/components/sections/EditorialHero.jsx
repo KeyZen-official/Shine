@@ -108,7 +108,7 @@ function HeroContent({ content, stats = [], socialLinks = [], image, brandTaglin
               match the path's own coordinates (x 0.0204 → 0.8502) rather
               than being eyeballed, so the strip stays inside the cut-out
               at every width. */}
-          <div className="absolute left-[2%] right-[15%] top-0 z-10 flex h-[13.85%] items-center justify-between gap-4">
+          <div className="relative mb-2 flex items-center justify-between gap-4 sm:absolute sm:left-[2%] sm:right-[15%] sm:top-0 sm:z-10 sm:mb-0 sm:h-[13.85%]">
             <p className="flex items-center gap-2">
               <span className="animate-spin text-lead text-accent" aria-hidden="true">
                 ✱
@@ -398,12 +398,12 @@ function HeroContent({ content, stats = [], socialLinks = [], image, brandTaglin
                 animationNum={15}
                 timelineRef={heroRef}
                 customVariants={revealVariants}
-                className="grid w-full gap-3 sm:grid-cols-2"
+                className="flex w-full justify-start lg:justify-end"
               >
                 <Button
                   href="/book-consultation"
                   size="md"
-                  className="group h-auto min-h-12 px-4 py-2 text-caption leading-tight"
+                  className="group h-auto min-h-12 px-7 py-3 text-caption font-semibold leading-tight sm:text-body"
                 >
                   {content?.primaryCtaLabel ?? 'Book Free Consultation'}
                   <svg
@@ -418,15 +418,6 @@ function HeroContent({ content, stats = [], socialLinks = [], image, brandTaglin
                   >
                     <path d="M5 12h14M12 5l7 7-7 7" />
                   </svg>
-                </Button>
-
-                <Button
-                  href="/destinations"
-                  variant="secondary"
-                  size="md"
-                  className="h-auto min-h-12 px-4 py-2 text-caption leading-tight"
-                >
-                  {content?.secondaryCtaLabel ?? 'Explore Study Destinations'}
                 </Button>
               </TimelineContent>
             </div>

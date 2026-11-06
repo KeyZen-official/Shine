@@ -975,5 +975,232 @@ export const TEST_PREP_DATA = {
         'Join Shine Consultant’s GMAT Focus preparation programme and prepare for the world’s top business schools with confidence.',
     },
   },
+  sat: {
+    heroContent: {
+      eyebrow: 'DIGITAL SAT PREPARATION — SHINE CONSULTANT',
+      headline: 'Digital SAT Preparation — Aim for Top Global Universities.',
+      supportingLine:
+        'Master the adaptive digital SAT with targeted diagnostic testing, math logic, reading-writing drills, and expert coaching from Borivali West, Mumbai.',
+      primaryCtaLabel: 'Book Free Consultation',
+      primaryCtaHref: '/book-consultation',
+      secondaryCtaLabel: 'Explore Syllabus',
+      secondaryCtaHref: '#about-sat',
+    },
+    heroStats: [
+      {
+        value: '2 Modules',
+        label: 'adaptive test sections',
+        srLabel: 'Reading & Writing and Mathematics',
+      },
+      {
+        value: '2h 14m',
+        label: 'shorter digital test time',
+        srLabel: '2 hours 14 minutes total exam duration',
+      },
+      {
+        value: '400–1600',
+        label: 'total score scale',
+        srLabel: 'Scored out of 1600 total points',
+        featureLabel: 'Score Scale',
+      },
+    ],
+    benefitIndicators: [
+      {
+        icon: 'GraduationCap',
+        title: 'Top US Universities',
+        subtitle: 'Ivy League & Tier-1 admissions',
+      },
+      {
+        icon: 'Laptop',
+        title: 'Digital Adaptive Lab',
+        subtitle: 'Bluebook interface mock testing',
+      },
+      {
+        icon: 'Calculator',
+        title: 'Desmos Math Mastery',
+        subtitle: 'Built-in graphing calculator tips',
+      },
+      {
+        icon: 'TrendingUp',
+        title: 'Score Improvement',
+        subtitle: 'Target 1450+ with diagnostic plans',
+      },
+    ],
+    about: {
+      badgeTitle: 'Digital SAT',
+      badgeSubtitle: 'Scholastic Assessment Test',
+      overviewText:
+        'The SAT is a globally recognized standardised college admission test administered by the College Board. Designed for undergraduate admissions in the USA, Canada, Europe, Singapore, and leading Indian universities, the digital SAT features a streamlined, multistage adaptive format.',
+      cards: [
+        {
+          icon: 'Users',
+          title: 'Who Should Take It?',
+          description:
+            'High school students (Grades 11 and 12) planning to pursue undergraduate bachelor’s degrees in the United States, Canada, and global destinations.',
+        },
+        {
+          icon: 'Calendar',
+          title: 'Adaptive Format',
+          description:
+            'A 2-hour 14-minute digital exam featuring multistage adaptivity: performance in the first module determines the difficulty and scoring potential of the second module.',
+        },
+        {
+          icon: 'Clock',
+          title: 'Scoring & Scale',
+          description:
+            'Scored on a scale of 400 to 1600, combining 200–800 in Reading & Writing with 200–800 in Mathematics. No negative marking for incorrect guesses.',
+        },
+      ],
+    },
+    versions: {
+      eyebrow: 'TARGETED COACHING',
+      title: 'SAT Coaching Options',
+      items: [
+        {
+          title: 'Digital SAT Classroom Coaching',
+          subtitle: 'Interactive In-Person Batch at Borivali',
+          description:
+            'Comprehensive classroom instruction with certified trainers, weekly concept lectures, timed sectional drills, and guided Desmos calculator training.',
+          bullets: [
+            'Small batch sizes for individualized attention and doubt resolution',
+            'Official College Board Bluebook mock test series with score analytics',
+          ],
+          ctaLabel: 'Enquire for Classroom SAT',
+        },
+        {
+          title: 'One-on-One Personalized SAT Mentorship',
+          subtitle: 'Custom Pacing & Score Booster Program',
+          description:
+            'Tailored for students targeting top-tier 1500+ scores or needing focused improvement in specific areas like Advanced Math or Evidence-Based Reading.',
+          bullets: [
+            'Flexible scheduling around school curricula and board exams',
+            'Targeted error-log review and speed optimization strategies',
+          ],
+          ctaLabel: 'Enquire for 1-on-1 SAT',
+        },
+      ],
+    },
+    modules: [
+      {
+        title: 'Reading & Writing',
+        icon: 'BookOpen',
+        duration: '2 Modules • 64 Minutes total (54 Questions)',
+        focus: 'Evaluates comprehension of concise literary, historical, scientific, and humanities passages through Craft and Structure, Information and Ideas, Standard English Conventions, and Expression of Ideas.',
+        bullets: [
+          'Mastering short, single-question passages with high-utility academic vocabulary',
+          'Rhetorical analysis, central idea, command of quantitative and textual evidence',
+          'Grammar punctuation rules, boundaries, subject-verb agreement, and transitions',
+        ],
+      },
+      {
+        title: 'Mathematics',
+        icon: 'Calculator',
+        duration: '2 Modules • 70 Minutes total (44 Questions)',
+        focus: 'Assesses mathematical readiness for college through Algebra, Advanced Math, Problem-Solving and Data Analysis, and Geometry and Trigonometry with an integrated Desmos calculator throughout.',
+        bullets: [
+          'Linear equations, inequalities, systems of equations, and function notation',
+          'Quadratic, exponential, polynomial expressions, and radical equations',
+          'Ratios, percentages, probability, and statistics data interpretation',
+          'Lines, angles, triangles, circles, and right-angle trigonometry problem solving',
+        ],
+      },
+    ],
+    benefits: [
+      'Full-length adaptive digital mock tests on official Bluebook format',
+      'Extensive Desmos graphing calculator shortcuts and speed tactics',
+      'Personalized diagnostic study plan identifying weak question types',
+      'Comprehensive coverage of digital SAT Reading, Writing and Math syllabus',
+      'Doubt solving sessions and individual error-log analysis after every test',
+      'College Board registration assistance and college application profile guidance',
+    ],
+    teachingSteps: [
+      {
+        step: '01',
+        title: 'Diagnostic Benchmark',
+        description: 'Complete a full-length digital SAT diagnostic exam to determine your baseline and target score.',
+      },
+      {
+        step: '02',
+        title: 'Concept & Strategy Coaching',
+        description: 'Learn foundational math concepts, grammar rules, and reading evidence frameworks step-by-step.',
+      },
+      {
+        step: '03',
+        title: 'Desmos & Calculator Drills',
+        description: 'Master built-in Desmos graphing tools to solve complex quadratic and system equations in seconds.',
+      },
+      {
+        step: '04',
+        title: 'Adaptive Mock Series',
+        description: 'Experience timed multistage adaptive test modules that mirror the exact College Board scoring engine.',
+      },
+      {
+        step: '05',
+        title: 'Error Log & Test Readiness',
+        description: 'Review every incorrect answer with instructors to eliminate traps and build test-day confidence.',
+      },
+    ],
+    reasons: [
+      {
+        icon: 'Award',
+        title: 'Digital SAT Specialists',
+        description: 'Curriculum specifically aligned with the College Board digital adaptive testing system.',
+      },
+      {
+        icon: 'Calculator',
+        title: 'Integrated Math Logic',
+        description: 'Focus on mathematical reasoning and Desmos calculator mastery to achieve 750+ in Math.',
+      },
+      {
+        icon: 'Target',
+        title: 'High-Score Track Record',
+        description: 'Structured methodologies that have helped Mumbai students secure admissions in Ivy League & top US universities.',
+      },
+      {
+        icon: 'Layers',
+        title: 'Admissions Integration',
+        description: 'Seamless synergy between SAT coaching and university profile building, essays, and admissions guidance.',
+      },
+    ],
+    faqs: [
+      {
+        id: 1,
+        question: 'What is the format of the Digital SAT?',
+        answer:
+          'The digital SAT is 2 hours and 14 minutes long, divided into two sections: Reading & Writing (64 minutes, 54 questions across two 32-minute modules) and Math (70 minutes, 44 questions across two 35-minute modules). A 10-minute break is provided between the sections.',
+        icon: '💻',
+      },
+      {
+        id: 2,
+        question: 'How does multistage adaptivity work on the SAT?',
+        answer:
+          'Each section consists of two modules. The first module contains an even mix of easy, medium, and hard questions. Depending on your performance in the first module, the second module will be either more difficult (allowing you to reach higher score bands up to 800) or easier.',
+      },
+      {
+        id: 3,
+        question: 'Can I use a calculator throughout the entire Math section?',
+        answer:
+          'Yes! On the digital SAT, a calculator is permitted for the entire Math section. You can use the built-in Desmos graphing calculator embedded directly inside the testing app, or bring your own College Board approved graphing calculator.',
+        icon: '🧮',
+      },
+      {
+        id: 4,
+        question: 'What is considered a competitive SAT score for top US universities?',
+        answer:
+          'Scores range from 400 to 1600. A score of 1200+ is competitive for many good universities; 1350–1450+ is competitive for top 50 US institutions; and 1500–1550+ is ideal for Ivy League universities (Harvard, Yale, Princeton, Columbia) and elite colleges (MIT, Stanford).',
+      },
+      {
+        id: 5,
+        question: 'When should high school students start SAT coaching at Shine Consultant?',
+        answer:
+          'We recommend students begin SAT preparation during the summer before Grade 11 or early in Grade 11. This allows ample time for 2 to 3 attempts (typically in August, October, December, or March/May) without clashing with Grade 12 board examinations.',
+      },
+    ],
+    finalCta: {
+      headline: 'Ready to Achieve Your Target SAT Score?',
+      description:
+        "Join Shine Consultant's SAT preparation programme and get the score you need for your dream university.",
+    },
+  },
 };
 

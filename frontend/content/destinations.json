@@ -278,5 +278,61 @@
     "lastReviewed": "",
     "heroImage": "/destinations/europe.jpg",
     "cardImage": "/destinations/europe.jpg"
+  },
+  {
+    "name": "Singapore",
+    "slug": "singapore",
+    "region": "asia",
+    "destinationType": "city",
+    "isPopular": false,
+    "displayOrder": 11,
+    "status": "published",
+    "shortIntroduction": "",
+    "content": {
+      "countryIntroduction": "",
+      "whyStudyThere": "",
+      "educationSystem": "",
+      "popularCoursesNote": "",
+      "admissionRequirements": "",
+      "englishRequirements": "",
+      "applicationProcess": "",
+      "visaGuidance": "",
+      "scholarships": "",
+      "accommodation": "",
+      "partTimeWork": "",
+      "costOfLiving": []
+    },
+    "faqs": [],
+    "lastReviewed": "",
+    "heroImage": "/destinations/singapore.jpg",
+    "cardImage": "/destinations/singapore.jpg"
+  },
+  {
+    "name": "France",
+    "slug": "france",
+    "region": "europe",
+    "destinationType": "country",
+    "isPopular": false,
+    "displayOrder": 12,
+    "status": "published",
+    "shortIntroduction": "",
+    "content": {
+      "countryIntroduction": "",
+      "whyStudyThere": "",
+      "educationSystem": "",
+      "popularCoursesNote": "",
+      "admissionRequirements": "",
+      "englishRequirements": "",
+      "applicationProcess": "",
+      "visaGuidance": "",
+      "scholarships": "",
+      "accommodation": "",
+      "partTimeWork": "",
+      "costOfLiving": []
+    },
+    "faqs": [],
+    "lastReviewed": "",
+    "heroImage": "/destinations/france.jpg",
+    "cardImage": "/destinations/france.jpg"
   }
 ]

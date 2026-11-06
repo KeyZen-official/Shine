@@ -106,7 +106,7 @@ export const InfoCard = ({
           padding: "0 0 8px 0",
         }}
       >
-        <div style={{ width: "100%", position: "relative", overflow: "hidden" }}>
+        <div style={{ width: "100%", height: 175, position: "relative", overflow: "hidden", flexShrink: 0 }}>
           <img
             src={image}
             alt={title}
@@ -130,11 +130,11 @@ export const InfoCard = ({
         >
           <h1
             style={{
-              fontSize: 21,
+              fontSize: 20,
               fontWeight: "bold",
               letterSpacing: "-.01em",
               lineHeight: "normal",
-              marginBottom: 5,
+              marginBottom: 4,
               color: hovered ? hoverTextColor : textColor,
               transition: "color 0.3s ease",
               position: "relative",
@@ -177,15 +177,16 @@ export const InfoCard = ({
           </h1>
           <p
             style={{
-              fontSize: 14,
+              fontSize: 13.5,
+              lineHeight: 1.45,
               color: textColor,
               display: "-webkit-box",
               WebkitLineClamp: 3,
               WebkitBoxOrient: "vertical",
               overflow: "hidden",
               direction: descDirection,
-              marginBottom: 0,
-              paddingBottom: 0,
+              margin: 0,
+              padding: 0,
               minHeight: 0,
             }}
           >
