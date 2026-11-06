@@ -52,11 +52,11 @@ function TopContactBar() {
         </div>
         <div className="flex items-center gap-6">
           <a
-            href="tel:+917303890969"
+            href="tel:+919137044882"
             className="inline-flex items-center gap-2 font-heading text-caption font-semibold text-navy transition-colors hover:text-accent"
           >
             <Phone className="h-3.5 w-3.5 text-accent" aria-hidden="true" />
-            <span>+91 73038 90969</span>
+            <span>+91 91370 44882</span>
           </a>
           <a
             href="mailto:enquiry@shineconsultant.co.in"
@@ -252,11 +252,11 @@ export function NavigationBar({ destinations = [], services = [], testPreparatio
           <div className="flex w-full flex-col gap-3 border-t border-navy/10 pt-5">
             <div className="flex flex-col gap-2 pb-2">
               <a
-                href="tel:+917303890969"
+                href="tel:+919137044882"
                 className="inline-flex items-center gap-2 text-caption font-semibold text-navy"
               >
                 <Phone className="h-4 w-4 text-accent" aria-hidden="true" />
-                +91 73038 90969
+                +91 91370 44882
               </a>
               <a
                 href="mailto:enquiry@shineconsultant.co.in"

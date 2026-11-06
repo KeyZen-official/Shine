@@ -37,7 +37,7 @@ import { GradientCard } from '../../../components/ui/gradient-card';
 export const metadata = buildMetadata({
   title: 'About Shine Consultant',
   description:
-    'An overseas education, migration consultancy and training organisation based in Mumbai, led by Mrs. Bhadika Mehta.',
+    'An overseas education, migration consultancy and training organisation based in Mumbai, led by Mrs. Bhadrika Mehta.',
   path: '/about',
 });
 
@@ -168,7 +168,7 @@ const CORE_COMMITMENTS = [
     icon: Award,
     title: '20+ Years Direct Experience',
     description:
-      'Under the leadership of Mrs. Bhadika Mehta, our advisory practice brings more than two decades of tested insight into global admissions and visa regulations.',
+      'Under the leadership of Mrs. Bhadrika Mehta, our advisory practice brings more than two decades of tested insight into global admissions and visa regulations.',
   },
   {
     icon: Layers,
@@ -191,7 +191,7 @@ const CORE_COMMITMENTS = [
  *   1. EditorialHero (Kept completely unchanged)
  *   2. Four Pillars Quick Strip (Visa, University, IELTS, Support)
  *   3. What We Do — What Shine Consultant Does (Asymmetric 5-card layout with photography)
- *   4. Leadership — Meet Our Leadership (Mrs. Bhadika Mehta profile, bio, quote)
+ *   4. Leadership — Meet Our Leadership (Mrs. Bhadrika Mehta profile, bio, quote)
  *   5. Who You Will Deal With — Our Team (Redesigned 3-pillar department breakdown with detailed scope)
  *   6. Our Methodology — Advisory Roadmap (Redesigned 4-stage chronological progression)
  *   7. Why Shine Consultant — Institutional Commitments (Added depth & value)
@@ -576,8 +576,8 @@ export default function AboutPage() {
               <div className="lg:col-span-3 flex justify-center lg:justify-start">
                 <div className="relative w-full max-w-[260px] aspect-[4/3.5] overflow-hidden rounded-2xl border-2 border-white/10 shadow-xl bg-[#0B192B]">
                   <img
-                    src="/imagery/leadership-bhadika-mehta.jpg"
-                    alt={`${leadership.name || 'Mrs. Bhadika Mehta'} — Founder & Director`}
+                    src="/imagery/leadership-bhadrika-mehta.jpg"
+                    alt={`${leadership.name || 'Mrs. Bhadrika Mehta'} — Founder & Director`}
                     className="w-full h-full object-cover"
                     loading="lazy"
                   />
@@ -587,7 +587,7 @@ export default function AboutPage() {
               {/* CENTRE: Name, Role & Biography */}
               <div className="lg:col-span-5 text-left">
                 <h3 className="text-2xl sm:text-3xl lg:text-[2rem] font-heading font-extrabold text-white leading-tight">
-                  {leadership.name || 'Mrs. Bhadika Mehta'}
+                  {leadership.name || 'Mrs. Bhadrika Mehta'}
                 </h3>
                 <p className="mt-1 font-heading text-sm font-semibold uppercase tracking-wider text-accent">
                   Founder &amp; Director
@@ -595,7 +595,7 @@ export default function AboutPage() {
                 <div className="mt-3 h-1 w-12 bg-accent rounded-full" />
                 <p className="mt-5 text-sm sm:text-base text-white/80 leading-relaxed">
                   {leadership.note ||
-                    'Shine Consultant is led by Mrs. Bhadika Mehta, who has more than 20 years of experience in overseas education and migration consulting.'}
+                    'Shine Consultant is led by Mrs. Bhadrika Mehta, who has more than 20 years of experience in overseas education and migration consulting.'}
                 </p>
               </div>
 
@@ -783,7 +783,7 @@ export default function AboutPage() {
               badgeText="Leadership Insight"
               badgeColor="#64748B"
               title="20+ Years Direct Experience"
-              description="Under the leadership of Mrs. Bhadika Mehta, our advisory practice brings more than two decades of tested insight into global admissions and visas."
+              description="Under the leadership of Mrs. Bhadrika Mehta, our advisory practice brings more than two decades of tested insight into global admissions and visas."
               ctaText="Meet leadership"
               ctaHref="#leadership"
               imageUrl="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80"

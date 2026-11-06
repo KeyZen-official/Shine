@@ -102,7 +102,7 @@ visible rather than looking like something lost in migration, and
 | "thousands of students settled abroad" | Unverified, and unfalsifiable as written. |
 | WhatsApp availability | The profile lists a mobile but never says it is on WhatsApp. Until confirmed, `whatsappNumber` stays empty and the floating button hides itself. |
 
-Mrs. Bhadika Mehta's 20+ years of experience **is** published, because the
+Mrs. Bhadrika Mehta's 20+ years of experience **is** published, because the
 profile states it about a named person.
 
 ## Nothing is sold through this website

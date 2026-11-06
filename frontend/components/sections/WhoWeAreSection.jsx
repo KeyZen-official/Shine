@@ -42,7 +42,7 @@ export function WhoWeAreSection({ content }) {
     ? toParagraphs(content.body)
     : [
         'Shine Consultant is an overseas education, migration consultancy and training organisation based in Mumbai. Our mission is to provide honest, unbiased and professional guidance to people looking to broaden their academic and professional horizons in overseas countries.',
-        'We are led by Mrs. Bhadika Mehta, and our team brings together qualified counsellors, experienced teachers for test preparation, and administrative staff who coordinate across departments.',
+        'We are led by Mrs. Bhadrika Mehta, and our team brings together qualified counsellors, experienced teachers for test preparation, and administrative staff who coordinate across departments.',
       ];
 
   return (

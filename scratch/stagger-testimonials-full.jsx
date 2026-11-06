@@ -42,7 +42,7 @@ export const TESTIMONIALS = [
   {
     tempId: 4,
     testimonial:
-      'Mrs. Bhadika Mehta and the team answered every query with unmatched patience. Secured admission for MS in Germany with complete documentation support.',
+      'Mrs. Bhadrika Mehta and the team answered every query with unmatched patience. Secured admission for MS in Germany with complete documentation support.',
     by: 'Pooja K., Technical University of Munich, Germany',
     imgSrc:
       'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=300&q=80',

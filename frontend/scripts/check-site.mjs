@@ -99,14 +99,14 @@ console.log(ok(!home.visible.includes('Find your course')), 'course search secti
 console.log(ok(!home.visible.includes('Universities we work with')), 'university rail removed');
 
 const contact = await page('/contact');
-console.log(ok(contact.visible.includes('Gold Crest Business Centre')), 'real office address');
-console.log(ok(contact.visible.includes('+91 73038 90969')), 'real phone');
+console.log(ok(contact.visible.includes('Gold Crest Business Center')), 'real office address');
+console.log(ok(contact.visible.includes('+91 91370 44882')), 'real phone');
 console.log(ok(contact.visible.includes('022-2892 8911 / 22 / 33')), 'landline as plain text');
 console.log(ok(contact.visible.includes('enquiry@shineconsultant.co.in')), 'real email');
 console.log(ok(contact.visible.includes('Interested service')), 'service field on the form');
 
 const about = await page('/about');
-console.log(ok(about.visible.includes('Mrs. Bhadika Mehta')), 'founder named');
+console.log(ok(about.visible.includes('Mrs. Bhadrika Mehta')), 'founder named');
 console.log(ok(about.visible.includes('leading organization in the domain')), 'vision');
 
 const ielts = await page('/test-preparation/ielts');

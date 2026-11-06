@@ -266,8 +266,8 @@ const CHECKS = [
      loudly in that situation instead. */
   ['/contact', 'the real office address is shown', /Gold Crest Business Centre/],
   ['/contact', 'the address names the locality', /Borivali \(West\)/],
-  ['/contact', 'the mobile number is shown', /\+91 73038 90969/],
-  ['/contact', 'the mobile number is dialable', /href="tel:\+917303890969"/, true, 'raw'],
+  ['/contact', 'the mobile number is shown', /\+91 91370 44882/],
+  ['/contact', 'the mobile number is dialable', /href="tel:\+919137044882"/, true, 'raw'],
   ['/contact', 'the landline group is shown', /022-2892 8911 \/ 22 \/ 33/],
   // The landline is printed as a stem with shared extensions, so it is
   // three numbers. Collapsing it into one href would not dial.
@@ -282,7 +282,7 @@ const CHECKS = [
   ['/about', 'the mission statement renders from the database', /honest, unbiased and professional guidance/],
   ['/about', 'the core values render', /Ethical practices/],
   ['/about', 'all four core values render', /Accountability in services/],
-  ['/about', 'the founder is named', /Mrs\. Bhadika Mehta/],
+  ['/about', 'the founder is named', /Mrs\. Bhadrika Mehta/],
   ['/about', 'the founder\u2019s role is shown', /Founder and Head/],
   ['/about', 'the team description renders', /unbiased and honest opinions/],
   [
