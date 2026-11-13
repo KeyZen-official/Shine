@@ -82,7 +82,7 @@ export default async function ServicePage({ params }) {
 
   const trail = [
     { label: 'Home', href: '/' },
-    { label: 'Our services', href: '/services' },
+    { label: 'Overseas Education Services', href: '/services' },
     { label: service.name, href: `/services/${service.slug}` },
   ];
 

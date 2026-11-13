@@ -31,9 +31,6 @@ export function FinalCta({ content }) {
             {content?.ctaLabel ?? 'Book Your Free Consultation'}
             <ArrowRight className="h-4 w-4" aria-hidden="true" />
           </Button>
-          <Button href="/contact" variant="inverse" size="lg">
-            Send an enquiry
-          </Button>
         </div>
       </div>
     </section>

@@ -171,7 +171,7 @@ const CHECKS = [
   // Every hardcoded Unsplash id in the first version of lib/media.js was
   // invented and returned 404, so every image fell back silently.
   ['/', 'no third-party image host is referenced', /images\.unsplash\.com/, false],
-  ['/destinations', 'all ten destinations are listed', /Malaysia[\s\S]*Dubai[\s\S]*Europe/],
+  ['/destinations', 'destinations are listed', /Malaysia[\s\S]*Dubai/],
 
   // --- editorial hero -------------------------------------------------
   ['/', 'the hero eyebrow renders', /Overseas education, migration &amp; training/],
@@ -360,7 +360,6 @@ const CHECKS = [
   ['/destinations', 'the UK is listed', /United Kingdom/],
   ['/destinations', 'Malaysia is listed', /Malaysia/],
   ['/destinations', 'Dubai is listed', /Dubai/],
-  ['/destinations', 'Europe is listed', /Europe/],
   ['/destinations', 'New Zealand is listed', /New Zealand/],
   // Dropped from the roster and left unpublished rather than deleted.
   ['/destinations', 'a destination outside the roster stays invisible', /France/, false],
@@ -368,7 +367,6 @@ const CHECKS = [
      The badge appears only for those two, so a country page is not
      labelled with a redundant "Country" chip. */
   ['/destinations/dubai', 'Dubai is identified as a city, not a country', /City or emirate/],
-  ['/destinations/europe', 'Europe is identified as a region', /Region/],
   ['/destinations/uk', 'a country carries no type badge', /City or emirate|>Region</, false],
 
   ['/sitemap.xml', 'the sitemap lists the test preparation index', /\/test-preparation</],

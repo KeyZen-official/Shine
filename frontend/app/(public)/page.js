@@ -84,17 +84,17 @@ export default function HomePage() {
       : null,
     services.length > 0
       ? {
-          value: services.length,
-          label: plural(services.length, 'service', 'services'),
+          value: 6,
+          label: 'services',
           srLabel: 'Services',
         }
       : null,
     allDestinations > 0
       ? {
-          value: allDestinations,
-          label: plural(allDestinations, 'study destination', 'study destinations'),
+          value: '10+',
+          label: 'study destinations',
           srLabel: 'Study destinations',
-          featureLabel: plural(allDestinations, 'destination', 'destinations'),
+          featureLabel: 'destinations',
         }
       : null,
   ].filter(Boolean);
@@ -180,7 +180,6 @@ export default function HomePage() {
               icon: i === 0 ? '🎓' : i === 4 ? '✈️' : undefined,
               iconPosition: i === 0 ? 'right' : 'left',
             }))}
-            timestamp="Updated for 2026 admissions & visa cycles"
             className="p-0"
           />
         ) : null}

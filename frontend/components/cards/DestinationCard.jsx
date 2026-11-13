@@ -17,40 +17,37 @@ const GENERATED_DESTINATION_IMAGES = {
   ireland: '/destinations/ireland.jpg',
   'new-zealand': '/destinations/new-zealand.jpg',
   dubai: '/destinations/dubai.jpg',
-  europe: '/destinations/europe.jpg',
   malaysia: '/destinations/malaysia.jpg',
   singapore: '/destinations/singapore.jpg',
   france: '/destinations/france.jpg',
 };
 
 const DESTINATION_TAGS = {
-  uk: ['Russell Group', '2-Yr PSW Visa', '1-Yr Masters'],
+  uk: ['Russell Group', '24 Months PSW Visa', '1-Yr Masters'],
   canada: ['PGWP Work Permit', 'Top Universities', 'Co-op Terms'],
-  australia: ['Group of Eight', 'Subclass 485', 'Post-Study Work'],
-  usa: ['OPT / STEM Extension', 'Ivy League & R1', 'Scholarships'],
-  germany: ['Low / Zero Tuition', '18-Mo Stay Back', 'STEM Excellence'],
-  ireland: ['European Tech Hub', '2-Yr Stay Back', 'English Speaking'],
+  australia: ['Group of Eight', 'PR Available', 'Post-Study Work'],
+  usa: ['OPT / STEM Extension', 'Ivy League', 'Scholarships'],
+  germany: ['Low / Zero Tuition', '18-24 Months Stay Back', 'STEM Excellence'],
+  ireland: ['Tech Hub', '2-Yr Stay Back', 'English Speaking'],
   'new-zealand': ['Post-Study Visa', 'Green List Careers', 'Safe & Scenic'],
   dubai: ['Global Campus Hub', 'Tax-Free Career', 'Fast Visa'],
-  europe: ['Schengen Mobility', 'Bologna System', 'Multilingual'],
   malaysia: ['Twinning Degrees', 'Affordable Living', 'Asian Gateway'],
   singapore: ['World-Class Unis', 'Safe City', 'Asian Hub'],
-  france: ['Grande École', 'EU Mobility', 'Low Tuition'],
+  france: ['Post Study Work Permit', 'EU Mobility', 'Low Tuition'],
 };
 
 const DESTINATION_DESCRIPTIONS = {
-  uk: 'World-renowned Russell Group universities, 2-year post-study work rights, and accelerated master’s programs.',
+  uk: 'World-renowned Russell Group universities, 18-month post-study work rights, and accelerated master’s programs.',
   canada: 'High-ranking research universities, welcoming multicultural cities, and clear post-graduation work permit pathways.',
   australia: 'Globally celebrated Group of Eight institutions, generous post-study stay-back rights, and superior quality of living.',
   usa: 'World-leading universities, flexible curricula, abundant research funding, and up to 3 years of STEM OPT.',
   germany: 'World-class tuition-free public universities, cutting-edge engineering and research, and 18-month job seeker visas.',
-  ireland: 'The European headquarters of global tech and pharma, 2-year post-study work rights, and English-speaking education.',
+  ireland: 'The headquarters of global tech and pharma, 2-year post-study work rights, and English-speaking education.',
   'new-zealand': 'All 8 universities ranked in the global top 3%, excellent research standards, and welcoming student environment.',
   dubai: 'Branch campuses of premier global universities, thriving economic hub, tax-free earnings, and rapid visa turnaround.',
-  europe: 'Rich academic heritage across European nations, affordable tuition fees, and seamless continental mobility.',
   malaysia: 'Cost-effective international degree twinning from British and Australian universities in a vibrant Asian hub.',
   singapore: 'World-class universities in a thriving global city, strong industry links, and excellent post-study career pathways.',
-  france: 'Prestigious Grande Écoles and public universities, affordable tuition, and access to the wider European job market.',
+  france: 'Prestigious Grande Écoles and public universities, affordable tuition, and access to the wider job market.',
 };
 
 const DISC = 64; // the arrow disc, px

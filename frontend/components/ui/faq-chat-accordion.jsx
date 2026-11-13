@@ -9,7 +9,7 @@ import { cn } from '@/lib/utils';
 export function FaqAccordion({
   data = [],
   className,
-  timestamp = 'Every day, 9:01 AM',
+  timestamp = null,
   questionClassName,
   answerClassName,
 }) {

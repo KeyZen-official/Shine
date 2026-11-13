@@ -30,7 +30,6 @@ export const DESTINATION_TYPES = [
 ];
 
 export const DESTINATION_REGIONS = [
-  { value: 'europe', label: 'Europe' },
   { value: 'north-america', label: 'North America' },
   { value: 'oceania', label: 'Oceania' },
   { value: 'asia', label: 'Asia' },

@@ -72,7 +72,7 @@ export const FOOTER_QUICK_LINKS = [
   { label: 'Home', href: '/' },
   { label: 'Study destinations', href: '/destinations' },
   { label: 'Test preparation', href: '/test-preparation' },
-  { label: 'Our services', href: '/services' },
+  { label: 'Overseas education services', href: '/services' },
   { label: 'About us', href: '/about' },
   { label: 'Contact us', href: '/contact' },
   { label: 'Book a consultation', href: '/book-consultation' },

@@ -151,7 +151,7 @@ export function ServicesSection({ services }) {
                 id="services-heading"
                 className="mt-3.5 text-4xl sm:text-5xl lg:text-[3.35rem] xl:text-[3.65rem] font-extrabold text-navy leading-[1.08] tracking-tight"
               >
-                <span className="text-navy">Our </span>
+                <span className="text-navy">Overseas Education </span>
                 <span className="relative inline-block text-accent">
                   Services
                   {/* Curved Red Smile Underline */}

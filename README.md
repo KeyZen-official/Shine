@@ -199,6 +199,7 @@ appear:
 | "thousands of students settled abroad" | Unverified, and unfalsifiable as written |
 | WhatsApp availability | The profile lists a mobile but never says it is on WhatsApp |
 
+Mrs. Bhadika Mehta's 20+ years of experience **is** published, because the
 Mrs. Bhadrika Mehta's 20+ years of experience **is** published, because the
 profile states it about a named person.
 
@@ -298,5 +299,6 @@ assistive-technology pass is a manual job.
 
 Adding Playwright with `@axe-core/playwright` across those seven widths is
 the natural next step if you want these enforced rather than reviewed.
-#   S h i n e  
+#   S h i n e 
+ 
  

@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import {
+  ArrowUpRight,
   ChevronDown,
   Facebook,
   Instagram,
@@ -82,8 +83,11 @@ export function Footer({
   const contact = {
     address: office.officeAddress,
     phone: office.phone,
+    officePhone: office.officePhone || '+91 73038 90969',
+    landline: office.landline || '022-2892 8911 / 22 / 33',
     email: office.email,
     whatsapp: office.whatsappNumber,
+    mapEmbedUrl: office.mapEmbedUrl || 'https://maps.google.com/maps?q=Gold+Crest+Business+Center,+Lokmanya+Tilak+Road,+Borivali+West,+Mumbai+400092&t=&z=16&ie=UTF8&iwloc=&output=embed',
   };
 
   const socialLinks = (settings?.socialLinks ?? [])
@@ -95,7 +99,7 @@ export function Footer({
   return (
     <footer className="bg-navy on-navy text-white">
       <div className="shell py-16 lg:py-20">
-        <div className="grid gap-8 md:grid-cols-2 md:gap-10 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
+        <div className="grid gap-8 md:grid-cols-2 md:gap-10 lg:grid-cols-3 xl:grid-cols-[1.2fr_0.8fr_0.9fr_1.1fr_0.9fr_1.4fr]">
           <div>
             {/* The footer has vertical room for the whole lockup, tagline
                 included — unlike the navigation bar, which crops it. */}
@@ -159,7 +163,7 @@ export function Footer({
           ) : null}
 
           {services.length > 0 ? (
-            <FooterGroup title="Our services">
+            <FooterGroup title="Overseas education services">
               <ul>
                 {services.map((service) => (
                   <li key={service.slug}>
@@ -186,48 +190,119 @@ export function Footer({
             </FooterGroup>
           ) : null}
 
-          {contact.address || contact.phone || contact.email ? (
-            <FooterGroup title="Get in touch">
-              <ul className="space-y-3">
+          {contact.address || contact.phone || contact.officePhone || contact.landline || contact.email ? (
+            <FooterGroup title="Get in touch" defaultOpen={true}>
+              <ul className="space-y-3.5">
                 {contact.address ? (
-                  <li className="flex gap-3 text-caption text-white/70">
-                    <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-white/40" aria-hidden="true" />
-                    <span className="whitespace-pre-line">{contact.address}</span>
+                  <li className="flex flex-col gap-2">
+                    <div className="flex gap-2.5 text-caption text-white/75">
+                      <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-accent" aria-hidden="true" />
+                      <span className="whitespace-pre-line leading-relaxed">{contact.address}</span>
+                    </div>
+
+                    {/* Google Map embed for the office address */}
+                    {contact.mapEmbedUrl ? (
+                      <div className="mt-1 flex flex-col gap-1.5">
+                        <div className="overflow-hidden rounded-xl border border-white/15 bg-[#0E1A29] shadow-inner w-full h-[140px]">
+                          <iframe
+                            title="Shine Consultant Borivali West Location Map"
+                            src={contact.mapEmbedUrl}
+                            width="100%"
+                            height="100%"
+                            style={{ border: 0 }}
+                            allowFullScreen=""
+                            loading="lazy"
+                            referrerPolicy="no-referrer-when-downgrade"
+                            className="w-full h-full"
+                          />
+                        </div>
+                        <a
+                          href={`https://maps.google.com/?q=${encodeURIComponent('Gold Crest Business Center, 1113/14, Lokmanya Tilak Road, Borivali West, Mumbai 400092')}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1 font-heading text-micro font-semibold text-accent hover:underline"
+                        >
+                          <span>Open in Google Maps</span>
+                          <ArrowUpRight className="h-3 w-3" aria-hidden="true" />
+                        </a>
+                      </div>
+                    ) : null}
                   </li>
                 ) : null}
+
+                {/* Office Number */}
+                {contact.officePhone ? (
+                  <li className="flex gap-2.5 items-start">
+                    <Phone className="mt-0.5 h-4 w-4 shrink-0 text-accent" aria-hidden="true" />
+                    <div className="flex flex-col text-caption">
+                      <span className="text-micro font-semibold uppercase tracking-wider text-white/50">Office Number</span>
+                      <a
+                        href={`tel:${contact.officePhone.replace(/\s/g, '')}`}
+                        className="text-white/85 transition-colors hover:text-white"
+                      >
+                        {contact.officePhone}
+                      </a>
+                    </div>
+                  </li>
+                ) : null}
+
+                {/* Landline Number */}
+                {contact.landline ? (
+                  <li className="flex gap-2.5 items-start">
+                    <Phone className="mt-0.5 h-4 w-4 shrink-0 text-accent" aria-hidden="true" />
+                    <div className="flex flex-col text-caption">
+                      <span className="text-micro font-semibold uppercase tracking-wider text-white/50">Landline Number</span>
+                      <a
+                        href="tel:02228928911"
+                        className="text-white/85 transition-colors hover:text-white"
+                      >
+                        {contact.landline}
+                      </a>
+                    </div>
+                  </li>
+                ) : null}
+
+                {/* Mobile / Direct */}
                 {contact.phone ? (
-                  <li className="flex gap-3">
-                    <Phone className="mt-0.5 h-4 w-4 shrink-0 text-white/40" aria-hidden="true" />
-                    <a
-                      href={`tel:${contact.phone.replace(/\s/g, '')}`}
-                      className="text-caption text-white/70 transition-colors hover:text-white"
-                    >
-                      {contact.phone}
-                    </a>
+                  <li className="flex gap-2.5 items-start">
+                    <Phone className="mt-0.5 h-4 w-4 shrink-0 text-accent" aria-hidden="true" />
+                    <div className="flex flex-col text-caption">
+                      <span className="text-micro font-semibold uppercase tracking-wider text-white/50">Mobile</span>
+                      <a
+                        href={`tel:${contact.phone.replace(/\s/g, '')}`}
+                        className="text-white/85 transition-colors hover:text-white"
+                      >
+                        {contact.phone}
+                      </a>
+                    </div>
                   </li>
                 ) : null}
+
+                {/* Email */}
                 {contact.email ? (
-                  <li className="flex gap-3">
-                    <Mail className="mt-0.5 h-4 w-4 shrink-0 text-white/40" aria-hidden="true" />
+                  <li className="flex gap-2.5 items-start">
+                    <Mail className="mt-0.5 h-4 w-4 shrink-0 text-accent" aria-hidden="true" />
                     <a
                       href={`mailto:${contact.email}`}
-                      className="break-all text-caption text-white/70 transition-colors hover:text-white"
+                      className="break-all text-caption text-white/85 transition-colors hover:text-white"
                     >
                       {contact.email}
                     </a>
                   </li>
                 ) : null}
+
+                {/* WhatsApp */}
                 {whatsappHref(contact.whatsapp, settings?.contact?.whatsappMessage) ? (
-                  <li className="flex gap-3">
+                  <li className="flex gap-2.5 items-center">
                     <MessageCircle
-                      className="mt-0.5 h-4 w-4 shrink-0 text-white/40"
+                      className="h-4 w-4 shrink-0 text-accent"
                       aria-hidden="true"
                     />
                     <a
                       href={whatsappHref(contact.whatsapp, settings?.contact?.whatsappMessage)}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-caption text-white/70 transition-colors hover:text-white"
+                      className="text-caption text-white/85 transition-colors hover:text-white"
                     >
                       Chat on WhatsApp
                     </a>

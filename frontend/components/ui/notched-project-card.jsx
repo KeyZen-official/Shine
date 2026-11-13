@@ -219,8 +219,8 @@ export function NotchedDestinationDemo() {
         title="United Kingdom"
         description="World-renowned Russell Group universities, 2-year post-study work visa, and centuries of academic prestige."
         image="/destinations/uk.jpg"
-        badge="Europe"
-        tags={["Top 100 Unis", "2-Yr PSW Visa", "Russell Group"]}
+        badge="United Kingdom"
+        tags={["Top 100 Unis", "18 Month PSW Visa", "Russell Group"]}
         surface="#FFFFFF"
         accent="#D00100"
       />
@@ -240,7 +240,7 @@ export function NotchedDestinationDemo() {
         description="Globally ranked Group of Eight institutions, generous post-study work rights, and unbeatable quality of life."
         image="/destinations/australia.jpg"
         badge="Oceania"
-        tags={["Group of Eight", "Subclass 485", "High Quality of Life"]}
+        tags={["Group of Eight", "PR Available", "High Quality of Life"]}
         surface="#FFFFFF"
         accent="#D00100"
       />

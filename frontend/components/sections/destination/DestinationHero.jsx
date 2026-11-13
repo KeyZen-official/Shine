@@ -15,7 +15,6 @@ const FLAG_MAP = {
   malaysia: '🇲🇾',
   'new-zealand': '🇳🇿',
   dubai: '🇦🇪',
-  europe: '🇪🇺',
   singapore: '🇸🇬',
   france: '🇫🇷',
 };

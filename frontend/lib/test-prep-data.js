@@ -312,7 +312,7 @@ export const TEST_PREP_DATA = {
           icon: 'Users',
           title: 'Who Should Take It?',
           description:
-            'Students planning to study undergraduate or postgraduate programmes in the USA, Canada, the UK, Europe, Australia, and worldwide.',
+            'Students planning to study undergraduate or postgraduate programmes in the USA, Canada, the UK, Australia, and worldwide.',
         },
         {
           icon: 'Calendar',
@@ -464,7 +464,7 @@ export const TEST_PREP_DATA = {
         id: 1,
         question: 'What is the TOEFL iBT test?',
         answer:
-          'The TOEFL iBT (Test of English as a Foreign Language internet-based test) evaluates your proficiency in academic English across Reading, Listening, Speaking, and Writing. It is particularly popular for US, Canadian, and European university admissions.',
+          'The TOEFL iBT (Test of English as a Foreign Language internet-based test) evaluates your proficiency in academic English across Reading, Listening, Speaking, and Writing. It is particularly popular for US, Canadian, and global university admissions.',
         icon: '💬',
       },
       {
@@ -1030,7 +1030,7 @@ export const TEST_PREP_DATA = {
       badgeTitle: 'Digital SAT',
       badgeSubtitle: 'Scholastic Assessment Test',
       overviewText:
-        'The SAT is a globally recognized standardised college admission test administered by the College Board. Designed for undergraduate admissions in the USA, Canada, Europe, Singapore, and leading Indian universities, the digital SAT features a streamlined, multistage adaptive format.',
+        'The SAT is a globally recognized standardised college admission test administered by the College Board. Designed for undergraduate admissions in the USA, Canada, Singapore, and leading universities, the digital SAT features a streamlined, multistage adaptive format.',
       cards: [
         {
           icon: 'Users',

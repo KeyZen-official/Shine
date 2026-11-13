@@ -1,13 +1,13 @@
 [
   {
     "question": "How does overseas education counselling work?",
-    "answer": "It begins with a career counselling conversation about your academic record, your work experience and what you want next. From there we evaluate your profile, shortlist countries and universities that fit it, and work through the application, documentation and visa stages with you. Pre- and post-departure sessions follow once you have an offer.",
+    "answer": "It begins with a career counselling and conversation about your academic record, your work experience and what you want next. From there we evaluate your profile, shortlist countries and universities that fit it, and work through the application, documentation and visa stages with you. Pre- and post-departure sessions follow once you have an offer.",
     "displayOrder": 1,
     "status": "published"
   },
   {
     "question": "Which countries can students explore?",
-    "answer": "The destinations we have published are listed on our Study Destinations page. Australia, Canada and New Zealand are among the countries we work with most. If a country you are considering is not listed, ask us during your consultation.",
+    "answer": "The destinations we have published are listed on our Study Destinations page.  If a country you are considering is not listed, ask us during your consultation.",
     "displayOrder": 2,
     "status": "published"
   },
@@ -37,7 +37,7 @@
   },
   {
     "question": "How can students book a consultation?",
-    "answer": "Use the Book Free Consultation page to choose a date and time, or send an enquiry and we will reply with the next available slots. The first consultation is free and carries no obligation.",
+    "answer": "Use the Book Free Consultation page , or send an enquiry and we will reply with the next available slots. The first consultation is free and carries no obligation.",
     "displayOrder": 7,
     "status": "published"
   }

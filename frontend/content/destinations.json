@@ -2,7 +2,7 @@
   {
     "name": "United Kingdom",
     "slug": "uk",
-    "region": "europe",
+    "region": "",
     "destinationType": "country",
     "isPopular": true,
     "displayOrder": 1,
@@ -114,7 +114,7 @@
   {
     "name": "Germany",
     "slug": "germany",
-    "region": "europe",
+    "region": "",
     "destinationType": "country",
     "isPopular": false,
     "displayOrder": 5,
@@ -142,7 +142,7 @@
   {
     "name": "Ireland",
     "slug": "ireland",
-    "region": "europe",
+    "region": "",
     "destinationType": "country",
     "isPopular": false,
     "displayOrder": 6,
@@ -252,40 +252,12 @@
     "cardImage": "/destinations/dubai.jpg"
   },
   {
-    "name": "Europe",
-    "slug": "europe",
-    "region": "europe",
-    "destinationType": "region",
-    "isPopular": false,
-    "displayOrder": 10,
-    "status": "published",
-    "shortIntroduction": "",
-    "content": {
-      "countryIntroduction": "",
-      "whyStudyThere": "",
-      "educationSystem": "",
-      "popularCoursesNote": "",
-      "admissionRequirements": "",
-      "englishRequirements": "",
-      "applicationProcess": "",
-      "visaGuidance": "",
-      "scholarships": "",
-      "accommodation": "",
-      "partTimeWork": "",
-      "costOfLiving": []
-    },
-    "faqs": [],
-    "lastReviewed": "",
-    "heroImage": "/destinations/europe.jpg",
-    "cardImage": "/destinations/europe.jpg"
-  },
-  {
     "name": "Singapore",
     "slug": "singapore",
     "region": "asia",
     "destinationType": "city",
     "isPopular": false,
-    "displayOrder": 11,
+    "displayOrder": 10,
     "status": "published",
     "shortIntroduction": "",
     "content": {
@@ -310,10 +282,10 @@
   {
     "name": "France",
     "slug": "france",
-    "region": "europe",
+    "region": "",
     "destinationType": "country",
     "isPopular": false,
-    "displayOrder": 12,
+    "displayOrder": 11,
     "status": "published",
     "shortIntroduction": "",
     "content": {

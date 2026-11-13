@@ -26,57 +26,11 @@ import { Button } from '../../../components/ui/Button';
 import { FINANCIAL_SERVICES_DISCLAIMER } from '../../../shared/constants';
 
 export const metadata = buildMetadata({
-  title: 'Our Services',
+  title: 'Overseas Education Services',
   description:
-    'Comprehensive overseas education and migration services: career counselling, university selection, application support, scholarships, visa assistance, and pre-departure briefings.',
+    'Comprehensive overseas education and student advisory services: career counselling, university selection, application support, scholarships, visa assistance, and pre-departure briefings.',
   path: '/services',
 });
-
-/**
- * Specialised and institutional services outside the core study abroad pathway.
- */
-const SPECIALISED_SERVICES = [
-  {
-    slug: 'test-preparation',
-    name: 'Test Preparation',
-    icon: GraduationCap,
-    badge: 'Coaching & Mentoring',
-    summary:
-      'Rigorous preparation for IELTS, PTE, TOEFL, GRE and GMAT with certified faculty, diagnostic tests and timed mock practice.',
-  },
-  {
-    slug: 'corporate-training',
-    name: 'Corporate Training',
-    icon: Briefcase,
-    badge: 'Professional Development',
-    summary:
-      'Customised corporate communications, cross-cultural readiness and professional development programmes for teams and organisations.',
-  },
-  {
-    slug: 'migration-counselling',
-    name: 'Migration Counselling',
-    icon: Globe,
-    badge: 'Skilled Pathways',
-    summary:
-      'In-depth guidance on points-based skilled migration, Express Entry, state nominations and permanent residency options.',
-  },
-  {
-    slug: 'visa-counselling',
-    name: 'Visa Counselling',
-    icon: ShieldCheck,
-    badge: 'Compliance & Interviews',
-    summary:
-      'Detailed checklist auditing, financial documentation verification, and 1-on-1 mock interviews for student and visit visas.',
-  },
-  {
-    slug: 'institutional-services',
-    name: 'Institutional Services',
-    icon: Building2,
-    badge: 'University Partnerships',
-    summary:
-      'Global academic tie-ups, student recruitment partnerships, institutional advisory and international articulation programmes.',
-  },
-];
 
 /**
  * Four foundational principles of the Shine Consultant advisory approach.
@@ -153,8 +107,8 @@ export default function ServicesPage() {
   ].filter(Boolean);
 
   const heroContent = {
-    eyebrow: 'OUR SERVICES — SHINE CONSULTANT',
-    headline: 'End-to-End Overseas Education & Migration Services.',
+    eyebrow: 'OVERSEAS EDUCATION SERVICES — SHINE CONSULTANT',
+    headline: 'End-to-End Overseas Education & Student Advisory Services.',
     supportingLine:
       'From career counselling and university selection to application filings, visa processing, pre-departure briefings and test preparation — Shine Consultant provides honest, transparent and dedicated support at every step of your international journey.',
     primaryCtaLabel: 'Book Free Consultation',
@@ -233,93 +187,10 @@ export default function ServicesPage() {
         </div>
       </div>
 
-      {/* 3 — Our Services: The exact same component from the Home page */}
+      {/* 3 — Overseas Education Services: The signature component */}
       <ServicesSection services={services} />
 
-      {/* 4 — Specialised & Institutional Advisory Services */}
-      <section className="section-y bg-[#FAF9F5]">
-        <div className="shell">
-          <div className="mx-auto max-w-3xl text-center mb-12 sm:mb-16">
-            <div className="inline-flex items-center gap-2 mb-2.5">
-              <span className="font-heading text-xs font-bold uppercase tracking-[0.16em] text-accent">
-                EXTENDED PROGRAMMES
-              </span>
-              <span className="h-[2px] w-8 rounded-full bg-accent inline-block" />
-            </div>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-navy tracking-tight">
-              Specialised &amp; Institutional Advisory
-            </h2>
-            <p className="mt-3 text-sm sm:text-base text-charcoal/80 leading-relaxed max-w-2xl mx-auto">
-              In addition to our core study abroad pathway, Shine Consultant delivers targeted training, skilled migration counselling, and institutional advisory services.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {SPECIALISED_SERVICES.map((item) => {
-              const IconComponent = item.icon;
-              return (
-                <div
-                  key={item.slug}
-                  className="rounded-2xl border border-navy/10 bg-white p-6 shadow-card hover:shadow-lg transition-all duration-300 flex flex-col justify-between"
-                >
-                  <div>
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-navy/5 text-navy">
-                        <IconComponent className="h-6 w-6 stroke-[2]" />
-                      </div>
-                      <span className="text-micro font-heading font-bold px-2.5 py-1 rounded-full bg-accent/10 text-accent">
-                        {item.badge}
-                      </span>
-                    </div>
-
-                    <h3 className="font-heading text-lg font-bold text-navy leading-snug mb-2">
-                      {item.name}
-                    </h3>
-
-                    <p className="text-xs sm:text-sm text-charcoal/80 leading-relaxed mb-6">
-                      {item.summary}
-                    </p>
-                  </div>
-
-                  <Link
-                    href={`/services/${item.slug}`}
-                    className="inline-flex items-center gap-1.5 font-heading text-xs font-bold text-accent hover:underline pt-4 border-t border-navy/10"
-                  >
-                    View Details
-                    <ArrowRight className="h-3.5 w-3.5" />
-                  </Link>
-                </div>
-              );
-            })}
-
-            {/* Quick Consultation Prompt Card */}
-            <div className="rounded-2xl border border-dashed border-accent/40 bg-accent/5 p-6 flex flex-col justify-between">
-              <div>
-                <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-accent text-white font-heading text-micro font-bold mb-4">
-                  <Sparkles className="h-3 w-3" /> Need Bespoke Help?
-                </span>
-                <h3 className="font-heading text-lg font-bold text-navy leading-snug mb-2">
-                  Have a Specific Requirement?
-                </h3>
-                <p className="text-xs sm:text-sm text-charcoal/80 leading-relaxed mb-4">
-                  Speak directly with our senior mentors in Borivali West, Mumbai, for customised advisory tailored to your unique circumstances.
-                </p>
-              </div>
-
-              <Button
-                href="/book-consultation"
-                variant="primary"
-                size="sm"
-                className="w-full font-heading text-xs font-bold py-2.5 rounded-xl shadow-xs"
-              >
-                Book Free Consultation
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 5 — Our Advisory Commitments */}
+      {/* 4 — Our Advisory Commitments */}
       <section className="section-y bg-white border-t border-navy/10">
         <div className="shell">
           <div className="mx-auto max-w-3xl text-center mb-12">
