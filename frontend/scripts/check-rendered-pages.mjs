@@ -203,13 +203,12 @@ const CHECKS = [
   // 100vw would have pulled the 768px variant onto a 390px phone.
   ['/', 'the hero sizes attribute matches the shell, not the viewport', /calc\(100vw - 2rem\)/, true, 'raw'],
   ['/', 'the hero supporting line splits into a second paragraph', /Honest, unbiased and professional guidance for people looking to broaden/],
-  /* No real social accounts have been supplied, so the honest state is an
-     omitted strip rather than icons linking to a platform home page. This
-     used to assert `instagram.com` was present, which only passed because
-     an optional dev script had seeded placeholder URLs — so the suite was
-     depending on placeholder content to go green. Set the real accounts in
-     Site settings and flip this to assert they render. */
-  ['/', 'the hero social strip omits itself when no accounts are configured', /aria-label="Follow us|instagram\.com/, false, 'raw'],
+  /* The real Facebook and Instagram accounts are configured in
+     `content/settings.json`, so the strip renders. These assert the actual
+     handles rather than merely that a social URL is present, which is what
+     keeps placeholder or platform-home-page URLs from passing. */
+  ['/', 'the hero social strip renders the Facebook account', /facebook\.com\/ShineConsultancyServices/, true, 'raw'],
+  ['/', 'the hero social strip renders the Instagram account', /instagram\.com\/shineconsultant_in/, true, 'raw'],
   ['/', 'the hero brand block renders', /Ready to find the course that fits your record/],
 
   // --- supplied logo artwork ------------------------------------------

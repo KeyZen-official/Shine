@@ -97,18 +97,17 @@ check(
   /animate-spin/.test(hero) && /Overseas education, migration (&amp;|&) training/i.test(hero),
 );
 /**
- * The social strip is driven by `WebsiteSettings.socialLinks`, and no real
- * accounts have been supplied for this company — so the correct render is
- * no strip at all. This used to assert `instagram|linkedin` was present,
- * which passed only because an optional development script
- * (`backend/scripts/apply-hero-copy.mjs`) seeds placeholder profile URLs.
- * A check that needs placeholder data in order to pass is not checking the
- * site. What matters is that the markup is still wired up, so that is
- * asserted against the component source instead of the rendered page.
+ * The social strip is driven by `WebsiteSettings.socialLinks`. The company's
+ * real Facebook and Instagram accounts are now configured in
+ * `content/settings.json`, so the strip must render and must point at those
+ * two accounts specifically. Asserting the real handles — not just that
+ * *some* social URL appears — is what stops placeholder or platform-home-page
+ * URLs from passing this check.
  */
 check(
-  'the social strip omits itself when no accounts are configured',
-  !/instagram\.com|linkedin\.com/i.test(hero),
+  'the social strip renders the configured accounts',
+  /facebook\.com\/ShineConsultancyServices/i.test(hero)
+    && /instagram\.com\/shineconsultant_in/i.test(hero),
 );
 check(
   'the social strip is still wired to settings, so it renders once accounts exist',
