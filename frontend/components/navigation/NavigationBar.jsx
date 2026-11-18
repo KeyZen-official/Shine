@@ -120,6 +120,16 @@ export function NavigationBar({ destinations = [], services = [], testPreparatio
         href: `/test-preparation/${item.slug}`,
       }));
     }
+    if (source === 'servicePages') {
+      return [
+        { label: 'Study Abroad', href: '/services/study-abroad' },
+        { label: 'Test Preparation', href: '/services/test-preparation' },
+        { label: 'Corporate Training', href: '/services/corporate-training' },
+        { label: 'Migration Counselling', href: '/services/migration-counselling' },
+        { label: 'Visa Counselling', href: '/services/visa-counselling' },
+        { label: 'Institutional Services', href: '/services/institutional-services' },
+      ];
+    }
     return [];
   };
 

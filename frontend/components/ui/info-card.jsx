@@ -49,9 +49,9 @@ export const InfoCard = ({
   const titleDirection = isRTL(title) ? "rtl" : "ltr";
   const descDirection = isRTL(description) ? "rtl" : "ltr";
 
-  // Sizes for inner card (matches .inner-container: 354x344)
+  // Sizes for inner card (matches .inner-container: 354x360)
   const innerWidth = 354;
-  const innerHeight = 344;
+  const innerHeight = 360;
 
   // Pattern background (unchanged, just colors are props)
   const pattern =
@@ -181,7 +181,7 @@ export const InfoCard = ({
               lineHeight: 1.45,
               color: textColor,
               display: "-webkit-box",
-              WebkitLineClamp: 3,
+              WebkitLineClamp: 4,
               WebkitBoxOrient: "vertical",
               overflow: "hidden",
               direction: descDirection,

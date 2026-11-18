@@ -89,9 +89,6 @@ export function WhyChooseSection({ destination, overview }) {
                     <p className="font-heading text-xs sm:text-sm font-bold text-white leading-snug">
                       {imageBadge}
                     </p>
-                    <p className="text-micro text-white/70 uppercase tracking-wider font-semibold mt-0.5">
-                      Shine Consultant Advisory
-                    </p>
                   </div>
                 </div>
               </div>

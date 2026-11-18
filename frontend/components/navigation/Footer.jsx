@@ -15,9 +15,15 @@ import {
   Youtube,
 } from 'lucide-react';
 import { Brandmark } from '../brand/Brandmark';
-import { FOOTER_QUICK_LINKS, LEGAL_LINKS } from '../../lib/config';
+import {
+  FOOTER_ADDITIONAL_SERVICES,
+  FOOTER_OUR_SERVICES,
+  FOOTER_QUICK_LINKS,
+  LEGAL_LINKS,
+} from '../../lib/config';
 import { FINANCIAL_SERVICES_DISCLAIMER } from '../../shared/constants';
 import { whatsappHref } from '../../lib/format';
+import { cn } from '../../lib/utils';
 
 const SOCIAL_ICONS = {
   instagram: Instagram,
@@ -26,6 +32,31 @@ const SOCIAL_ICONS = {
   youtube: Youtube,
   x: MessageCircle,
   threads: MessageCircle,
+};
+
+/* Brand colours for each social platform icon */
+const SOCIAL_COLORS = {
+  facebook: {
+    bg: '#1877F2',
+    text: '#ffffff',
+    border: '#1877F2',
+  },
+  instagram: {
+    bg: '#E4405F',
+    background: 'linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%)',
+    text: '#ffffff',
+    border: 'transparent',
+  },
+  linkedin: {
+    bg: '#0A66C2',
+    text: '#ffffff',
+    border: '#0A66C2',
+  },
+  youtube: {
+    bg: '#FF0000',
+    text: '#ffffff',
+    border: '#FF0000',
+  },
 };
 
 /**
@@ -99,7 +130,7 @@ export function Footer({
   return (
     <footer className="bg-navy on-navy text-white">
       <div className="shell py-16 lg:py-20">
-        <div className="grid gap-8 md:grid-cols-2 md:gap-10 lg:grid-cols-3 xl:grid-cols-[1.2fr_0.8fr_0.9fr_1.1fr_0.9fr_1.4fr]">
+        <div className="grid gap-8 md:grid-cols-2 md:gap-10 lg:grid-cols-3 xl:grid-cols-[1.15fr_0.75fr_0.85fr_0.95fr_0.9fr_0.85fr_1.35fr]">
           <div>
             {/* The footer has vertical room for the whole lockup, tagline
                 included — unlike the navigation bar, which crops it. */}
@@ -111,16 +142,29 @@ export function Footer({
             ) : null}
 
             {socialLinks.length > 0 ? (
-              <ul className="mt-6 flex items-center gap-2">
+              <ul className="mt-6 flex items-center gap-2.5">
                 {socialLinks.map((link) => {
                   const SocialIcon = SOCIAL_ICONS[link.platform] ?? MessageCircle;
+                  const brandColor = SOCIAL_COLORS[link.platform];
                   return (
                     <li key={link.platform}>
                       <a
                         href={link.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-white/20 text-white/70 transition-colors duration-fast hover:border-white/50 hover:text-white"
+                        className={cn(
+                          'inline-flex h-10 w-10 items-center justify-center rounded-md transition-transform duration-fast hover:scale-110 shadow-sm overflow-hidden',
+                          !brandColor && 'border border-white/20 text-white/70 hover:border-white/50 hover:text-white',
+                        )}
+                        style={
+                          brandColor
+                            ? {
+                                background: brandColor.background || brandColor.bg,
+                                borderColor: brandColor.border || brandColor.bg,
+                                color: brandColor.text,
+                              }
+                            : undefined
+                        }
                       >
                         <SocialIcon className="h-4 w-4" aria-hidden="true" />
                         <span className="sr-only">
@@ -162,19 +206,29 @@ export function Footer({
             </FooterGroup>
           ) : null}
 
-          {services.length > 0 ? (
-            <FooterGroup title="Overseas education services">
-              <ul>
-                {services.map((service) => (
-                  <li key={service.slug}>
-                    <Link href={`/services/${service.slug}`} className={LINK}>
-                      {service.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </FooterGroup>
-          ) : null}
+          <FooterGroup title="Our services">
+            <ul>
+              {FOOTER_OUR_SERVICES.map((service) => (
+                <li key={service.href}>
+                  <Link href={service.href} className={LINK}>
+                    {service.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </FooterGroup>
+
+          <FooterGroup title="Additional services">
+            <ul>
+              {FOOTER_ADDITIONAL_SERVICES.map((item) => (
+                <li key={item.label}>
+                  <Link href={item.href} className={LINK}>
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </FooterGroup>
 
           {testPreparation.length > 0 ? (
             <FooterGroup title="Test preparation">

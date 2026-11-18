@@ -87,7 +87,7 @@ export function TestProgrammeDetailLayout({
           width: 1920,
           height: 1080,
         }}
-        brandTagline="Honest, unbiased & professional guidance — from Borivali West, Mumbai"
+        brandTagline="Honest, unbiased & professional guidance"
       />
 
       {/* 2. FOUR BENEFIT INDICATORS QUICK STRIP */}

@@ -91,7 +91,7 @@ export default async function DestinationPage({ params }) {
 
   const heroContent = {
     eyebrow: `STUDY DESTINATION — ${destination.name.toUpperCase()}`,
-    headline: `Study in the ${destination.name} — From Mumbai.`,
+    headline: `Study in the ${destination.name}.`,
     supportingLine:
       pageData?.heroIntro ||
       `Discover world-class universities, innovative learning environments and opportunities to build your international career. Expert guidance from Borivali West.`,
@@ -160,7 +160,7 @@ export default async function DestinationPage({ params }) {
           width: 1920,
           height: 1080,
         }}
-        brandTagline="Honest, unbiased & professional guidance — from Borivali West, Mumbai"
+        brandTagline="Honest, unbiased & professional guidance"
       />
 
       {/* 2 — Four Pillars Quick Strip matching home/about style */}
@@ -172,9 +172,8 @@ export default async function DestinationPage({ params }) {
               return (
                 <div
                   key={idx}
-                  className={`flex items-center gap-4 lg:px-6 ${
-                    idx < 3 ? 'lg:border-r lg:border-navy/10' : ''
-                  }`}
+                  className={`flex items-center gap-4 lg:px-6 ${idx < 3 ? 'lg:border-r lg:border-navy/10' : ''
+                    }`}
                 >
                   <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#E5F2EC] text-navy">
                     <IconComp className="h-6 w-6 stroke-[1.8]" />

@@ -59,6 +59,8 @@ export const PRIMARY_NAV = [
     label: 'Services',
     short: 'Services',
     href: '/services',
+    dropdownSource: 'servicePages',
+    dropdownOnly: true,
   },
   { label: 'Contact Us', short: 'Contact', href: '/contact' },
 ];
@@ -69,13 +71,27 @@ export const PRIMARY_NAV = [
  * worse than a shorter footer.
  */
 export const FOOTER_QUICK_LINKS = [
-  { label: 'Home', href: '/' },
-  { label: 'Study destinations', href: '/destinations' },
-  { label: 'Test preparation', href: '/test-preparation' },
-  { label: 'Overseas education services', href: '/services' },
   { label: 'About us', href: '/about' },
+  { label: 'Gallery', href: '/gallery' },
+  { label: 'Testimonials', href: '/testimonials' },
+  { label: 'Latest updates', href: '/latest-updates' },
+  { label: 'Forex exchange', href: '/forex-exchange' },
   { label: 'Contact us', href: '/contact' },
-  { label: 'Book a consultation', href: '/book-consultation' },
+];
+
+export const FOOTER_OUR_SERVICES = [
+  { label: 'Study Abroad', href: '/services/study-abroad' },
+  { label: 'Test Preparation', href: '/services/test-preparation' },
+  { label: 'Corporate Training', href: '/services/corporate-training' },
+  { label: 'Migration Counselling', href: '/services/migration-counselling' },
+  { label: 'Visa Counselling', href: '/services/visa-counselling' },
+  { label: 'Institutional Services', href: '/services/institutional-services' },
+];
+
+export const FOOTER_ADDITIONAL_SERVICES = [
+  { label: 'Education Loan', href: '/contact?service=education-loan' },
+  { label: 'Forex Support', href: '/forex-exchange' },
+  { label: 'Temporary Accommodation', href: '/contact?service=temporary-accommodation' },
 ];
 
 export const LEGAL_LINKS = [

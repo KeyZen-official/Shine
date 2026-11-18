@@ -141,12 +141,12 @@ export function NavBody({ children, className, visible: override }) {
        * — which has the same dropdowns and a focus trap — serves that
        * range instead.
        */
-      style={{ maxWidth: visible ? '72rem' : '80rem' }}
+      style={{ maxWidth: visible ? '76rem' : '80rem' }}
       className={cn(
-        'pointer-events-auto relative z-50 mx-auto hidden w-full items-center justify-between gap-4 border px-4 sm:px-6 xl:flex xl:px-8',
+        'pointer-events-auto relative z-50 mx-auto hidden w-full items-center justify-between gap-6 border px-4 sm:px-6 xl:flex xl:px-8',
         SHELL_TRANSITION,
         visible
-          ? 'h-16 translate-y-3 rounded-full border-navy/10 bg-white/90 shadow-card backdrop-blur-safe'
+          ? 'h-16 translate-y-3 rounded-full border-navy/10 bg-white/90 shadow-card backdrop-blur-safe xl:px-10'
           : 'h-20 translate-y-0 rounded-none border-transparent bg-transparent',
         className,
       )}
@@ -240,7 +240,7 @@ export function NavItems({ items = [], className, onItemClick, isActive }) {
                   aria-haspopup="true"
                   onClick={() => setOpenDropdown((current) => (current === key ? null : key))}
                   className={cn(
-                    'relative inline-flex shrink-0 items-center gap-0.5 whitespace-nowrap rounded-full px-2.5 py-2 font-heading text-caption font-semibold transition-colors duration-fast ease-standard',
+                    'relative inline-flex shrink-0 items-center gap-0.5 whitespace-nowrap rounded-full px-3 py-2 font-heading text-caption font-semibold transition-colors duration-fast ease-standard',
                     active ? 'text-navy' : 'text-charcoal-70 hover:text-navy',
                   )}
                 >
@@ -271,7 +271,7 @@ export function NavItems({ items = [], className, onItemClick, isActive }) {
                       // two-word label breaks onto a second line the moment
                       // the bar is tight, which is what made "Study
                       // Destinations" and "Contact Us" stack.
-                      'relative block whitespace-nowrap rounded-full px-2.5 py-2 font-heading text-caption font-semibold transition-colors duration-fast ease-standard',
+                      'relative block whitespace-nowrap rounded-full px-3 py-2 font-heading text-caption font-semibold transition-colors duration-fast ease-standard',
                       active ? 'text-navy' : 'text-charcoal-70 hover:text-navy',
                     )}
                   >
@@ -534,7 +534,7 @@ export function NavbarLogo({ className }) {
         priority
         imageClassName={cn(
           'w-auto transition-[height] duration-slow ease-standard',
-          visible ? 'h-9' : 'h-12',
+          visible ? 'h-8' : 'h-12',
         )}
       />
     </Link>

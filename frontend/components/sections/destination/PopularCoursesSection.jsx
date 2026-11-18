@@ -111,20 +111,9 @@ export function PopularCoursesSection({ courses = [] }) {
                   <h3 className="font-heading text-lg font-bold text-navy leading-snug group-hover:text-accent transition-colors">
                     {course.shortTitle || course.title}
                   </h3>
-                  <p className="mt-2 text-caption text-charcoal/75 leading-relaxed line-clamp-2">
+                  <p className="mt-2 text-caption text-charcoal/75 leading-relaxed line-clamp-3">
                     {course.description}
                   </p>
-                </div>
-
-                {/* Explore Courses Link */}
-                <div className="mt-5 pt-3 border-t border-navy/10 flex items-center justify-between">
-                  <Link
-                    href={course.href || '/contact'}
-                    className="inline-flex items-center gap-1.5 text-xs font-heading font-bold text-accent transition-colors hover:text-accent-hover"
-                  >
-                    Explore Courses
-                    <ArrowRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1" />
-                  </Link>
                 </div>
               </div>
             );

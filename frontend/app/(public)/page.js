@@ -75,11 +75,11 @@ export default function HomePage() {
   const allDestinations = getDestinations().length;
 
   const stats = [
-    testPreparation.length > 0
+    allDestinations > 0
       ? {
-          value: testPreparation.length,
-          label: plural(testPreparation.length, 'test we coach', 'tests we coach'),
-          srLabel: 'Tests we coach',
+          value: '10+',
+          label: 'destinations',
+          srLabel: 'Study destinations',
         }
       : null,
     services.length > 0
@@ -87,14 +87,6 @@ export default function HomePage() {
           value: 6,
           label: 'services',
           srLabel: 'Services',
-        }
-      : null,
-    allDestinations > 0
-      ? {
-          value: '10+',
-          label: 'study destinations',
-          srLabel: 'Study destinations',
-          featureLabel: 'destinations',
         }
       : null,
   ].filter(Boolean);

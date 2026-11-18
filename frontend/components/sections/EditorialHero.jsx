@@ -31,6 +31,31 @@ const SOCIAL_ICONS = {
   threads: MessageCircle,
 };
 
+/* Brand colours for each social platform icon */
+const SOCIAL_COLORS = {
+  facebook: {
+    bg: '#1877F2',
+    text: '#ffffff',
+    border: '#1877F2',
+  },
+  instagram: {
+    bg: '#E4405F',
+    background: 'linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%)',
+    text: '#ffffff',
+    border: 'transparent',
+  },
+  linkedin: {
+    bg: '#0A66C2',
+    text: '#ffffff',
+    border: '#0A66C2',
+  },
+  youtube: {
+    bg: '#FF0000',
+    text: '#ffffff',
+    border: '#FF0000',
+  },
+};
+
 /**
  * The home page hero: a notched editorial image with the eyebrow and social
  * links sitting in the cut-out strip, real catalogue counts beneath it, and
@@ -83,11 +108,8 @@ function HeroContent({ content, stats = [], socialLinks = [], image, brandTaglin
   // ignored rather than overflowing the grid.
   const paragraphs = toParagraphs(content?.supportingLine).slice(0, 2);
 
-  // The last figure is rendered large; everything before it sits in the
-  // small row. With a single stat there is no feature figure at all, so the
-  // row never shows a lone oversized number.
-  const featureStat = stats.length > 1 ? stats[stats.length - 1] : null;
-  const smallStats = stats.length > 1 ? stats.slice(0, -1) : stats;
+  // All stats sit in the small row — no oversized feature figure.
+  const smallStats = stats;
 
   return (
     <section ref={heroRef} className="bg-ivory px-4 py-8 sm:px-6 lg:px-8">
@@ -130,6 +152,7 @@ function HeroContent({ content, stats = [], socialLinks = [], image, brandTaglin
               <ul className="flex shrink-0 gap-2 sm:gap-3">
                 {socialLinks.map((link, index) => {
                   const SocialIcon = SOCIAL_ICONS[link.platform] ?? MessageCircle;
+                  const brandColor = SOCIAL_COLORS[link.platform];
                   return (
                     <li key={link.platform}>
                       <TimelineContent
@@ -140,7 +163,15 @@ function HeroContent({ content, stats = [], socialLinks = [], image, brandTaglin
                         href={link.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex h-5 w-5 items-center justify-center rounded-sm border border-navy/10 bg-white text-navy transition-colors duration-fast ease-standard hover:border-navy/30 hover:text-accent sm:h-6 sm:w-6 sm:rounded-md md:h-8 md:w-8"
+                        className={cn(
+                          'flex h-5 w-5 items-center justify-center rounded-sm sm:h-6 sm:w-6 sm:rounded-md md:h-8 md:w-8 transition-transform duration-fast hover:scale-110 shadow-sm overflow-hidden',
+                          !brandColor && 'border border-navy/10 bg-white text-navy hover:border-navy/30 hover:text-accent',
+                        )}
+                        style={brandColor ? {
+                          background: brandColor.background || brandColor.bg,
+                          borderColor: brandColor.border || brandColor.bg,
+                          color: brandColor.text,
+                        } : undefined}
                       >
                         <SocialIcon className="h-3 w-3 md:h-4 md:w-4" aria-hidden="true" />
                         <span className="sr-only">Shine Consultant on {link.platform}</span>
@@ -245,26 +276,7 @@ function HeroContent({ content, stats = [], socialLinks = [], image, brandTaglin
                 ))}
               </TimelineContent>
 
-              {featureStat ? (
-                <TimelineContent
-                  as="dl"
-                  animationNum={6}
-                  timelineRef={heroRef}
-                  customVariants={revealVariants}
-                  className="flex shrink-0 items-baseline gap-2 text-h2 lg:text-h1"
-                >
-                  <dt className="sr-only">{featureStat.srLabel ?? featureStat.label}</dt>
-                  <dd className="font-heading font-bold leading-none text-accent">
-                    {featureStat.value}
-                  </dd>
-                  <span
-                    className="font-heading uppercase leading-none text-charcoal-70"
-                    aria-hidden="true"
-                  >
-                    {featureStat.featureLabel ?? featureStat.label}
-                  </span>
-                </TimelineContent>
-              ) : null}
+
             </div>
           ) : null}
         </div>
@@ -339,10 +351,9 @@ function HeroContent({ content, stats = [], socialLinks = [], image, brandTaglin
           </div>
 
           {/* Right column: branding above, the ask and the actions below.
-              `justify-between` at lg pushes them apart so the actions line
-              up with the paragraphs on the left instead of hanging under
-              the logo with a gap beneath them. */}
-          <div className="flex flex-col gap-10 lg:h-full lg:justify-between lg:gap-8">
+              `lg:-mt-16` brings the Shine logo up to fill the vertical space
+              where the feature stat previously sat alongside the small stats row. */}
+          <div className={cn("flex flex-col gap-10 lg:h-full lg:justify-between lg:gap-8 lg:pl-6", stats.length > 0 && "lg:-mt-16")}>
             <div className="flex flex-col gap-4 lg:items-end lg:text-right">
               {/* The lockup itself, rather than the name set in Manrope —
                   the script is the recognisable part of this brand. */}

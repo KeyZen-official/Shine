@@ -6,6 +6,7 @@ import {
   BarChart3,
   BookOpen,
   Briefcase,
+  Building2,
   Calendar,
   Check,
   CheckCircle2,
@@ -15,6 +16,7 @@ import {
   GraduationCap,
   Headphones,
   HeartHandshake,
+  Landmark,
   Layers,
   MapPin,
   PlaneTakeoff,
@@ -223,30 +225,22 @@ export default function AboutPage() {
   const stats = [
     counts.destinations > 0
       ? {
-          value: counts.destinations,
-          label: plural(counts.destinations, 'study destination', 'study destinations'),
-          srLabel: 'Study destinations',
-        }
+        value: '10+',
+        label: 'destinations',
+        srLabel: 'Study destinations',
+      }
       : null,
     counts.services > 0
       ? {
-          value: counts.services,
-          label: plural(counts.services, 'advisory service', 'advisory services'),
-          srLabel: 'Specialised advisory services',
-        }
-      : null,
-    counts.testPreparation > 0
-      ? {
-          value: counts.testPreparation,
-          label: plural(counts.testPreparation, 'coaching programme', 'coaching programmes'),
-          srLabel: 'Test preparation coaching programmes',
-          featureLabel: plural(counts.testPreparation, 'programme', 'programmes'),
-        }
+        value: 6,
+        label: 'services',
+        srLabel: 'Services',
+      }
       : null,
   ].filter(Boolean);
 
   const heroContent = {
-    headline: 'Overseas Education, Migration and Training — From Mumbai.',
+    headline: 'Overseas Education, Migration and Training',
     supportingLine: about.introduction || settings?.companyIntroduction,
     primaryCtaLabel: 'Book Free Consultation',
     secondaryCtaLabel: 'Explore Study Destinations',
@@ -256,13 +250,13 @@ export default function AboutPage() {
 
   return (
     <>
-      {/* 1 — Hero: EditorialHero kept completely unchanged */}
+      {/* 1 — Hero: EditorialHero */}
       <EditorialHero
         content={heroContent}
         stats={stats}
         socialLinks={socialLinks}
         image={aboutHeroImage}
-        brandTagline="Honest, unbiased & professional guidance — from Borivali West, Mumbai"
+        brandTagline="Honest, unbiased & professional guidance"
       />
 
       {/* 2 — Four Pillars Quick Strip matching reference */}
@@ -275,7 +269,7 @@ export default function AboutPage() {
                 <GraduationCap className="h-6 w-6 stroke-[1.8]" />
               </span>
               <div>
-                <p className="font-heading text-sm font-bold text-navy">Visa &amp; Immigration</p>
+                <p className="font-heading text-sm font-bold text-navy">Study abroad Counselling</p>
                 <p className="text-caption text-charcoal-70">End-to-end support</p>
               </div>
             </div>
@@ -297,7 +291,7 @@ export default function AboutPage() {
                 <BookOpen className="h-6 w-6 stroke-[1.8]" />
               </span>
               <div>
-                <p className="font-heading text-sm font-bold text-navy">IELTS &amp; Test Preparation</p>
+                <p className="font-heading text-sm font-bold text-navy">Test Preparation</p>
                 <p className="text-caption text-charcoal-70">Expert training</p>
               </div>
             </div>
@@ -308,7 +302,7 @@ export default function AboutPage() {
                 <Headphones className="h-6 w-6 stroke-[1.8]" />
               </span>
               <div>
-                <p className="font-heading text-sm font-bold text-navy">Student Support</p>
+                <p className="font-heading text-sm font-bold text-navy">Student & Client Support</p>
                 <p className="text-caption text-charcoal-70">From admission to arrival</p>
               </div>
             </div>
@@ -333,16 +327,16 @@ export default function AboutPage() {
               </h2>
             </div>
             <p className="max-w-md text-base sm:text-lead text-charcoal/80 leading-relaxed">
-              End-to-end support for your global education journey, from planning to post-arrival.
+              End-to-end support for your global education journey, from planning to pre and post-arrival.
             </p>
           </div>
 
-          {/* 5 Feature Cards Grid (Asymmetric) with Integrated Photography */}
+          {/* 6 Feature Cards Grid: Two Long Cards at Start & End, Four Cards at Center */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 lg:gap-6 items-stretch">
-            {/* Card 1: Study Abroad Consulting (Large Left Feature Card, 5 cols) */}
+            {/* Card 1: Long Card at Start (Study Abroad, 3 cols) */}
             <Link
-              href="/services/university-selection"
-              className="group relative flex flex-col justify-between overflow-hidden rounded-[24px] sm:rounded-[28px] bg-gradient-to-br from-[#10243D] to-[#0B192B] p-6 sm:p-7 text-white shadow-xl transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl lg:col-span-5 border border-white/10"
+              href="/services/study-abroad"
+              className="group relative flex flex-col justify-between overflow-hidden rounded-[24px] sm:rounded-[28px] bg-gradient-to-br from-[#10243D] to-[#0B192B] p-6 sm:p-7 text-white shadow-xl transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl lg:col-span-3 border border-white/10"
             >
               {/* Subtle Red Swoosh / Gradient at bottom-right */}
               <div
@@ -366,7 +360,7 @@ export default function AboutPage() {
                 <div className="relative w-full aspect-[16/10] overflow-hidden rounded-2xl border border-white/15 shadow-lg my-3 group-hover:border-accent/40 transition-colors">
                   <img
                     src="/imagery/counsellor-consultation.jpg"
-                    alt="Study abroad counselling session"
+                    alt="Study Abroad Consulting"
                     className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                     loading="lazy"
                   />
@@ -375,12 +369,45 @@ export default function AboutPage() {
 
                 {/* Text Content */}
                 <div className="relative z-10 mt-4">
-                  <h3 className="font-heading text-2xl sm:text-[1.75rem] font-extrabold text-white leading-tight">
-                    Study Abroad Consulting
+                  <h3 className="font-heading text-xl sm:text-2xl font-extrabold text-white leading-tight">
+                    Study Abroad
                   </h3>
-                  <p className="mt-2.5 text-sm sm:text-base text-white/80 leading-relaxed max-w-sm">
-                    Personalised guidance for courses, universities and admission process.
+                  <p className="mt-2.5 text-caption sm:text-sm text-white/80 leading-relaxed">
+                    Personalised guidance for career profiling, university selection, error-free applications and Pre and Post  departure.
                   </p>
+                </div>
+
+                {/* Services Checklist: fills the vertical space */}
+                <div className="relative z-10 mt-5 pt-4 border-t border-white/10 space-y-2">
+                  <p className="font-heading text-micro font-bold uppercase tracking-wider text-accent">
+                    Key Services Included:
+                  </p>
+                  <ul className="space-y-2 text-caption text-white/85">
+                    <li className="flex items-center gap-2">
+                      <CheckCircle2 className="h-4 w-4 text-accent shrink-0" />
+                      <span>Career &amp; Profile Counselling</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <CheckCircle2 className="h-4 w-4 text-accent shrink-0" />
+                      <span>University &amp; Country Selection</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <CheckCircle2 className="h-4 w-4 text-accent shrink-0" />
+                      <span>Application &amp; SOP Guidance</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <CheckCircle2 className="h-4 w-4 text-accent shrink-0" />
+                      <span>Scholarship &amp; Financial Aid Support</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <CheckCircle2 className="h-4 w-4 text-accent shrink-0" />
+                      <span>Complete Visa Assistance</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <CheckCircle2 className="h-4 w-4 text-accent shrink-0" />
+                      <span>Pre- &amp; Post-Departure Sessions</span>
+                    </li>
+                  </ul>
                 </div>
               </div>
 
@@ -395,53 +422,14 @@ export default function AboutPage() {
               </div>
             </Link>
 
-            {/* Right Column: 4 Cards in 2x2 Grid (7 cols) with Imagery */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 lg:gap-6 lg:col-span-7">
-              {/* Card 2: Migration Support */}
+            {/* Center Column: 4 Cards in 2x2 Grid (6 cols) */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 lg:gap-6 lg:col-span-6">
+              {/* Card 2: Test Preparation */}
               <Link
-                href="/services/visa-assistance"
+                href="/services/test-preparation"
                 className="group relative flex flex-col justify-between overflow-hidden rounded-[24px] sm:rounded-[28px] bg-gradient-to-br from-[#10243D] to-[#0B192B] p-5 sm:p-6 text-white shadow-lg transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl border border-white/10"
               >
                 <div>
-                  {/* Image Banner with Badge */}
-                  <div className="relative w-full h-28 sm:h-32 overflow-hidden rounded-xl border border-white/10 shadow-sm mb-4">
-                    <img
-                      src="/destinations/uk.jpg"
-                      alt="Migration Support"
-                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                      loading="lazy"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#0B192B]/85 via-[#10243D]/30 to-transparent pointer-events-none" />
-                    <div className="absolute bottom-2.5 left-2.5 flex h-9 w-9 items-center justify-center rounded-lg bg-[#10243D]/90 backdrop-blur-sm border border-white/15 text-white shadow-md">
-                      <Users className="h-4.5 w-4.5 stroke-[1.8]" />
-                    </div>
-                  </div>
-
-                  <h3 className="font-heading text-lg sm:text-xl font-bold text-white group-hover:text-accent transition-colors">
-                    Migration Support
-                  </h3>
-                  <p className="mt-1.5 text-caption text-white/75 leading-relaxed">
-                    Expert assistance for a smooth and compliant migration journey.
-                  </p>
-                </div>
-
-                <div className="mt-4 pt-3 border-t border-white/10 flex items-center justify-between">
-                  <span className="font-heading text-micro font-semibold uppercase tracking-wider text-white/50 group-hover:text-white transition-colors">
-                    View service
-                  </span>
-                  <div className="flex h-8 w-8 items-center justify-center rounded-full border border-white/30 text-white transition-all duration-300 group-hover:bg-accent group-hover:text-white group-hover:border-accent group-hover:scale-105">
-                    <ArrowRight className="h-3.5 w-3.5 stroke-[2.2] transition-transform duration-300 group-hover:translate-x-0.5" />
-                  </div>
-                </div>
-              </Link>
-
-              {/* Card 3: Test Preparation */}
-              <Link
-                href="/test-preparation"
-                className="group relative flex flex-col justify-between overflow-hidden rounded-[24px] sm:rounded-[28px] bg-gradient-to-br from-[#10243D] to-[#0B192B] p-5 sm:p-6 text-white shadow-lg transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl border border-white/10"
-              >
-                <div>
-                  {/* Image Banner with Badge */}
                   <div className="relative w-full h-28 sm:h-32 overflow-hidden rounded-xl border border-white/10 shadow-sm mb-4">
                     <img
                       src="/imagery/services-education.jpg"
@@ -459,7 +447,7 @@ export default function AboutPage() {
                     Test Preparation
                   </h3>
                   <p className="mt-1.5 text-caption text-white/75 leading-relaxed">
-                    Comprehensive coaching for IELTS, PTE, TOEFL, GRE and GMAT.
+                    Result-oriented coaching for IELTS, TOEFL, PTE, GRE, GMAT, SAT.
                   </p>
                 </div>
 
@@ -473,17 +461,16 @@ export default function AboutPage() {
                 </div>
               </Link>
 
-              {/* Card 4: Career Training */}
+              {/* Card 3: Corporate Training */}
               <Link
-                href="/services/career-counselling"
+                href="/services/corporate-training"
                 className="group relative flex flex-col justify-between overflow-hidden rounded-[24px] sm:rounded-[28px] bg-gradient-to-br from-[#10243D] to-[#0B192B] p-5 sm:p-6 text-white shadow-lg transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl border border-white/10"
               >
                 <div>
-                  {/* Image Banner with Badge */}
                   <div className="relative w-full h-28 sm:h-32 overflow-hidden rounded-xl border border-white/10 shadow-sm mb-4">
                     <img
                       src="/imagery/about-hero.jpg"
-                      alt="Career Training"
+                      alt="Corporate Training"
                       className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                       loading="lazy"
                     />
@@ -494,16 +481,16 @@ export default function AboutPage() {
                   </div>
 
                   <h3 className="font-heading text-lg sm:text-xl font-bold text-white group-hover:text-accent transition-colors">
-                    Career Training
+                    Corporate Training
                   </h3>
                   <p className="mt-1.5 text-caption text-white/75 leading-relaxed">
-                    Skill-based training to boost your global career prospects.
+                    Courses in etiquette, personality development and business communication.
                   </p>
                 </div>
 
                 <div className="mt-4 pt-3 border-t border-white/10 flex items-center justify-between">
                   <span className="font-heading text-micro font-semibold uppercase tracking-wider text-white/50 group-hover:text-white transition-colors">
-                    View guidance
+                    View training
                   </span>
                   <div className="flex h-8 w-8 items-center justify-center rounded-full border border-white/30 text-white transition-all duration-300 group-hover:bg-accent group-hover:text-white group-hover:border-accent group-hover:scale-105">
                     <ArrowRight className="h-3.5 w-3.5 stroke-[2.2] transition-transform duration-300 group-hover:translate-x-0.5" />
@@ -511,37 +498,73 @@ export default function AboutPage() {
                 </div>
               </Link>
 
-              {/* Card 5: Post-Arrival Support */}
+              {/* Card 4: Migration Counselling */}
               <Link
-                href="/services/pre-and-post-departure-sessions"
+                href="/services/migration-counselling"
                 className="group relative flex flex-col justify-between overflow-hidden rounded-[24px] sm:rounded-[28px] bg-gradient-to-br from-[#10243D] to-[#0B192B] p-5 sm:p-6 text-white shadow-lg transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl border border-white/10"
               >
                 <div>
-                  {/* Image Banner with Badge */}
                   <div className="relative w-full h-28 sm:h-32 overflow-hidden rounded-xl border border-white/10 shadow-sm mb-4">
                     <img
-                      src="/destinations/canada.jpg"
-                      alt="Post-Arrival Support"
+                      src="/destinations/uk.jpg"
+                      alt="Migration Counselling"
                       className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                       loading="lazy"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#0B192B]/85 via-[#10243D]/30 to-transparent pointer-events-none" />
                     <div className="absolute bottom-2.5 left-2.5 flex h-9 w-9 items-center justify-center rounded-lg bg-[#10243D]/90 backdrop-blur-sm border border-white/15 text-white shadow-md">
-                      <Headphones className="h-4.5 w-4.5 stroke-[1.8]" />
+                      <Users className="h-4.5 w-4.5 stroke-[1.8]" />
                     </div>
                   </div>
 
                   <h3 className="font-heading text-lg sm:text-xl font-bold text-white group-hover:text-accent transition-colors">
-                    Post-Arrival Support
+                    Migration Counselling
                   </h3>
                   <p className="mt-1.5 text-caption text-white/75 leading-relaxed">
-                    Continued guidance for accommodation, settlement and beyond.
+                    Skilled migration advisory for Canada, Australia and New Zealand PR pathways.
                   </p>
                 </div>
 
                 <div className="mt-4 pt-3 border-t border-white/10 flex items-center justify-between">
                   <span className="font-heading text-micro font-semibold uppercase tracking-wider text-white/50 group-hover:text-white transition-colors">
-                    View support
+                    View pathways
+                  </span>
+                  <div className="flex h-8 w-8 items-center justify-center rounded-full border border-white/30 text-white transition-all duration-300 group-hover:bg-accent group-hover:text-white group-hover:border-accent group-hover:scale-105">
+                    <ArrowRight className="h-3.5 w-3.5 stroke-[2.2] transition-transform duration-300 group-hover:translate-x-0.5" />
+                  </div>
+                </div>
+              </Link>
+
+              {/* Card 5: Visa Counselling */}
+              <Link
+                href="/services/visa-counselling"
+                className="group relative flex flex-col justify-between overflow-hidden rounded-[24px] sm:rounded-[28px] bg-gradient-to-br from-[#10243D] to-[#0B192B] p-5 sm:p-6 text-white shadow-lg transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl border border-white/10"
+              >
+                <div>
+                  <div className="relative w-full h-28 sm:h-32 overflow-hidden rounded-xl border border-white/10 shadow-sm mb-4">
+                    <img
+                      src="/destinations/canada.jpg"
+                      alt="Visa Counselling"
+                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#0B192B]/85 via-[#10243D]/30 to-transparent pointer-events-none" />
+                    <div className="absolute bottom-2.5 left-2.5 flex h-9 w-9 items-center justify-center rounded-lg bg-[#10243D]/90 backdrop-blur-sm border border-white/15 text-white shadow-md">
+                      <ShieldCheck className="h-4.5 w-4.5 stroke-[1.8]" />
+                    </div>
+                  </div>
+
+                  <h3 className="font-heading text-lg sm:text-xl font-bold text-white group-hover:text-accent transition-colors">
+                    Visa Counselling
+                  </h3>
+                  <p className="mt-1.5 text-caption text-white/75 leading-relaxed">
+                    Expert visa guidance in study, tourism and business domains with high success.
+                  </p>
+                </div>
+
+                <div className="mt-4 pt-3 border-t border-white/10 flex items-center justify-between">
+                  <span className="font-heading text-micro font-semibold uppercase tracking-wider text-white/50 group-hover:text-white transition-colors">
+                    View visa support
                   </span>
                   <div className="flex h-8 w-8 items-center justify-center rounded-full border border-white/30 text-white transition-all duration-300 group-hover:bg-accent group-hover:text-white group-hover:border-accent group-hover:scale-105">
                     <ArrowRight className="h-3.5 w-3.5 stroke-[2.2] transition-transform duration-300 group-hover:translate-x-0.5" />
@@ -549,6 +572,95 @@ export default function AboutPage() {
                 </div>
               </Link>
             </div>
+
+            {/* Card 6: Long Card at End (Institutional Services, 3 cols) */}
+            <Link
+              href="/services/institutional-services"
+              className="group relative flex flex-col justify-between overflow-hidden rounded-[24px] sm:rounded-[28px] bg-gradient-to-br from-[#10243D] to-[#0B192B] p-6 sm:p-7 text-white shadow-xl transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl lg:col-span-3 border border-white/10"
+            >
+              {/* Subtle Red Swoosh / Gradient at bottom-left */}
+              <div
+                aria-hidden="true"
+                className="pointer-events-none absolute -bottom-16 -left-16 w-64 h-64 rounded-full bg-gradient-to-tr from-accent/50 via-accent/20 to-transparent blur-2xl"
+              />
+
+              <div>
+                {/* Icon & Core Practice Pill */}
+                <div className="flex items-center justify-between mb-4 relative z-10">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#1E3758] border border-white/10 text-white shadow-sm transition-transform duration-300 group-hover:scale-105">
+                    <Landmark className="h-6 w-6 text-white stroke-[1.8]" />
+                  </div>
+                  <span className="inline-flex items-center gap-1.5 rounded-full bg-accent/20 px-3 py-1 font-heading text-micro font-bold uppercase tracking-wider text-accent border border-accent/30">
+                    <Sparkles className="h-3 w-3 text-accent" />
+                    Institutional
+                  </span>
+                </div>
+
+                {/* Featured Photograph Inside the Box */}
+                <div className="relative w-full aspect-[16/10] overflow-hidden rounded-2xl border border-white/15 shadow-lg my-3 group-hover:border-accent/40 transition-colors">
+                  <img
+                    src="/destinations/europe.jpg"
+                    alt="Institutional Services"
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0B192B]/50 via-transparent to-transparent pointer-events-none" />
+                </div>
+
+                {/* Text Content */}
+                <div className="relative z-10 mt-4">
+                  <h3 className="font-heading text-xl sm:text-2xl font-extrabold text-white leading-tight">
+                    Institutional Services
+                  </h3>
+                  <p className="mt-2.5 text-caption sm:text-sm text-white/80 leading-relaxed">
+                    Strategic advisory, international university tie-ups and student recruitment for institutions.
+                  </p>
+                </div>
+
+                {/* Institutional Offerings Checklist */}
+                <div className="relative z-10 mt-5 pt-4 border-t border-white/10 space-y-2">
+                  <p className="font-heading text-micro font-bold uppercase tracking-wider text-accent">
+                    Key Services Included:
+                  </p>
+                  <ul className="space-y-2 text-caption text-white/85">
+                    <li className="flex items-center gap-2">
+                      <CheckCircle2 className="h-4 w-4 text-accent shrink-0" />
+                      <span>Global Institutional Tie-ups</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <CheckCircle2 className="h-4 w-4 text-accent shrink-0" />
+                      <span>Student Exchange Programmes</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <CheckCircle2 className="h-4 w-4 text-accent shrink-0" />
+                      <span>Academic Study Tours Abroad</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <CheckCircle2 className="h-4 w-4 text-accent shrink-0" />
+                      <span>In-House International Cell Setup</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <CheckCircle2 className="h-4 w-4 text-accent shrink-0" />
+                      <span>Collaborative Research Agreements</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <CheckCircle2 className="h-4 w-4 text-accent shrink-0" />
+                      <span>Administrative &amp; Faculty Exchange</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              {/* Bottom Action */}
+              <div className="relative z-10 mt-6 pt-4 border-t border-white/10 flex items-center justify-between">
+                <span className="font-heading text-xs font-semibold uppercase tracking-wider text-white/60 group-hover:text-white transition-colors">
+                  Explore services
+                </span>
+                <div className="flex h-10 w-10 items-center justify-center rounded-full border border-white/30 text-white transition-all duration-300 group-hover:bg-accent group-hover:text-white group-hover:border-accent group-hover:scale-105">
+                  <ArrowRight className="h-4.5 w-4.5 stroke-[2.2] transition-transform duration-300 group-hover:translate-x-0.5" />
+                </div>
+              </div>
+            </Link>
           </div>
         </div>
       </section>
@@ -576,7 +688,7 @@ export default function AboutPage() {
               <div className="lg:col-span-3 flex justify-center lg:justify-start">
                 <div className="relative w-full max-w-[260px] aspect-[4/3.5] overflow-hidden rounded-2xl border-2 border-white/10 shadow-xl bg-[#0B192B]">
                   <img
-                    src="/imagery/leadership-bhadrika-mehta.jpg"
+                    src="/brand/bradb.jpeg"
                     alt={`${leadership.name || 'Mrs. Bhadrika Mehta'} — Founder & Director`}
                     className="w-full h-full object-cover"
                     loading="lazy"
@@ -609,7 +721,7 @@ export default function AboutPage() {
                     &ldquo;
                   </span>
                   <p className="mt-2 text-sm sm:text-base italic text-white/95 leading-relaxed">
-                    Our goal is to provide honest, unbiased and professional guidance to help students build a successful global future.
+                    Our goal is to provide honest, unbiased and professional guidance to help students and Client  build a successful global future.
                   </p>
                 </div>
               </div>
@@ -644,9 +756,9 @@ export default function AboutPage() {
             <GradientCard
               badgeText="Advisory Practice"
               badgeColor="#F59E0B"
-              title="Senior Education Counsellors"
-              description="Unbiased university shortlisting, career mapping, and academic trajectory guidance tailored to your specific aptitude."
-              ctaText="Book counselling session"
+              title="Senior Admission and Visa Officer"
+              description="Unbiased university shortlisting, career mapping, and Submiting Applications."
+              ctaText="Contact Us"
               ctaHref="/contact"
               imageUrl="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=600&q=80"
               gradient="orange"
@@ -655,10 +767,8 @@ export default function AboutPage() {
             <GradientCard
               badgeText="Documentation & Compliance"
               badgeColor="#64748B"
-              title="Admissions & Visa Operations"
+              title="Admissions & Visa Manager Operations"
               description="Rigorous document verification, financial audits, mock interview preparation, and compliance with foreign consular guidelines."
-              ctaText="Explore visa guidance"
-              ctaHref="/services/visa-assistance"
               imageUrl="https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=600&q=80"
               gradient="gray"
             />
@@ -666,8 +776,8 @@ export default function AboutPage() {
             <GradientCard
               badgeText="Academic Training"
               badgeColor="#8B5CF6"
-              title="Faculty & Test Trainers"
-              description="Subject-specialist coaching for IELTS, PTE, TOEFL, GRE, and GMAT with certified trainers, mock drills, and error reviews."
+              title="Professional Test Trainers"
+              description="Subject-specialist coaching for IELTS, PTE, TOEFL, GRE, SAT and GMAT with certified trainers, mock drills, and error reviews."
               ctaText="Explore test preparation"
               ctaHref="/test-preparation"
               imageUrl="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80"
@@ -690,7 +800,7 @@ export default function AboutPage() {
                 <span className="h-[2px] w-8 rounded-full bg-accent inline-block" />
               </div>
               <h2 className="mt-3 text-3xl sm:text-4xl lg:text-[2.65rem] font-extrabold text-navy leading-tight tracking-tight">
-                How We Structure Your Advisory
+                This Is How We Structure the process
               </h2>
             </div>
             <p className="max-w-md text-base sm:text-lead text-charcoal/80 leading-relaxed">
@@ -705,8 +815,6 @@ export default function AboutPage() {
               badgeColor="#F59E0B"
               title="Profile Discovery & Assessment"
               description="Comprehensive academic review, career mapping, budget feasibility, and personalized country evaluation."
-              ctaText="Start profile discovery"
-              ctaHref="/contact"
               imageUrl="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=600&q=80"
               gradient="orange"
             />
@@ -716,8 +824,6 @@ export default function AboutPage() {
               badgeColor="#64748B"
               title="Course & University Selection"
               description="Unbiased shortlisting across verified institutions, intake calendars, eligibility criteria, and scholarship mapping."
-              ctaText="Explore destinations"
-              ctaHref="/destinations"
               imageUrl="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=600&q=80"
               gradient="gray"
             />
@@ -725,10 +831,8 @@ export default function AboutPage() {
             <GradientCard
               badgeText="Stage 03 • Weeks 4 – 6"
               badgeColor="#8B5CF6"
-              title="Application Dossier & SOP Review"
+              title="Application Dossier "
               description="Statement of Purpose guidance, reference letter compilation, certified credential filing, and direct portal tracking."
-              ctaText="View application support"
-              ctaHref="/services/university-application"
               imageUrl="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=600&q=80"
               gradient="purple"
             />
@@ -738,8 +842,6 @@ export default function AboutPage() {
               badgeColor="#10B981"
               title="Visa Filing & Travel Orientation"
               description="Financial audit, mock visa interview rehearsal, embassy lodgement, accommodation guidance, and flight orientation."
-              ctaText="Book free consultation"
-              ctaHref="/book-consultation"
               imageUrl="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=600&q=80"
               gradient="green"
             />
@@ -759,10 +861,10 @@ export default function AboutPage() {
               <span className="h-[2px] w-8 rounded-full bg-accent inline-block" />
             </div>
             <h2 className="mt-3 text-3xl sm:text-4xl lg:text-[2.65rem] font-extrabold text-navy leading-tight tracking-tight">
-              Why Students &amp; Families Choose Shine Consultant
+              Why Students &amp; Clients Choose Shine Consultant
             </h2>
             <p className="mt-3.5 text-base sm:text-lead text-charcoal/80 leading-relaxed">
-              We operate an independent, student-first practice with verified standards in Mumbai.
+              We operate an independent, student-first practice with verified standards.
             </p>
           </div>
 
@@ -794,7 +896,7 @@ export default function AboutPage() {
               badgeText="Full Spectrum"
               badgeColor="#8B5CF6"
               title="Integrated Service Continuum"
-              description="From foundational IELTS and GRE test preparation in Mumbai through application filings, visa processing, and post-arrival settlement support."
+              description="From foundational Test Preparation to Visa and Application filings, and pre post arrival guidance."
               ctaText="View all services"
               ctaHref="/services"
               imageUrl="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=600&q=80"

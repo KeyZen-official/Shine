@@ -177,7 +177,7 @@ export default async function TestPreparationDetailPage({ params }) {
             width: 1920,
             height: 1080,
           }}
-          brandTagline="Honest, unbiased & professional guidance — from Borivali West, Mumbai"
+          brandTagline="Honest, unbiased & professional guidance"
         />
 
         {/* 4 Benefit Indicators Quick Strip */}
