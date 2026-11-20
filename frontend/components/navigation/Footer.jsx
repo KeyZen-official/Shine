@@ -18,6 +18,7 @@ import { Brandmark } from '../brand/Brandmark';
 import {
   FOOTER_ADDITIONAL_SERVICES,
   FOOTER_OUR_SERVICES,
+  FOOTER_OVERSEAS_SERVICES,
   FOOTER_QUICK_LINKS,
   LEGAL_LINKS,
 } from '../../lib/config';
@@ -129,8 +130,8 @@ export function Footer({
 
   return (
     <footer className="bg-navy on-navy text-white">
-      <div className="shell py-16 lg:py-20">
-        <div className="grid gap-8 md:grid-cols-2 md:gap-10 lg:grid-cols-3 xl:grid-cols-[1.15fr_0.75fr_0.85fr_0.95fr_0.9fr_0.85fr_1.35fr]">
+      <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 py-16 lg:py-20">
+        <div className="grid gap-8 md:grid-cols-2 md:gap-8 lg:grid-cols-4 xl:grid-cols-[1.25fr_0.75fr_0.85fr_0.85fr_1.05fr_0.75fr_0.75fr_1.35fr]">
           <div>
             {/* The footer has vertical room for the whole lockup, tagline
                 included — unlike the navigation bar, which crops it. */}
@@ -206,9 +207,21 @@ export function Footer({
             </FooterGroup>
           ) : null}
 
-          <FooterGroup title="Overseas Education Services">
+          <FooterGroup title="Our services">
             <ul>
               {FOOTER_OUR_SERVICES.map((service) => (
+                <li key={service.href}>
+                  <Link href={service.href} className={LINK}>
+                    {service.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </FooterGroup>
+
+          <FooterGroup title="Overseas Education Services">
+            <ul>
+              {FOOTER_OVERSEAS_SERVICES.map((service) => (
                 <li key={service.href}>
                   <Link href={service.href} className={LINK}>
                     {service.label}
