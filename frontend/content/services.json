@@ -1,0 +1,203 @@
+[
+  {
+    "name": "Career Counselling",
+    "slug": "career-counselling",
+    "icon": "Compass",
+    "layoutVariant": "a-left-media",
+    "displayOrder": 1,
+    "status": "published",
+    "summary": "We help students decide career options depending on their past academic records, work experience and future aspirations.",
+    "description": "The first conversation is about direction, not destinations. We look at what you have studied, what you have done since, and what you want the next few years to lead to.\n\nGetting this stage right is what makes every later decision — country, institution, programme — follow from something rather than from a brochure.",
+    "howWeHelp": [
+      "A structured review of your academic record and work experience",
+      "Career options discussed against your own aspirations, not a shortlist of products",
+      "An honest view of which directions your profile currently supports"
+    ],
+    "processSteps": [
+      {
+        "order": 1,
+        "title": "Share your background",
+        "description": "Transcripts, test scores and any work experience."
+      },
+      {
+        "order": 2,
+        "title": "Talk through the options",
+        "description": "Where your record can realistically take you."
+      },
+      {
+        "order": 3,
+        "title": "Agree a direction",
+        "description": "So the country and course decisions that follow have a basis."
+      }
+    ],
+    "faqs": []
+  },
+  {
+    "name": "University Selection",
+    "slug": "university-selection",
+    "icon": "ListChecks",
+    "layoutVariant": "b-right-media",
+    "displayOrder": 2,
+    "status": "published",
+    "summary": "We assist students in shortlisting and deciding on countries and universities based on their past profiles, needs and career goals.",
+    "description": "A shortlist is only useful if it is built around your profile. We work through countries and institutions against your academic record, your budget and what you want the qualification to do for you.",
+    "howWeHelp": [
+      "Countries compared on their education systems, entry requirements and costs",
+      "Institutions shortlisted against your actual profile rather than a ranking table",
+      "The trade-offs made explicit, including where a choice is ambitious"
+    ],
+    "processSteps": [
+      {
+        "order": 1,
+        "title": "Set the criteria",
+        "description": "What you need from the country, the institution and the city."
+      },
+      {
+        "order": 2,
+        "title": "Build the shortlist",
+        "description": "With the reasoning attached to each option."
+      },
+      {
+        "order": 3,
+        "title": "Decide together",
+        "description": "You choose; our job is to make the choice an informed one."
+      }
+    ],
+    "faqs": []
+  },
+  {
+    "name": "University Application",
+    "slug": "university-application",
+    "icon": "FileText",
+    "layoutVariant": "c-stacked-banner",
+    "displayOrder": 3,
+    "status": "published",
+    "summary": "We aid students in creating error-free applications. Any shortcoming in the application process can delay the entire process and result in possible rejection.",
+    "description": "Most avoidable rejections and delays come from the application itself: a statement that answers the wrong question, a reference that arrives late, a form field left incomplete.\n\nWe work through each application before it is submitted.",
+    "howWeHelp": [
+      "Every form checked for completeness before submission",
+      "Statements of purpose reviewed against what the institution actually asks",
+      "References requested early and followed up",
+      "Deadlines tracked across your whole shortlist"
+    ],
+    "processSteps": [
+      {
+        "order": 1,
+        "title": "Prepare",
+        "description": "Documents assembled and the statement drafted."
+      },
+      {
+        "order": 2,
+        "title": "Review",
+        "description": "A full check against each institution’s requirements."
+      },
+      {
+        "order": 3,
+        "title": "Submit and track",
+        "description": "Filed on time, then followed through to the decision."
+      }
+    ],
+    "faqs": []
+  },
+  {
+    "name": "Scholarship Help",
+    "slug": "scholarship-help",
+    "icon": "Award",
+    "layoutVariant": "a-left-media",
+    "displayOrder": 4,
+    "status": "published",
+    "summary": "We guide students in applying for various scholarships and financial aid.",
+    "description": "Scholarship opportunities are more often lost to deadlines than to competition. We identify what your profile is eligible for and build those applications into your timeline from the start.\n\nWe cannot promise an award, and we will not suggest otherwise.",
+    "howWeHelp": [
+      "Eligibility checked against institutional and external awards",
+      "Funding deadlines mapped alongside your admission deadlines",
+      "Applications reviewed before they are submitted"
+    ],
+    "processSteps": [
+      {
+        "order": 1,
+        "title": "Check eligibility",
+        "description": "What you can realistically apply for."
+      },
+      {
+        "order": 2,
+        "title": "Plan the timeline",
+        "description": "Funding deadlines usually fall before admission ones."
+      },
+      {
+        "order": 3,
+        "title": "Apply",
+        "description": "Prepared and reviewed like any other application."
+      }
+    ],
+    "faqs": []
+  },
+  {
+    "name": "Visa Assistance",
+    "slug": "visa-assistance",
+    "icon": "Plane",
+    "layoutVariant": "b-right-media",
+    "displayOrder": 5,
+    "status": "published",
+    "summary": "We offer expert visa guidance in various domains such as studies, tourism and business.",
+    "description": "We help you assemble a complete and internally consistent application, and explain what each stage of the process expects of you.\n\nWe are a consultancy, not an immigration authority. We do not make visa decisions and we do not guarantee outcomes. We will also not assist with any application that misrepresents your position.",
+    "howWeHelp": [
+      "A document checklist specific to your destination and purpose",
+      "Your application read for internal consistency before it is filed",
+      "Each stage of the process explained in advance",
+      "Interview preparation where one is required"
+    ],
+    "processSteps": [
+      {
+        "order": 1,
+        "title": "Checklist",
+        "description": "Exactly what your destination requires from you."
+      },
+      {
+        "order": 2,
+        "title": "Assemble",
+        "description": "Documents gathered and checked against one another."
+      },
+      {
+        "order": 3,
+        "title": "Final review",
+        "description": "A last read before you submit."
+      }
+    ],
+    "faqs": []
+  },
+  {
+    "name": "Pre- and Post-Departure Sessions",
+    "slug": "pre-and-post-departure-sessions",
+    "icon": "Luggage",
+    "layoutVariant": "c-stacked-banner",
+    "displayOrder": 6,
+    "status": "published",
+    "summary": "We conduct pre- and post-departure sessions with our clients to facilitate their transition to overseas countries.",
+    "description": "The weeks either side of departure are where most practical problems appear, usually because nobody planned the unglamorous parts. We go through them with you — and we stay reachable after you have arrived.",
+    "howWeHelp": [
+      "Accommodation options compared, including the institution’s own",
+      "Travel, insurance and arrival planned in the right order",
+      "Banking, mobile connectivity and registration covered",
+      "A follow-up session after you arrive, not just before you leave"
+    ],
+    "processSteps": [
+      {
+        "order": 1,
+        "title": "Before you fly",
+        "description": "Accommodation, travel, insurance and finances settled."
+      },
+      {
+        "order": 2,
+        "title": "Arrival briefing",
+        "description": "What to expect in your first week."
+      },
+      {
+        "order": 3,
+        "title": "After you land",
+        "description": "A post-departure session once you are settling in."
+      }
+    ],
+    "faqs": []
+  }
+]
