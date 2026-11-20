@@ -189,8 +189,8 @@ export default function StudyAbroadPage() {
   };
 
   const stats = [
-    { value: 6, label: 'advisory services', srLabel: 'Advisory services' },
-    { value: '10+', label: 'study destinations', srLabel: 'Study destinations', featureLabel: 'destinations' },
+    { value: 6, label: 'Advisory Services', srLabel: 'Advisory services' },
+    { value: '10+', label: 'Study Destinations', srLabel: 'Study destinations', featureLabel: 'destinations' },
   ];
 
   const quickPillars = [

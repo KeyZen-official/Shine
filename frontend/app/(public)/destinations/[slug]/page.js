@@ -114,9 +114,9 @@ export default async function DestinationPage({ params }) {
         srLabel: 'Over 150 Canadian universities',
       },
       {
-        value: '3 to 4 Years',
+        value: '1 to 3 Years',
         label: 'Work Rights (PGWP)',
-        srLabel: 'Post-Graduation Work Permit up to 3 to 4 years',
+        srLabel: 'Post-Graduation Work Permit from 1 to 3 years',
       },
     ],
     australia: [

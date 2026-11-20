@@ -50,9 +50,9 @@ export default function VisaCounsellingPage() {
   };
 
   const stats = [
-    { value: '20+', label: 'years of experience', srLabel: 'Years of experience' },
-    { value: '95%+', label: 'success rate', srLabel: 'Historical success rate' },
-    { value: 'Multiple', label: 'countries covered', srLabel: 'Countries covered', featureLabel: 'countries' },
+    { value: '20+', label: 'Years of Experience', srLabel: 'Years of experience' },
+    { value: '95%+', label: 'Success Rate', srLabel: 'Historical success rate' },
+    { value: 'Multiple', label: 'Countries Covered', srLabel: 'Countries covered', featureLabel: 'countries' },
   ];
 
   const quickPillars = [

@@ -70,8 +70,8 @@ export default function InstitutionalServicesPage() {
   };
 
   const stats = [
-    { value: 4, label: 'institutional services', srLabel: 'Institutional services' },
-    { value: 'Global', label: 'institutional network', srLabel: 'Global network', featureLabel: 'network' },
+    { value: 4, label: 'Institutional Services', srLabel: 'Institutional services' },
+    { value: 'Global', label: 'Institutional Network', srLabel: 'Global network', featureLabel: 'network' },
   ];
 
   const quickPillars = [

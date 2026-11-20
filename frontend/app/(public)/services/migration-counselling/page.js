@@ -65,8 +65,8 @@ export default function MigrationCounsellingPage() {
   };
 
   const stats = [
-    { value: '10+', label: 'years of experience', srLabel: 'Years of experience' },
-    { value: '1000s', label: 'families settled abroad', srLabel: 'Families settled abroad', featureLabel: 'settled' },
+    { value: '10+', label: 'Years of Experience', srLabel: 'Years of experience' },
+    { value: '1000s', label: 'Families Settled Abroad', srLabel: 'Families settled abroad', featureLabel: 'settled' },
   ];
 
   const quickPillars = [

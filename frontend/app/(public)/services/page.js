@@ -82,23 +82,23 @@ export default function ServicesPage() {
     counts.services > 0
       ? {
           value: counts.services,
-          label: plural(counts.services, 'advisory service', 'advisory services'),
+          label: plural(counts.services, 'Advisory Service', 'Advisory Services'),
           srLabel: 'Advisory services',
         }
       : null,
     counts.destinations > 0
       ? {
           value: counts.destinations,
-          label: plural(counts.destinations, 'study destination', 'study destinations'),
+          label: plural(counts.destinations, 'Study Destination', 'Study Destinations'),
           srLabel: 'Study destinations',
         }
       : null,
     counts.testPreparation > 0
       ? {
           value: counts.testPreparation,
-          label: plural(counts.testPreparation, 'coaching programme', 'coaching programmes'),
+          label: plural(counts.testPreparation, 'Coaching Programme', 'Coaching Programmes'),
           srLabel: 'Coaching programmes',
-          featureLabel: plural(counts.testPreparation, 'programme', 'programmes'),
+          featureLabel: plural(counts.testPreparation, 'Programme', 'Programmes'),
         }
       : null,
   ].filter(Boolean);
@@ -107,7 +107,7 @@ export default function ServicesPage() {
     eyebrow: 'OVERSEAS EDUCATION SERVICES — SHINE CONSULTANT',
     headline: 'End-to-End Overseas Education & Client Advisory Services.',
     supportingLine:
-      'From career counselling and university selection to application filings, visa processing, pre-departure briefings and test preparation — Shine Consultant provides honest, transparent and dedicated support at every step of your international journey.',
+      'From career counselling and university selection to application filings, visa processing, and test preparation along with institutional services for tie-ups and study tours — Shine Consultant provides honest, transparent and dedicated support at every step of your international journey.',
     primaryCtaLabel: 'Book Free Consultation',
     primaryCtaHref: '/book-consultation',
     secondaryCtaLabel: 'Explore Services',
@@ -315,7 +315,7 @@ export default function ServicesPage() {
         content={{
           headline: 'Start Your Education Journey with Shine Consultant',
           supportingLine:
-            'Schedule a confidential thirty-minute consultation with a senior advisor. We will review your academic background, discuss realistic destinations, and chart your roadmap abroad.',
+            'Schedule a confidential thirty-minute consultation with a senior advisor. We will review your case, discuss realistic destinations, and chart your roadmap for abroad.',
           ctaLabel: 'Book Free Consultation',
         }}
       />

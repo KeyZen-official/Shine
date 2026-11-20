@@ -58,8 +58,8 @@ export default function CorporateTrainingPage() {
   };
 
   const stats = [
-    { value: 4, label: 'training programmes', srLabel: 'Training programmes' },
-    { value: 'Expert', label: 'corporate trainers', srLabel: 'Expert trainers', featureLabel: 'trainers' },
+    { value: 4, label: 'Training Programmes', srLabel: 'Training programmes' },
+    { value: 'Expert', label: 'Corporate Trainers', srLabel: 'Expert trainers', featureLabel: 'trainers' },
   ];
 
   const quickPillars = [

@@ -586,8 +586,8 @@ export const DESTINATION_DATA = {
                 "icon": "BookOpen"
         },
         {
-                "title": "3 to 4 years work rights (PGWP)",
-                "description": "Post-Graduation Work Permit enabling graduates to gain 3 to 4 years of Canadian professional work experience.",
+                "title": "1 to 3 years work rights (PGWP)",
+                "description": "Post-Graduation Work Permit enabling graduates to gain 1 to 3 years of Canadian professional work experience.",
                 "icon": "TrendingUp"
         },
         {

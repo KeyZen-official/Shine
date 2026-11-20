@@ -33,14 +33,14 @@ export default function LatestPage() {
     destinations.length > 0
       ? {
           value: '10+',
-          label: 'destinations',
+          label: 'Destinations',
           srLabel: 'Study destinations',
         }
       : null,
     services.length > 0
       ? {
           value: 6,
-          label: 'services',
+          label: 'Services',
           srLabel: 'Services',
         }
       : null,

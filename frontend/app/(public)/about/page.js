@@ -226,14 +226,14 @@ export default function AboutPage() {
     counts.destinations > 0
       ? {
         value: '10+',
-        label: 'destinations',
+        label: 'Destinations',
         srLabel: 'Study destinations',
       }
       : null,
     counts.services > 0
       ? {
         value: 6,
-        label: 'services',
+        label: 'Services',
         srLabel: 'Services',
       }
       : null,

@@ -63,8 +63,8 @@ export default function TestPreparationPage() {
   };
 
   const stats = [
-    { value: 7, label: 'exams we coach', srLabel: 'Exams we coach' },
-    { value: '6+', label: 'tests we coach', srLabel: 'Tests we prepare for', featureLabel: 'programmes' },
+    { value: 6, label: 'Coaching Programmes', srLabel: 'Coaching programmes' },
+    { value: '10+', label: 'Study Destinations', srLabel: 'Study destinations', featureLabel: 'destinations' },
   ];
 
   const quickPillars = [

@@ -227,10 +227,10 @@ export function NotchedDestinationDemo() {
       <NotchedProjectCard
         href="/destinations/canada"
         title="Canada"
-        description="Over 350 institutions including 150+ Canadian universities, 3 to 4 years post-graduation work permit (PGWP)."
+        description="Over 350 institutions including 150+ Canadian universities, 1 to 3 years post-graduation work permit (PGWP)."
         image="/destinations/canada.jpg"
         badge="North America"
-        tags={["350+ Institutions", "150+ Universities", "3-4 Yr PGWP"]}
+        tags={["350+ Institutions", "150+ Universities", "1-3 Yr PGWP"]}
         surface="#FFFFFF"
         accent="#D00100"
       />
