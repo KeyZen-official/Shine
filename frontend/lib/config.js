@@ -72,7 +72,6 @@ export const PRIMARY_NAV = [
  */
 export const FOOTER_QUICK_LINKS = [
   { label: 'About us', href: '/about' },
-  { label: 'Gallery', href: '/gallery' },
   { label: 'Testimonials', href: '/testimonials' },
   { label: 'Latest updates', href: '/latest-updates' },
   { label: 'Forex exchange', href: '/forex-exchange' },
