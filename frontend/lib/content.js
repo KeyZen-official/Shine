@@ -7,6 +7,7 @@ import companyFile from '../content/company.json';
 import contactFile from '../content/contact.json';
 import homeFile from '../content/home.json';
 import settingsFile from '../content/settings.json';
+import updatesFile from '../content/updates.json';
 
 /**
  * The site's content layer.
@@ -196,5 +197,50 @@ export function getContentCounts() {
     destinations: getDestinations().length,
     services: getServices().length,
     testPreparation: getTestPreparation().length,
+    updates: getUpdates().length,
   };
+}
+
+/* ------------------------------------------------------------------ */
+/* Latest updates                                                      */
+/* ------------------------------------------------------------------ */
+
+const byPublicationDateDesc = (a, b) =>
+  new Date(b.publishedAt ?? 0).getTime() - new Date(a.publishedAt ?? 0).getTime();
+
+export function getUpdates({ includeDrafts = false, category = '', limit } = {}) {
+  let list = (updatesFile ?? []).filter((u) => includeDrafts || isPublished(u));
+
+  if (category && category !== 'All') {
+    list = list.filter((u) => u.category === category);
+  }
+
+  list.sort(byPublicationDateDesc);
+
+  if (typeof limit === 'number' && limit > 0) {
+    return list.slice(0, limit);
+  }
+
+  return list;
+}
+
+export function getUpdate(slug) {
+  const record = (updatesFile ?? []).find((u) => u.slug === slug);
+  if (!record || !isPublished(record)) return null;
+  return record;
+}
+
+export function getUpdateCategories() {
+  const published = (updatesFile ?? []).filter(isPublished);
+  const categories = Array.from(new Set(published.map((u) => u.category).filter(Boolean)));
+  return ['All', ...categories];
+}
+
+export function getRelatedUpdates(slug, category, limit = 3) {
+  const published = (updatesFile ?? []).filter((u) => isPublished(u) && u.slug !== slug);
+  const sameCategory = published.filter((u) => u.category === category);
+  const others = published.filter((u) => u.category !== category);
+
+  const combined = [...sameCategory, ...others].sort(byPublicationDateDesc);
+  return combined.slice(0, limit);
 }

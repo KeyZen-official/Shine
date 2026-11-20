@@ -150,6 +150,41 @@ export function breadcrumbJsonLd(trail = []) {
   };
 }
 
+export function articleJsonLd(article) {
+  if (!article) return null;
+  const canonical = `${siteConfig.siteUrl}/latest/${article.slug}`;
+  const imageUrl = article.featuredImage
+    ? resolveMediaUrl(article.featuredImage)
+    : undefined;
+
+  return prune({
+    '@context': 'https://schema.org',
+    '@type': 'NewsArticle',
+    headline: article.title,
+    description: article.shortDescription || article.seo?.description,
+    image: imageUrl ? [imageUrl] : undefined,
+    datePublished: article.publishedAt,
+    dateModified: article.publishedAt,
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': canonical,
+    },
+    author: {
+      '@type': 'Organization',
+      name: siteConfig.name,
+      url: siteConfig.siteUrl,
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: siteConfig.name,
+      logo: {
+        '@type': 'ImageObject',
+        url: `${siteConfig.siteUrl}/brand/logo-lockup-400.png`,
+      },
+    },
+  });
+}
+
 function prune(object) {
   const output = {};
   for (const [key, value] of Object.entries(object)) {
