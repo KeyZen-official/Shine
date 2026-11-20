@@ -8,7 +8,7 @@ import {
   FilePenLine,
   HandCoins,
   FileCheck,
-  Plane,
+  Landmark,
   ArrowRight,
   Calendar,
 } from 'lucide-react';
@@ -59,12 +59,12 @@ export const CORE_SERVICES = [
     icon: FileCheck,
   },
   {
-    id: 'pre-and-post-departure-sessions',
-    title: 'Pre- and Post-Departure Sessions',
+    id: 'institutional-tie-ups',
+    title: 'Institutional Tie-ups',
     description:
-      'Complete guidance for a confident start, from travel preparation to settling abroad.',
-    href: '/services/pre-and-post-departure-sessions',
-    icon: Plane,
+      'Global university tie-ups, student exchange programmes, study tours and international cell operations.',
+    href: '/services/institutional-services',
+    icon: Landmark,
   },
 ];
 
@@ -172,7 +172,7 @@ export function ServicesSection({ services }) {
               </h2>
 
               <p className="mt-5 text-base sm:text-lg lg:text-[1.125rem] text-charcoal/80 leading-relaxed max-w-lg">
-                End-to-end support for your global education journey, from planning to post-arrival.
+                End-to-end support for your global education journey, from planning to institutional tie-ups.
               </p>
             </div>
 

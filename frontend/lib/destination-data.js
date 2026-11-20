@@ -223,6 +223,7 @@ export const DESTINATION_DATA = {
       title: 'What Do You Need to Apply?',
       items: [
         'Academic transcripts and certificates',
+        'Credential evaluation (WES / ICAS / IQAS etc. for top universities)',
         'English proficiency test scores (e.g. IELTS, TOEFL, PTE)',
         'Statement of Purpose (SOP)',
         'Letters of Recommendation (LOR), where required',
@@ -318,8 +319,8 @@ export const DESTINATION_DATA = {
                 "icon": "BookOpen"
         },
         {
-                "title": "Graduate Route (18-Month PSW)",
-                "description": "Post-study work rights to launch global careers in London and regional hubs.",
+                "title": "Graduate Route (18 Months PSW)",
+                "description": "18 months post-study work rights (PSW) to launch global careers in London and regional hubs.",
                 "icon": "TrendingUp"
         },
         {
@@ -402,11 +403,9 @@ export const DESTINATION_DATA = {
             "creators": "Collegiate Research University",
             "imageUrl": "https://images.unsplash.com/photo-1580828343064-fde4fc206bc6?auto=format&fit=crop&w=800&q=80",
             "stat1Label": "Intakes",
-            "stat1Value": "Autumn (Oct)",
+            "stat1Value": "Sept & Jan",
             "stat2Label": "Degrees",
             "stat2Value": "BA, BSc, MSt, DPhil",
-            "stat3Label": "Advisory",
-            "stat3Value": "Full Support",
             "href": "/contact"
       },
       {
@@ -418,11 +417,9 @@ export const DESTINATION_DATA = {
             "creators": "Collegiate Research University",
             "imageUrl": "https://images.unsplash.com/photo-1565035010268-a3816f98589a?auto=format&fit=crop&w=800&q=80",
             "stat1Label": "Intakes",
-            "stat1Value": "Michaelmas (Oct)",
+            "stat1Value": "Sept & Jan",
             "stat2Label": "Degrees",
             "stat2Value": "BA, MPhil, PhD",
-            "stat3Label": "Advisory",
-            "stat3Value": "Full Support",
             "href": "/contact"
       },
       {
@@ -434,11 +431,9 @@ export const DESTINATION_DATA = {
             "creators": "Public Research University",
             "imageUrl": "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=800&q=80",
             "stat1Label": "Intakes",
-            "stat1Value": "Autumn Intake",
+            "stat1Value": "Sept & Jan",
             "stat2Label": "Degrees",
             "stat2Value": "BEng, MEng, MSc",
-            "stat3Label": "Advisory",
-            "stat3Value": "Full Support",
             "href": "/contact"
       },
       {
@@ -495,6 +490,7 @@ export const DESTINATION_DATA = {
       title: 'What Do You Need to Apply?',
       items: [
         'Academic transcripts and certificates',
+        'Credential evaluation (WES / ICAS / IQAS etc. for top universities)',
         'English proficiency test scores (e.g. IELTS, TOEFL, PTE)',
         'Statement of Purpose (SOP)',
         'Letters of Recommendation (LOR), where required',
@@ -509,11 +505,11 @@ export const DESTINATION_DATA = {
       title: 'Get Ready for Your UK Student Visa',
       image: '/imagery/usa-visa-passport.jpg',
       items: [
-        'Visa documentation guidance',
-        'Application filing and form support',
         'Immigration authority compliance guidance',
-        'Interview preparation and rehearsal',
+        'Visa documentation guidance',
         'Financial documentation guidance',
+        'Application filing and form support',
+        'Interview preparation and rehearsal',
         'Pre-departure orientation and student briefing',
       ],
       ctaText: 'Talk to Our Visa Experts',
@@ -539,7 +535,7 @@ export const DESTINATION_DATA = {
             "answer": "Entry criteria depend on course tier and degree level. Generally, undergraduate study requires 65%–85% in Class 12, and postgraduate courses require 55%–75% in a relevant bachelor’s degree, plus English proficiency."
       },
       {
-            "question": "What is the UK Graduate Route (PSW) work visa?",
+            "question": "What is the UK Graduate Route (18 Months PSW) work visa?",
             "answer": "The Graduate Route allows international students who successfully complete an eligible degree to stay and work in the UK for 18 months (3 years for doctoral graduates) without requiring initial company sponsorship."
       },
       {
@@ -580,8 +576,8 @@ export const DESTINATION_DATA = {
       imageBadge: 'A Hub of Innovation, Research & Global Opportunities',
       points: [
         {
-                "title": "Top-tier public institutions",
-                "description": "Universally respected degrees known for scientific and academic integrity.",
+                "title": "350+ institutions & 150+ universities",
+                "description": "Over 350 designated learning institutions and 150+ Canadian universities offering globally respected degrees.",
                 "icon": "Award"
         },
         {
@@ -590,19 +586,19 @@ export const DESTINATION_DATA = {
                 "icon": "BookOpen"
         },
         {
-                "title": "Up to 3-year PGWP",
-                "description": "Post-Graduation Work Permit enabling graduates to gain Canadian work experience.",
+                "title": "3 to 4 years work rights (PGWP)",
+                "description": "Post-Graduation Work Permit enabling graduates to gain 3 to 4 years of Canadian professional work experience.",
                 "icon": "TrendingUp"
+        },
+        {
+                "title": "WES credential evaluation",
+                "description": "Credential evaluation required by WES, ICAS etc. for academic equivalence at top Canadian universities.",
+                "icon": "BookOpen"
         },
         {
                 "title": "Co-op work-integrated study",
                 "description": "Integrated paid internships providing direct industry experience before graduation.",
                 "icon": "Compass"
-        },
-        {
-                "title": "Safe and inclusive society",
-                "description": "Consistently ranked among the top safest and most welcoming countries globally.",
-                "icon": "Users"
         },
         {
                 "title": "Clear immigration pathways",
@@ -767,6 +763,7 @@ export const DESTINATION_DATA = {
       title: 'What Do You Need to Apply?',
       items: [
         'Academic transcripts and certificates',
+        'Credential evaluation (WES / ICAS / IQAS etc. for top universities)',
         'English proficiency test scores (e.g. IELTS, TOEFL, PTE)',
         'Statement of Purpose (SOP)',
         'Letters of Recommendation (LOR), where required',
@@ -774,7 +771,7 @@ export const DESTINATION_DATA = {
         'Valid passport',
         'University-specific application documents',
       ],
-      note: 'Requirements may vary by university and programme.',
+      note: 'Requirements may vary by university. Credential evaluation by WES / ICAS etc. required for top Canadian universities.',
     },
     visaAssistance: {
       eyebrow: 'VISA SUPPORT',
@@ -819,8 +816,8 @@ export const DESTINATION_DATA = {
             "answer": "A PAL is an official verification letter issued by the Canadian province where your institution is located, confirming your study spot within the national cap. It is required for most post-secondary study permit applications."
       },
       {
-            "question": "What GIC amount is required for Canadian student visas?",
-            "answer": "Under current IRCC guidelines, international students must secure a Guaranteed Investment Certificate (GIC) to prove cost of living funds for their first year in Canada."
+            "question": "Is GIC (Guaranteed Investment Certificate) mandatory for a Canadian student visa?",
+            "answer": "No, a GIC is not mandatory for all Canadian study permit applications. While SDS utilized a GIC, international students applying through the regular study permit stream can demonstrate required living costs and tuition funds through liquid bank savings, fixed deposits, provident funds, or approved education loans without a mandatory GIC."
       },
       {
             "question": "Which English language tests are accepted for Canadian admissions?",
@@ -1039,6 +1036,7 @@ export const DESTINATION_DATA = {
       title: 'What Do You Need to Apply?',
       items: [
         'Academic transcripts and certificates',
+        'Credential evaluation (WES / ICAS / IQAS etc. for top universities)',
         'English proficiency test scores (e.g. IELTS, TOEFL, PTE)',
         'Statement of Purpose (SOP)',
         'Letters of Recommendation (LOR), where required',
@@ -1311,6 +1309,7 @@ export const DESTINATION_DATA = {
       title: 'What Do You Need to Apply?',
       items: [
         'Academic transcripts and certificates',
+        'Credential evaluation (WES / ICAS / IQAS etc. for top universities)',
         'English proficiency test scores (e.g. IELTS, TOEFL, PTE)',
         'Statement of Purpose (SOP)',
         'Letters of Recommendation (LOR), where required',
@@ -1583,6 +1582,7 @@ export const DESTINATION_DATA = {
       title: 'What Do You Need to Apply?',
       items: [
         'Academic transcripts and certificates',
+        'Credential evaluation (WES / ICAS / IQAS etc. for top universities)',
         'English proficiency test scores (e.g. IELTS, TOEFL, PTE)',
         'Statement of Purpose (SOP)',
         'Letters of Recommendation (LOR), where required',
@@ -1855,6 +1855,7 @@ export const DESTINATION_DATA = {
       title: 'What Do You Need to Apply?',
       items: [
         'Academic transcripts and certificates',
+        'Credential evaluation (WES / ICAS / IQAS etc. for top universities)',
         'English proficiency test scores (e.g. IELTS, TOEFL, PTE)',
         'Statement of Purpose (SOP)',
         'Letters of Recommendation (LOR), where required',
@@ -2127,6 +2128,7 @@ export const DESTINATION_DATA = {
       title: 'What Do You Need to Apply?',
       items: [
         'Academic transcripts and certificates',
+        'Credential evaluation (WES / ICAS / IQAS etc. for top universities)',
         'English proficiency test scores (e.g. IELTS, TOEFL, PTE)',
         'Statement of Purpose (SOP)',
         'Letters of Recommendation (LOR), where required',
@@ -2399,6 +2401,7 @@ export const DESTINATION_DATA = {
       title: 'What Do You Need to Apply?',
       items: [
         'Academic transcripts and certificates',
+        'Credential evaluation (WES / ICAS / IQAS etc. for top universities)',
         'English proficiency test scores (e.g. IELTS, TOEFL, PTE)',
         'Statement of Purpose (SOP)',
         'Letters of Recommendation (LOR), where required',
@@ -2958,3 +2961,5 @@ export const DESTINATION_DATA = {
 export function getDestinationPageData(slug) {
   return DESTINATION_DATA[slug] || DESTINATION_DATA.usa;
 }
+
+

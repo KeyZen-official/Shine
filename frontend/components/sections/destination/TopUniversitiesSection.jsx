@@ -26,6 +26,11 @@ export function TopUniversitiesSection({ destination, universities = [] }) {
             <h2 className="text-3xl sm:text-4xl lg:text-[2.65rem] font-extrabold text-navy leading-tight tracking-tight">
               Explore Leading Universities in {destination.name}
             </h2>
+            <p className="mt-2 text-sm text-charcoal/70">
+              {destination.slug === 'canada' || destination.name === 'Canada'
+                ? 'Academic credential evaluation required by WES, ICAS etc. for top Canadian universities.'
+                : 'Admissions guidance, intake planning, and credential evaluation support.'}
+            </p>
           </div>
 
           <Link
@@ -58,8 +63,6 @@ export function TopUniversitiesSection({ destination, universities = [] }) {
                 stat1Value={uni.stat1Value || 'Fall & Spring'}
                 stat2Label={uni.stat2Label || 'Degree Level'}
                 stat2Value={uni.stat2Value || 'UG & PG'}
-                stat3Label={uni.stat3Label || 'Advisory Status'}
-                stat3Value={uni.stat3Value || 'Open'}
                 badge={uni.badge}
                 onDirectionsClick={() => {
                   router.push(uni.href || '/contact');

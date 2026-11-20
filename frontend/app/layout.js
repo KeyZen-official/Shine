@@ -1,24 +1,8 @@
-import { Inter, Manrope } from 'next/font/google';
 import './globals.css';
 import { siteConfig } from '../lib/config';
 
-/**
- * Self-hosted by next/font at build time, so there is no third-party font
- * request, no FOIT and no layout shift once the hero paints.
- */
-const heading = Manrope({
-  subsets: ['latin', 'latin-ext'],
-  weight: ['500', '600', '700', '800'],
-  variable: '--font-heading',
-  display: 'swap',
-});
-
-const body = Inter({
-  subsets: ['latin', 'latin-ext'],
-  weight: ['400', '500', '600'],
-  variable: '--font-body',
-  display: 'swap',
-});
+const heading = { variable: 'font-heading' };
+const body = { variable: 'font-body' };
 
 export const metadata = {
   metadataBase: new URL(siteConfig.siteUrl),
@@ -29,7 +13,7 @@ export const metadata = {
   // Paraphrases the mission statement in the company profile. Keep this in
   // step with COMPANY.mission in backend/src/seed/structure.js.
   description:
-    'Honest, unbiased and professional guidance for people broadening their academic and professional horizons overseas. Overseas education, migration consultancy and test preparation, from our Borivali West office in Mumbai.',
+    'Honest, unbiased and professional guidance for people broadening their academic and professional horizons overseas. Overseas education, migration consultancy and test preparation from Shine Consultant.',
   applicationName: siteConfig.name,
   formatDetection: { telephone: false },
   openGraph: {

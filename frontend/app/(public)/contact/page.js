@@ -25,7 +25,7 @@ import { Button } from '../../../components/ui/Button';
 export const metadata = buildMetadata({
   title: 'Contact Shine Consultant',
   description:
-    'Reach our counsellors by phone, email or walk in to our Borivali West office. Send an enquiry and we will respond within one working day.',
+    'Reach our counsellors by phone, email or walk in to our office. Send an enquiry and we will respond within one working day.',
   path: '/contact',
 });
 
@@ -67,10 +67,12 @@ export default function ContactPage() {
             <Phone className="h-5 w-5 stroke-[2]" aria-hidden="true" />
           </div>
           <div className="min-w-0">
-            <p className="font-heading text-xs font-bold uppercase tracking-wider text-navy">Mobile</p>
-            <a href={`tel:${phone.replace(/\s/g, '')}`} className="mt-0.5 text-xs text-charcoal/75 hover:text-accent transition-colors leading-relaxed">
-              {phone}
-            </a>
+            <p className="font-heading text-xs font-bold uppercase tracking-wider text-navy">Mobile / Direct</p>
+            <div className="mt-0.5 text-xs text-charcoal/75 leading-relaxed">
+              <a href="tel:9137044882" className="hover:text-accent transition-colors">+91 91370 44882</a>
+              <span className="mx-1 text-charcoal/40">/</span>
+              <a href="tel:7303890969" className="hover:text-accent transition-colors">+91 73038 90969</a>
+            </div>
           </div>
         </div>
       )}
@@ -80,19 +82,19 @@ export default function ContactPage() {
             <Phone className="h-5 w-5 stroke-[2]" aria-hidden="true" />
           </div>
           <div className="min-w-0">
-            <p className="font-heading text-xs font-bold uppercase tracking-wider text-navy">Landline</p>
+            <p className="font-heading text-xs font-bold uppercase tracking-wider text-navy">Landline Office</p>
             <p className="mt-0.5 text-xs text-charcoal/75 leading-relaxed">{alternatePhone}</p>
           </div>
         </div>
       )}
       {email && (
-        <div className="flex items-start gap-3 py-3">
+        <div className="flex items-start gap-3 py-3 col-span-full">
           <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-accent/10 text-accent">
             <Mail className="h-5 w-5 stroke-[2]" aria-hidden="true" />
           </div>
           <div className="min-w-0">
             <p className="font-heading text-xs font-bold uppercase tracking-wider text-navy">Email</p>
-            <a href={`mailto:${email}`} className="mt-0.5 text-xs text-charcoal/75 hover:text-accent transition-colors break-all leading-relaxed">
+            <a href={`mailto:${email}`} className="mt-0.5 text-xs text-charcoal/75 hover:text-accent transition-colors whitespace-nowrap leading-relaxed">
               {email}
             </a>
           </div>
@@ -127,32 +129,23 @@ export default function ContactPage() {
     </>
   );
 
-  const plural = (count, one, many) => (count === 1 ? one : many);
-
   const stats = [
-    counts.destinations > 0
-      ? {
-        value: counts.destinations,
-        label: plural(counts.destinations, 'study destination', 'study destinations'),
-        srLabel: 'Study destinations',
-      }
-      : null,
-    counts.services > 0
-      ? {
-        value: counts.services,
-        label: plural(counts.services, 'advisory service', 'advisory services'),
-        srLabel: 'Advisory services',
-      }
-      : null,
-    counts.testPreparation > 0
-      ? {
-        value: counts.testPreparation,
-        label: plural(counts.testPreparation, 'coaching programme', 'coaching programmes'),
-        srLabel: 'Coaching programmes',
-        featureLabel: plural(counts.testPreparation, 'programme', 'programmes'),
-      }
-      : null,
-  ].filter(Boolean);
+    {
+      value: '10+',
+      label: 'Destinations',
+      srLabel: 'Study destinations',
+    },
+    {
+      value: 6,
+      label: 'Services',
+      srLabel: 'Services',
+    },
+    {
+      value: 6,
+      label: 'Programmes',
+      srLabel: 'Coaching programmes',
+    },
+  ];
 
   const heroContent = {
     eyebrow: 'GET IN TOUCH — SHINE CONSULTANT',
@@ -231,7 +224,7 @@ export default function ContactPage() {
                 Visit Our Office
               </h2>
               <p className="text-sm text-charcoal/80 leading-relaxed mb-8 max-w-lg">
-                Our counsellors are available in person at our Borivali West headquarters. Walk-in
+                Our counsellors are available in person at our headquarters. Walk-in
                 appointments are welcome during business hours; for a guaranteed session, please
                 book a free consultation in advance.
               </p>
@@ -385,7 +378,7 @@ export default function ContactPage() {
                 </h3>
 
                 <p className="text-sm text-white/75 leading-relaxed mb-6 max-w-md">
-                  Book a thirty-minute session at our Borivali West office or over a call. Bring
+                  Book a thirty-minute session at our office or over a call. Bring
                   your transcripts, your questions and nothing else — we handle the rest.
                 </p>
 

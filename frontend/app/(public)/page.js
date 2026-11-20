@@ -27,7 +27,7 @@ import { TestPrepSection } from '../../components/sections/TestPrepSection';
 export const metadata = buildMetadata({
   title: 'Overseas Education, Migration & Training',
   description:
-    'Honest, unbiased and professional guidance on studying, training and migrating overseas. Career counselling, university selection, applications, scholarships, visas and test preparation, from Borivali West, Mumbai.',
+    'Honest, unbiased and professional guidance on studying, training and migrating overseas. Career counselling, university selection, applications, scholarships, visas and test preparation from Shine Consultant.',
   path: '/',
 });
 

@@ -58,8 +58,19 @@ export function TestPrepSection({ testPreparation = [] }) {
 
   const scroll = useCallback((direction) => {
     if (!scrollRef.current) return;
-    const cardWidth = 408; // card width + gap
-    scrollRef.current.scrollBy({ left: direction * cardWidth, behavior: 'smooth' });
+    if (direction > 0) {
+      // One click brings GMAT & SAT (the remaining cards) smoothly into view
+      scrollRef.current.scrollTo({
+        left: scrollRef.current.scrollWidth - scrollRef.current.clientWidth,
+        behavior: 'smooth',
+      });
+    } else {
+      // One click returns smoothly to the first cards (IELTS, PTE, TOEFL, GRE)
+      scrollRef.current.scrollTo({
+        left: 0,
+        behavior: 'smooth',
+      });
+    }
   }, []);
 
   return (

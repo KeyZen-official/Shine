@@ -111,11 +111,13 @@ const TrailCard = React.forwardRef(
 
           <div className="my-4 h-px w-full bg-navy/10" />
 
-          {/* Three Key Institutional Stats */}
+          {/* Key Institutional Stats */}
           <div className="flex justify-between items-center text-left">
             <StatItem label={stat1Label} value={s1Val} />
             <StatItem label={stat2Label} value={s2Val} />
-            <StatItem label={stat3Label} value={s3Val} />
+            {s3Val && stat3Label && stat3Label !== 'Advisory' ? (
+              <StatItem label={stat3Label} value={s3Val} />
+            ) : null}
           </div>
         </div>
       </motion.div>

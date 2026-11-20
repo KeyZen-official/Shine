@@ -217,20 +217,20 @@ export function NotchedDestinationDemo() {
       <NotchedProjectCard
         href="/destinations/uk"
         title="United Kingdom"
-        description="World-renowned Russell Group universities, 18-month post-study work visa, and centuries of academic prestige."
+        description="World-renowned Russell Group universities, 18-month post-study work visa (18 Months PSW), and 400+ institutions."
         image="/destinations/uk.jpg"
         badge="United Kingdom"
-        tags={["Top 100 Unis", "18 Month PSW Visa", "Russell Group"]}
+        tags={["400+ Institutions", "18 Months PSW", "Russell Group"]}
         surface="#FFFFFF"
         accent="#D00100"
       />
       <NotchedProjectCard
         href="/destinations/canada"
         title="Canada"
-        description="Affordable high-calibre education, multicultural cities, and attractive post-graduation work permit pathways."
+        description="Over 350 institutions including 150+ Canadian universities, 3 to 4 years post-graduation work permit (PGWP)."
         image="/destinations/canada.jpg"
         badge="North America"
-        tags={["PGWP Permit", "Top Universities", "PR Pathways"]}
+        tags={["350+ Institutions", "150+ Universities", "3-4 Yr PGWP"]}
         surface="#FFFFFF"
         accent="#D00100"
       />

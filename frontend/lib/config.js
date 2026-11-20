@@ -80,15 +80,18 @@ export const FOOTER_QUICK_LINKS = [
 ];
 
 export const FOOTER_OUR_SERVICES = [
-  { label: 'Study Abroad', href: '/services/study-abroad' },
-  { label: 'Test Preparation', href: '/services/test-preparation' },
-  { label: 'Corporate Training', href: '/services/corporate-training' },
-  { label: 'Migration Counselling', href: '/services/migration-counselling' },
-  { label: 'Visa Counselling', href: '/services/visa-counselling' },
-  { label: 'Institutional Services', href: '/services/institutional-services' },
+  { label: 'Career Counselling', href: '/services/career-counselling' },
+  { label: 'University Selection', href: '/services/university-selection' },
+  { label: 'University Application', href: '/services/university-application' },
+  { label: 'Scholarship Help', href: '/services/scholarship-help' },
+  { label: 'Visa Assistance', href: '/services/visa-assistance' },
+  { label: 'Institutional Tie-ups', href: '/services/institutional-services' },
 ];
 
 export const FOOTER_ADDITIONAL_SERVICES = [
+  { label: 'Study Abroad', href: '/services/study-abroad' },
+  { label: 'Migration Counselling', href: '/services/migration-counselling' },
+  { label: 'Corporate Training', href: '/services/corporate-training' },
   { label: 'Education Loan', href: '/contact?service=education-loan' },
   { label: 'Forex Support', href: '/forex-exchange' },
   { label: 'Temporary Accommodation', href: '/contact?service=temporary-accommodation' },

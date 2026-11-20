@@ -94,29 +94,218 @@ export default async function DestinationPage({ params }) {
     headline: `Study in the ${destination.name}.`,
     supportingLine:
       pageData?.heroIntro ||
-      `Discover world-class universities, innovative learning environments and opportunities to build your international career. Expert guidance from Borivali West.`,
+      `Discover world-class universities, innovative learning environments and opportunities to build your international career. Expert guidance from Shine Consultant.`,
     primaryCtaLabel: 'Book Free Consultation',
     primaryCtaHref: '/book-consultation',
     secondaryCtaLabel: 'Explore Universities',
     secondaryCtaHref: '#universities',
   };
 
-  const heroStats = [
+  const DESTINATION_HERO_STATS = {
+    canada: [
+      {
+        value: '350+',
+        label: 'Institutions',
+        srLabel: 'Over 350 accredited institutions',
+      },
+      {
+        value: '150+',
+        label: 'Canadian Universities',
+        srLabel: 'Over 150 Canadian universities',
+      },
+      {
+        value: '3 to 4 Years',
+        label: 'Work Rights (PGWP)',
+        srLabel: 'Post-Graduation Work Permit up to 3 to 4 years',
+      },
+    ],
+    australia: [
+      {
+        value: '300+',
+        label: 'Institutions',
+        srLabel: 'Over 300 institutions',
+      },
+      {
+        value: '42',
+        label: 'Australian Universities (Go8)',
+        srLabel: '42 Australian universities including Group of Eight',
+      },
+      {
+        value: '2 to 4 Years',
+        label: 'PSWP Work Rights',
+        srLabel: 'Post-study work permit from 2 up to 4 years',
+      },
+    ],
+    usa: [
+      {
+        value: '4,000+',
+        label: 'Accredited Institutions',
+        srLabel: 'Over 4,000 accredited universities',
+      },
+      {
+        value: 'Top 25',
+        label: 'Global QS Universities',
+        srLabel: 'Top 25 universities in Global QS rankings',
+      },
+      {
+        value: 'Up to 3 Years',
+        label: 'OPT Work Rights',
+        srLabel: 'Up to 3 years post-study OPT work rights',
+      },
+    ],
+    uk: [
+      {
+        value: '400+',
+        label: 'Universities & Colleges',
+        srLabel: 'Over 400 universities and institutions across the UK',
+      },
+      {
+        value: 'Russell Group',
+        label: 'World-Leading Research',
+        srLabel: 'Russell Group world-leading research universities',
+      },
+      {
+        value: '18 Months',
+        label: 'Graduate Route (18 Months PSW)',
+        srLabel: '18-month graduate route post-study work visa',
+      },
+    ],
+    germany: [
+      {
+        value: '400+',
+        label: 'Institutions',
+        srLabel: 'Over 400 higher education institutions',
+      },
+      {
+        value: 'Tuition-Free',
+        label: 'Public Universities',
+        srLabel: 'Tuition-free public universities',
+      },
+      {
+        value: '18 Months',
+        label: 'Job Seeker Stay-Back',
+        srLabel: '18 months post-study stay-back visa',
+      },
+    ],
+    ireland: [
+      {
+        value: '30+',
+        label: 'Institutions',
+        srLabel: 'Over 30 world-class institutions',
+      },
+      {
+        value: 'European Tech Hub',
+        label: 'Global Headquarters',
+        srLabel: 'European tech and pharma headquarters',
+      },
+      {
+        value: '2 Years',
+        label: 'Third Level Graduate Scheme',
+        srLabel: '2-year post-study work scheme',
+      },
+    ],
+    'new-zealand': [
+      {
+        value: '8',
+        label: 'Universities (Top 3%)',
+        srLabel: 'All 8 universities in top 3% globally',
+      },
+      {
+        value: 'High Quality',
+        label: 'Standard of Living',
+        srLabel: 'High quality of life and safety',
+      },
+      {
+        value: 'Up to 3 Years',
+        label: 'Post-Study Work Visa',
+        srLabel: 'Up to 3 years post-study work visa',
+      },
+    ],
+    dubai: [
+      {
+        value: '60+',
+        label: 'International Campuses',
+        srLabel: 'Over 60 international branch campuses',
+      },
+      {
+        value: 'Tax-Free',
+        label: 'Career Growth',
+        srLabel: 'Global financial hub and tax-free earnings',
+      },
+      {
+        value: 'Fast Track',
+        label: 'Visa Processing',
+        srLabel: 'Fast-track visa processing',
+      },
+    ],
+    singapore: [
+      {
+        value: 'Top 15',
+        label: 'Global Universities',
+        srLabel: 'World top 15 global universities',
+      },
+      {
+        value: 'Asian Hub',
+        label: 'Industry Connections',
+        srLabel: 'Premier Asian financial and technology hub',
+      },
+      {
+        value: 'Post-Study',
+        label: 'Career Pathways',
+        srLabel: 'Global career and employment opportunities',
+      },
+    ],
+    malaysia: [
+      {
+        value: 'Twinning',
+        label: 'UK & Australian Degrees',
+        srLabel: 'International degree twinning programmes',
+      },
+      {
+        value: 'Affordable',
+        label: 'Tuition & Living Cost',
+        srLabel: 'Cost-effective high-quality education',
+      },
+      {
+        value: 'Global Hub',
+        label: 'Multicultural Gateway',
+        srLabel: 'Vibrant multicultural education hub',
+      },
+    ],
+    france: [
+      {
+        value: '3,500+',
+        label: 'Institutions',
+        srLabel: 'Over 3,500 higher education institutions',
+      },
+      {
+        value: 'Grandes Écoles',
+        label: 'Elite Business & Engineering',
+        srLabel: 'Elite Grandes Ecoles and public universities',
+      },
+      {
+        value: '2 Years',
+        label: 'Post-Study APS Visa',
+        srLabel: 'Post-study stay and work rights',
+      },
+    ],
+  };
+
+  const heroStats = DESTINATION_HERO_STATS[destination.slug] || [
     {
-      value: '4,000+',
-      label: 'accredited institutions',
+      value: 'Accredited',
+      label: 'institutions',
       srLabel: 'Over 4,000 accredited universities',
     },
     {
-      value: 'Top 100',
-      label: 'global universities',
+      value: 'Top-Ranked',
+      label: 'universities',
       srLabel: 'Top global university ranking',
     },
     {
-      value: '3-Year',
-      label: 'post-study work option',
+      value: 'Post-Study',
+      label: 'work rights',
       srLabel: 'Post-study work authorization',
-      featureLabel: 'Work Rights',
     },
   ];
 

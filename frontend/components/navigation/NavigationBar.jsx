@@ -48,7 +48,7 @@ function TopContactBar() {
         <div className="flex items-center gap-2 text-micro">
           <span className="font-bold text-navy">Shine Consultant</span>
           <span className="text-navy/30">•</span>
-          <span>Overseas Education, Migration & Training — Borivali West, Mumbai</span>
+          <span>Overseas Education, Migration & Training</span>
         </div>
         <div className="flex items-center gap-6">
           <a

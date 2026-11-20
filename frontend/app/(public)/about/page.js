@@ -180,9 +180,9 @@ const CORE_COMMITMENTS = [
   },
   {
     icon: MapPin,
-    title: 'Accessible Mumbai Headquarters',
+    title: 'Accessible Headquarters',
     description:
-      'Meet face-to-face with qualified counsellors at our Borivali West office. We believe personal conversations yield the most dependable guidance.',
+      'Meet face-to-face with qualified counsellors at our office. We believe personal conversations yield the most dependable guidance.',
   },
 ];
 
@@ -327,7 +327,7 @@ export default function AboutPage() {
               </h2>
             </div>
             <p className="max-w-md text-base sm:text-lead text-charcoal/80 leading-relaxed">
-              End-to-end support for your global education journey, from planning to pre and post-arrival.
+              End-to-end support for your global education journey, from planning to institutional tie-ups.
             </p>
           </div>
 
@@ -904,10 +904,10 @@ export default function AboutPage() {
             />
 
             <GradientCard
-              badgeText="Borivali West"
+              badgeText="Head Office"
               badgeColor="#10B981"
-              title="Accessible Mumbai Office"
-              description="Meet face-to-face with qualified counsellors at our Borivali West centre. We believe personal conversations yield the most dependable guidance."
+              title="Accessible Office"
+              description="Meet face-to-face with qualified counsellors at our centre. We believe personal conversations yield the most dependable guidance."
               ctaText="Visit our office"
               ctaHref="/contact"
               imageUrl="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80"
@@ -920,7 +920,7 @@ export default function AboutPage() {
       {/* 8 — Final Call to Action */}
       <CtaStrip
         title="Talk to us before you commit to anything"
-        description="The first consultation is free and carries no obligation. Visit us in Borivali West, Mumbai or schedule an online session."
+        description="The first consultation is free and carries no obligation. Visit us at our office or schedule an online session."
         secondaryLabel="Contact us"
         secondaryHref="/contact"
         surface="white"

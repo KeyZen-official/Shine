@@ -37,8 +37,8 @@ const DESTINATION_TAGS = {
 };
 
 const DESTINATION_DESCRIPTIONS = {
-  uk: 'World-renowned Russell Group universities, 18-month post-study work rights, and accelerated master’s programs.',
-  canada: 'High-ranking research universities, welcoming multicultural cities, and clear post-graduation work permit pathways.',
+  uk: 'World-renowned Russell Group universities, 18-month post-study work rights (18 Months PSW), and 400+ institutions.',
+  canada: 'Over 350 institutions including 150+ Canadian universities, 3 to 4 years post-graduation work rights (PGWP), and clear residency pathways.',
   australia: 'Over 300 institutions including 42 universities and Group of Eight, 2–4 year post-study work permits, and superior quality of living.',
   usa: 'Top 25 universities in global QS rankings, up to 3 years STEM OPT, and world-leading research and innovation.',
   germany: 'World-class tuition-free public universities, cutting-edge engineering and research, and 18-month job seeker visas.',

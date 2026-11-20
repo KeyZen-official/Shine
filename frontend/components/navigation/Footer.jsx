@@ -206,7 +206,7 @@ export function Footer({
             </FooterGroup>
           ) : null}
 
-          <FooterGroup title="Our services">
+          <FooterGroup title="Overseas Education Services">
             <ul>
               {FOOTER_OUR_SERVICES.map((service) => (
                 <li key={service.href}>
@@ -285,50 +285,42 @@ export function Footer({
                 ) : null}
 
                 {/* Mobile Numbers */}
-                {contact.mobileNumbers?.length > 0 ? (
-                  <li className="flex gap-2.5 items-start">
-                    <Phone className="mt-0.5 h-4 w-4 shrink-0 text-accent" aria-hidden="true" />
-                    <div className="flex flex-col text-caption">
-                      <span className="text-micro font-semibold uppercase tracking-wider text-white/50">Mobile No</span>
-                      <span className="text-white/85">
-                        {contact.mobileNumbers.map((num, i) => (
-                          <span key={num}>
-                            <a
-                              href={`tel:${num}`}
-                              className="transition-colors hover:text-white"
-                            >
-                              {num}
-                            </a>
-                            {i < contact.mobileNumbers.length - 1 ? ' / ' : ''}
-                          </span>
-                        ))}
-                      </span>
-                    </div>
-                  </li>
-                ) : null}
+                <li className="flex gap-2.5 items-start">
+                  <Phone className="mt-0.5 h-4 w-4 shrink-0 text-accent" aria-hidden="true" />
+                  <div className="flex flex-col text-caption">
+                    <span className="text-micro font-semibold uppercase tracking-wider text-white/50">Mobile No</span>
+                    <span className="text-white/85">
+                      <a href="tel:7303890969" className="transition-colors hover:text-white">
+                        7303890969
+                      </a>
+                      {' / '}
+                      <a href="tel:9137044882" className="transition-colors hover:text-white">
+                        9137044882
+                      </a>
+                    </span>
+                  </div>
+                </li>
 
                 {/* Office Numbers */}
-                {contact.officeNumbers?.length > 0 ? (
-                  <li className="flex gap-2.5 items-start">
-                    <Phone className="mt-0.5 h-4 w-4 shrink-0 text-accent" aria-hidden="true" />
-                    <div className="flex flex-col text-caption">
-                      <span className="text-micro font-semibold uppercase tracking-wider text-white/50">Office No</span>
-                      <span className="text-white/85">
-                        {contact.officeNumbers.map((num, i) => (
-                          <span key={num}>
-                            <a
-                              href={`tel:${num.replace(/-/g, '')}`}
-                              className="transition-colors hover:text-white"
-                            >
-                              {num}
-                            </a>
-                            {i < contact.officeNumbers.length - 1 ? ' / ' : ''}
-                          </span>
-                        ))}
-                      </span>
-                    </div>
-                  </li>
-                ) : null}
+                <li className="flex gap-2.5 items-start">
+                  <Phone className="mt-0.5 h-4 w-4 shrink-0 text-accent" aria-hidden="true" />
+                  <div className="flex flex-col text-caption">
+                    <span className="text-micro font-semibold uppercase tracking-wider text-white/50">Office No</span>
+                    <span className="text-white/85">
+                      <a href="tel:02228928911" className="transition-colors hover:text-white">
+                        022-28928911
+                      </a>
+                      {' / '}
+                      <a href="tel:02228928922" className="transition-colors hover:text-white">
+                        22
+                      </a>
+                      {' / '}
+                      <a href="tel:02228928933" className="transition-colors hover:text-white">
+                        33
+                      </a>
+                    </span>
+                  </div>
+                </li>
 
                 {/* Email */}
                 {contact.email ? (
@@ -336,7 +328,7 @@ export function Footer({
                     <Mail className="mt-0.5 h-4 w-4 shrink-0 text-accent" aria-hidden="true" />
                     <a
                       href={`mailto:${contact.email}`}
-                      className="break-all text-caption text-white/85 transition-colors hover:text-white"
+                      className="whitespace-nowrap text-caption text-white/85 transition-colors hover:text-white"
                     >
                       {contact.email}
                     </a>
