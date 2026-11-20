@@ -15,6 +15,7 @@ import { pickImage } from '../../../../lib/media';
 import { EditorialHero } from '../../../../components/sections/EditorialHero';
 import { SectionShell } from '../../../../components/ui/SectionShell';
 import { FinalCta } from '../../../../components/sections/FinalCta';
+import { GradientCard } from '../../../../components/ui/gradient-card';
 
 export const metadata = buildMetadata({
   title: 'Study Abroad',
@@ -174,10 +175,18 @@ export default function StudyAbroadPage() {
     .slice()
     .sort((a, b) => (a.displayOrder ?? 0) - (b.displayOrder ?? 0));
 
-  const heroImage = pickImage(null, {
-    fallbackKey: 'study',
-    alt: 'Students on a university campus — study abroad with Shine Consultant',
-  });
+  const heroImage = {
+    fallbackUrl: '/imagery/usa-campus-overview.jpg',
+    alt: 'Students on an international university campus — study abroad with Shine Consultant',
+    width: 2560,
+    height: 1024,
+    variants: {
+      w360: '/imagery/usa-campus-overview.jpg',
+      w768: '/imagery/usa-campus-overview.jpg',
+      w1024: '/imagery/usa-campus-overview.jpg',
+      w1920: '/imagery/usa-campus-overview.jpg',
+    },
+  };
 
   const heroContent = {
     eyebrow: 'OVERSEAS EDUCATION — STUDY ABROAD',
@@ -208,6 +217,7 @@ export default function StudyAbroadPage() {
         stats={stats}
         socialLinks={socialLinks}
         image={heroImage}
+        brandTagline="Honest, Unbiased & Professional Guidance"
       />
 
       {/* 2 — Quick Pillars Strip */}
@@ -331,7 +341,69 @@ export default function StudyAbroadPage() {
         );
       })}
 
-      {/* 4 — Student Journey */}
+      {/* 4 — Our Methodology: Interactive Gradient Cards Layout */}
+      <section id="methodology" className="section-y bg-[#FAF8F3]">
+        <div className="shell">
+          {/* Header */}
+          <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between mb-10 lg:mb-14">
+            <div>
+              <div className="inline-flex items-center gap-2.5">
+                <span className="font-heading text-xs sm:text-sm font-bold uppercase tracking-[0.16em] text-accent">
+                  OUR METHODOLOGY
+                </span>
+                <span className="h-[2px] w-8 rounded-full bg-accent inline-block" />
+              </div>
+              <h2 className="mt-3 text-3xl sm:text-4xl lg:text-[2.65rem] font-extrabold text-navy leading-tight tracking-tight">
+                This Is How We Structure the Process
+              </h2>
+            </div>
+            <p className="max-w-md text-base sm:text-lead text-charcoal/80 leading-relaxed">
+              A transparent, proven four-stage roadmap from initial profile discovery through university selection, application, and visa grant.
+            </p>
+          </div>
+
+          {/* Interactive Gradient Cards in 2x2 Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-7 lg:gap-9 items-stretch">
+            <GradientCard
+              badgeText="Stage 01 • Week 1"
+              badgeColor="#F59E0B"
+              title="Profile Discovery & Assessment"
+              description="Comprehensive academic review, career mapping, budget feasibility, and personalized country evaluation."
+              imageUrl="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=600&q=80"
+              gradient="orange"
+            />
+
+            <GradientCard
+              badgeText="Stage 02 • Weeks 2 – 3"
+              badgeColor="#64748B"
+              title="Course & University Selection"
+              description="Unbiased shortlisting across verified institutions, intake calendars, eligibility criteria, and scholarship mapping."
+              imageUrl="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=600&q=80"
+              gradient="gray"
+            />
+
+            <GradientCard
+              badgeText="Stage 03 • Weeks 4 – 6"
+              badgeColor="#8B5CF6"
+              title="Application Dossier"
+              description="Statement of Purpose guidance, reference letter compilation, certified credential filing, and direct portal tracking."
+              imageUrl="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=600&q=80"
+              gradient="purple"
+            />
+
+            <GradientCard
+              badgeText="Stage 04 • Weeks 7 – 10"
+              badgeColor="#10B981"
+              title="Visa Filing & Travel Orientation"
+              description="Financial audit, mock visa interview rehearsal, embassy lodgement, accommodation guidance, and flight orientation."
+              imageUrl="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=600&q=80"
+              gradient="green"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* 5 — Student Journey */}
       <SectionShell
         id="journey"
         eyebrow="Step by step"

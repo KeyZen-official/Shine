@@ -21,7 +21,6 @@ import { buildMetadata } from '../../../lib/seo';
 import { EditorialHero } from '../../../components/sections/EditorialHero';
 import { FinalCta } from '../../../components/sections/FinalCta';
 import { Button } from '../../../components/ui/Button';
-import { FINANCIAL_SERVICES_DISCLAIMER } from '../../../shared/constants';
 
 export const metadata = buildMetadata({
   title: 'Overseas Education Services',
@@ -301,11 +300,6 @@ export default function ServicesPage() {
                 </p>
               </div>
             ))}
-          </div>
-
-          {/* Statutory Notice: Financial Services Disclaimer */}
-          <div className="mt-12 rounded-xl border border-navy/10 bg-[#EAF5F1] p-5 text-xs text-charcoal/80 leading-relaxed max-w-3xl mx-auto text-center">
-            {FINANCIAL_SERVICES_DISCLAIMER}
           </div>
         </div>
       </section>

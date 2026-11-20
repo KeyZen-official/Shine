@@ -8,71 +8,126 @@ const SQRT_5000 = Math.sqrt(5000);
 
 export const TESTIMONIALS = [
   {
-    tempId: 0,
-    testimonial:
-      'They help you for studying for the test which you are preparing for. The service provided is quite good and the staff here is also polite. They help you with your queries and also other problems which you face. Overall it was good and convenient for me to do my admission abroad through this agency.',
-    by: 'Apurv Nerurkar',
-    imgSrc: '/Reviews/review-apurv-nerurkar.jpg',
-  },
-  {
     tempId: 1,
+    by: 'Ashwin Singh',
+    country: 'United Kingdom',
+    countryCode: 'uk',
+    flag: '🇬🇧',
+    university: 'Coventry University',
     testimonial:
       'I had a really good experience with Shine Consultant. They supported and guided me at every step and also helped me decide which country would be best for my studies and future growth. They were always in touch and regularly followed up.',
-    by: 'Ashwin Singh',
+    avatar: '/Reviews/ashwin.jpeg',
     imgSrc: '/Reviews/review-ashwin-singh.jpg',
   },
   {
     tempId: 2,
-    testimonial:
-      'I am extremely grateful to Shine Consultancy for their outstanding support in helping me secure admission to Macquarie University for my Master\'s in Information Systems and Management. From university selection to visa processing, they guided me every step of the way.',
-    by: 'Dolwin Menezes, Macquarie University, Australia',
-    imgSrc: '/Reviews/review-dolwin-menezes.jpg',
-  },
-  {
-    tempId: 3,
+    by: 'Krishnasagar Thakkar',
+    country: 'United Kingdom',
+    countryCode: 'uk',
+    flag: '🇬🇧',
+    university: 'University of Bath',
     testimonial:
       'Had a really great experience with Shine Consultant. They helped me sort out my entire UK university application and visa process in just 2 months. The team was extremely supportive, responsive, and professional throughout.',
-    by: 'Krishnasagar Thakkar',
+    avatar: '/Reviews/krishnasagar.jpeg',
     imgSrc: '/Reviews/review-krishnasagar-thakkar.jpg',
   },
   {
-    tempId: 4,
+    tempId: 3,
+    by: 'Dolwin Menezes',
+    country: 'Australia',
+    countryCode: 'australia',
+    flag: '🇦🇺',
+    university: 'Macquarie University',
     testimonial:
-      'All the staff members are very cooperative and friendly. They guided me with ease during my entire process. A special thanks to Priyanka Mam, Neelam Mam, Manoj Sir and Deeksha Mam for going through all the odds and helping us. I would recommend Shine Consulting to all the students looking for Higher Studies.',
+      'I am extremely grateful to Shine Consultancy for their outstanding support in helping me secure admission to Macquarie University for my Master\'s in Information Systems and Management. From university selection to visa processing, they guided me every step of the way.',
+    avatar: '/Reviews/Dolwin.jpeg',
+    imgSrc: '/Reviews/review-dolwin-menezes.jpg',
+  },
+  {
+    tempId: 4,
     by: 'Madan Panth',
+    country: 'Australia',
+    countryCode: 'australia',
+    flag: '🇦🇺',
+    university: 'University of Wollongong',
+    testimonial:
+      'All the staff members are very cooperative and friendly. They guided me with ease during my entire process. A special thanks to the team for going through all the odds and helping us. I would recommend Shine Consulting to all students looking for Higher Studies.',
+    avatar: '/Reviews/madan-panth.jpg',
     imgSrc: '/Reviews/review-madan-panth.jpg',
   },
   {
     tempId: 5,
+    by: 'Parth Gala',
+    country: 'Germany',
+    countryCode: 'germany',
+    flag: '🇩🇪',
+    university: 'University of Europe',
     testimonial:
       'I had an excellent experience with Shine Consultant Borivali. In my opinion, it is one of the best agencies for students who are planning to study abroad. The entire team is extremely professional, supportive, and genuinely cares about every student.',
-    by: 'Parth Gala',
+    avatar: '/Reviews/parth-gala.jpeg',
     imgSrc: '/Reviews/review-parth-gala.jpg',
-  },
-  {
-    tempId: 6,
-    testimonial:
-      'Studying abroad is on your mind then Shine Consultancy is the place to be at. No other person than Mr. Parag Mehta could guide you better through the process. The entire process of College and visa application was as smooth as silk, entire credits to Parag sir and his team. The personal attention and guidance I have received has no match.',
-    by: 'Raj Ajmera',
-    imgSrc: '/Reviews/review-raj-ajmera.jpg',
   },
 ];
 
+const CountryFlag = ({ code, flag, className = 'h-3.5 w-5' }) => {
+  if (code === 'uk') {
+    return (
+      <span className={cn('inline-flex items-center overflow-hidden rounded-xs shrink-0', className)}>
+        <svg viewBox="0 0 60 30" className="h-full w-full">
+          <clipPath id="uk-flag-clip"><path d="M0 0v30h60V0z"/></clipPath>
+          <path d="M0 0v30h60V0z" fill="#012169"/>
+          <path d="M0 0l60 30m0-30L0 30" stroke="#fff" strokeWidth="6"/>
+          <path d="M0 0l60 30m0-30L0 30" clipPath="url(#uk-flag-clip)" stroke="#C8102E" strokeWidth="4"/>
+          <path d="M30 0v30M0 15h60" stroke="#fff" strokeWidth="10"/>
+          <path d="M30 0v30M0 15h60" stroke="#C8102E" strokeWidth="6"/>
+        </svg>
+      </span>
+    );
+  }
+  if (code === 'australia') {
+    return (
+      <span className={cn('inline-flex items-center overflow-hidden rounded-xs shrink-0', className)}>
+        <svg viewBox="0 0 60 30" className="h-full w-full">
+          <rect width="60" height="30" fill="#00008B"/>
+          <g transform="scale(0.5)">
+            <path d="M0 0v30h60V0z" fill="#012169"/>
+            <path d="M0 0l60 30m0-30L0 30" stroke="#fff" strokeWidth="6"/>
+            <path d="M0 0l60 30m0-30L0 30" stroke="#C8102E" strokeWidth="4"/>
+            <path d="M30 0v30M0 15h60" stroke="#fff" strokeWidth="10"/>
+            <path d="M30 0v30M0 15h60" stroke="#C8102E" strokeWidth="6"/>
+          </g>
+          <circle cx="15" cy="22" r="3" fill="#fff"/>
+          <circle cx="45" cy="6" r="1.5" fill="#fff"/>
+          <circle cx="39" cy="12" r="1.5" fill="#fff"/>
+          <circle cx="51" cy="11" r="1.5" fill="#fff"/>
+          <circle cx="47" cy="22" r="1.5" fill="#fff"/>
+          <circle cx="43" cy="16" r="1" fill="#fff"/>
+        </svg>
+      </span>
+    );
+  }
+  if (code === 'germany') {
+    return (
+      <span className={cn('inline-flex items-center overflow-hidden rounded-xs shrink-0', className)}>
+        <svg viewBox="0 0 60 30" className="h-full w-full">
+          <rect width="60" height="10" y="0" fill="#000"/>
+          <rect width="60" height="10" y="10" fill="#DD0000"/>
+          <rect width="60" height="10" y="20" fill="#FFCE00"/>
+        </svg>
+      </span>
+    );
+  }
+  return <span className="text-xs leading-none">{flag || '🌍'}</span>;
+};
+
 const TestimonialCard = ({ position, testimonial, handleMove, cardSize, onShowProof }) => {
   const isCenter = position === 0;
-  const initials = testimonial.by
-    .split(',')[0]
-    .split(' ')
-    .slice(0, 2)
-    .map((w) => w[0])
-    .join('')
-    .toUpperCase();
 
   return (
     <div
       onClick={() => handleMove(position)}
       className={cn(
-        'absolute left-1/2 top-1/2 cursor-pointer border-2 p-8 transition-all duration-500 ease-in-out select-none',
+        'absolute left-1/2 top-1/2 cursor-pointer border-2 p-6 sm:p-7 transition-all duration-500 ease-in-out select-none flex flex-col justify-between',
         isCenter
           ? 'z-10 bg-navy text-white border-navy shadow-card-hover'
           : 'z-0 bg-white text-charcoal border-navy/15 hover:border-accent shadow-card',
@@ -102,66 +157,86 @@ const TestimonialCard = ({ position, testimonial, handleMove, cardSize, onShowPr
           height: 2,
         }}
       />
-      <div
-        className={cn(
-          'mb-4 flex h-12 w-12 items-center justify-center rounded-full overflow-hidden border',
-          isCenter
-            ? 'border-white/30'
-            : 'border-navy/20',
-        )}
-        style={{
-          boxShadow: isCenter
-            ? '3px 3px 0px rgba(255,255,255,0.3)'
-            : '3px 3px 0px rgba(20,36,58,0.1)',
-        }}
-      >
-        {testimonial.imgSrc ? (
+
+      {/* Top Header Row: Student Avatar + Country Badge */}
+      <div className="flex items-center justify-between gap-3 mb-3 pr-8">
+        <div
+          className={cn(
+            'relative h-13 w-13 sm:h-14 sm:w-14 shrink-0 rounded-full overflow-hidden border-2 shadow-sm',
+            isCenter ? 'border-white/50 ring-2 ring-white/20' : 'border-navy/20 ring-2 ring-navy/10',
+          )}
+        >
           <img
-            src={testimonial.imgSrc}
+            src={testimonial.avatar || testimonial.imgSrc}
             alt={testimonial.by}
-            className="h-full w-full object-cover"
+            className="h-full w-full object-cover object-top"
           />
-        ) : (
-          <span className={cn(
-            'text-sm font-bold',
-            isCenter ? 'text-white' : 'text-navy',
-          )}>
-            {initials}
-          </span>
-        )}
+        </div>
+
+        {/* Country Badge */}
+        <div
+          className={cn(
+            'inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold tracking-wide border shadow-xs',
+            isCenter
+              ? 'bg-white/15 text-white border-white/25'
+              : 'bg-navy/5 text-navy border-navy/15',
+          )}
+        >
+          <CountryFlag code={testimonial.countryCode} flag={testimonial.flag} />
+          <span>{testimonial.country === 'United Kingdom' ? 'UK' : testimonial.country}</span>
+        </div>
       </div>
-      <h3
+
+      {/* Testimonial Quote */}
+      <p
         className={cn(
-          'text-caption sm:text-body font-medium leading-relaxed line-clamp-5',
-          isCenter ? 'text-white' : 'text-charcoal',
+          'text-xs sm:text-[0.84rem] font-normal leading-relaxed line-clamp-4 my-auto',
+          isCenter ? 'text-white/95' : 'text-charcoal/85',
         )}
       >
         &ldquo;{testimonial.testimonial}&rdquo;
-      </h3>
-      <p
-        className={cn(
-          'absolute bottom-8 left-8 right-16 text-caption font-heading font-semibold truncate',
-          isCenter ? 'text-white/80' : 'text-navy',
-        )}
-      >
-        — {testimonial.by}
       </p>
-      <button
-        onClick={(e) => {
-          e.stopPropagation();
-          onShowProof(testimonial.imgSrc);
-        }}
-        className={cn(
-          'absolute bottom-7 right-8 flex h-7 w-7 items-center justify-center rounded-full transition-colors',
-          isCenter
-            ? 'bg-white/20 hover:bg-white/30 text-white'
-            : 'bg-navy/10 hover:bg-navy/20 text-navy',
+
+      {/* Bottom Footer: Student Name & University + Proof Button */}
+      <div className="mt-3 pt-2.5 border-t border-current/10 flex items-center justify-between gap-2">
+        <div className="min-w-0 pr-2">
+          <p
+            className={cn(
+              'font-heading text-xs sm:text-sm font-bold truncate leading-snug',
+              isCenter ? 'text-white' : 'text-navy',
+            )}
+          >
+            — {testimonial.by}
+          </p>
+          <p
+            className={cn(
+              'text-[0.7rem] sm:text-[0.76rem] truncate font-semibold mt-0.5',
+              isCenter ? 'text-[#FCA5A5]' : 'text-accent',
+            )}
+          >
+            {testimonial.university}
+          </p>
+        </div>
+
+        {testimonial.imgSrc && (
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              onShowProof(testimonial.imgSrc);
+            }}
+            className={cn(
+              'flex h-7 w-7 shrink-0 items-center justify-center rounded-full transition-transform hover:scale-110 shadow-xs',
+              isCenter
+                ? 'bg-white/20 hover:bg-white/30 text-white'
+                : 'bg-navy/10 hover:bg-navy/20 text-navy',
+            )}
+            aria-label="View original review"
+            title="View original review proof"
+          >
+            <ImageIcon className="h-3.5 w-3.5" />
+          </button>
         )}
-        aria-label="View review proof"
-        title="View original review"
-      >
-        <ImageIcon className="h-3.5 w-3.5" />
-      </button>
+      </div>
     </div>
   );
 };

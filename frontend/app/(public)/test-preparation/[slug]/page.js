@@ -177,7 +177,7 @@ export default async function TestPreparationDetailPage({ params }) {
             width: 1920,
             height: 1080,
           }}
-          brandTagline="Honest, unbiased & professional guidance"
+          brandTagline="Honest, Unbiased & Professional Guidance"
         />
 
         {/* 4 Benefit Indicators Quick Strip */}

@@ -297,7 +297,7 @@ function HeroContent({ content, stats = [], socialLinks = [], image, brandTaglin
          */}
         <div className="grid items-stretch gap-10 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] lg:gap-12">
           <div>
-            <h1 className="mb-8 text-h1 font-semibold !leading-[110%] text-navy lg:text-display">
+            <h1 className="mb-8 text-h1 font-semibold !leading-[1.18] text-navy lg:text-display pb-2">
               <VerticalCutReveal
                 splitBy="words"
                 staggerDuration={0.06}
@@ -375,7 +375,7 @@ function HeroContent({ content, stats = [], socialLinks = [], image, brandTaglin
                  * silently kept rendering the old string — the one place on
                  * the home page still describing the company wrongly.
                  */}
-                {brandTagline ?? siteConfig.tagline}
+                {brandTagline ?? 'Honest, Unbiased & Professional Guidance'}
               </TimelineContent>
             </div>
 

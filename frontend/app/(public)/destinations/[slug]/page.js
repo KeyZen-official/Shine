@@ -349,7 +349,7 @@ export default async function DestinationPage({ params }) {
           width: 1920,
           height: 1080,
         }}
-        brandTagline="Honest, unbiased & professional guidance"
+        brandTagline="Honest, Unbiased & Professional Guidance"
       />
 
       {/* 2 — Four Pillars Quick Strip matching home/about style */}

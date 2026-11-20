@@ -114,9 +114,9 @@ export function WhoWeAreSection({ content }) {
                 id="who-we-are-heading"
                 className="mt-3.5 text-4xl sm:text-5xl lg:text-[3.25rem] xl:text-[3.65rem] font-extrabold leading-[1.1] tracking-tight"
               >
-                <span className="text-navy block">Honest, unbiased,</span>
+                <span className="text-navy block">Honest, Unbiased,</span>
                 <span className="relative inline-block text-accent mt-1">
-                  professional guidance.
+                  Professional Guidance.
                   {/* Curved Red Hand-drawn Underline */}
                   <svg
                     className="absolute -bottom-2.5 sm:-bottom-3.5 left-0 w-full h-4 overflow-visible pointer-events-none"

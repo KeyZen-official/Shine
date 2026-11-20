@@ -87,7 +87,7 @@ export function TestProgrammeDetailLayout({
           width: 1920,
           height: 1080,
         }}
-        brandTagline="Honest, unbiased & professional guidance"
+        brandTagline="Honest, Unbiased & Professional Guidance"
       />
 
       {/* 2. FOUR BENEFIT INDICATORS QUICK STRIP */}

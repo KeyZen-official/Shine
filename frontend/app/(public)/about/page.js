@@ -256,7 +256,7 @@ export default function AboutPage() {
         stats={stats}
         socialLinks={socialLinks}
         image={aboutHeroImage}
-        brandTagline="Honest, unbiased & professional guidance"
+        brandTagline="Honest, Unbiased & Professional Guidance"
       />
 
       {/* 2 — Four Pillars Quick Strip matching reference */}
@@ -714,15 +714,25 @@ export default function AboutPage() {
               {/* RIGHT: Separate Lighter Navy Quote Card */}
               <div className="lg:col-span-4">
                 <div className="relative rounded-2xl bg-[#172D4A] border border-white/10 p-6 sm:p-7 shadow-lg flex flex-col justify-between">
-                  <span
-                    aria-hidden="true"
-                    className="text-4xl font-serif text-accent leading-none font-bold select-none"
-                  >
-                    &ldquo;
-                  </span>
-                  <p className="mt-2 text-sm sm:text-base italic text-white/95 leading-relaxed">
-                    Our goal is to provide honest, unbiased and professional guidance to help students and Client  build a successful global future.
-                  </p>
+                  <div>
+                    <span
+                      aria-hidden="true"
+                      className="text-4xl font-serif text-accent leading-none font-bold select-none"
+                    >
+                      &ldquo;
+                    </span>
+                    <p className="mt-2 text-sm sm:text-base italic text-white/95 leading-relaxed">
+                      Our goal is to provide honest, unbiased and professional guidance to help students and clients build a successful global future.
+                    </p>
+                  </div>
+                  <div className="flex justify-end mt-2">
+                    <span
+                      aria-hidden="true"
+                      className="text-4xl font-serif text-accent leading-none font-bold select-none"
+                    >
+                      &rdquo;
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -767,7 +777,7 @@ export default function AboutPage() {
             <GradientCard
               badgeText="Documentation & Compliance"
               badgeColor="#64748B"
-              title="Admissions & Visa Manager Operations"
+              title="Admissions & Visa Manager"
               description="Rigorous document verification, financial audits, mock interview preparation, and compliance with foreign consular guidelines."
               imageUrl="https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=600&q=80"
               gradient="gray"
@@ -787,69 +797,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 6 — Our Methodology: Interactive Gradient Cards Layout */}
-      <section id="roadmap" className="section-y bg-[#FAF8F3]">
-        <div className="shell">
-          {/* Header */}
-          <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between mb-10 lg:mb-14">
-            <div>
-              <div className="inline-flex items-center gap-2.5">
-                <span className="font-heading text-xs sm:text-sm font-bold uppercase tracking-[0.16em] text-accent">
-                  OUR METHODOLOGY
-                </span>
-                <span className="h-[2px] w-8 rounded-full bg-accent inline-block" />
-              </div>
-              <h2 className="mt-3 text-3xl sm:text-4xl lg:text-[2.65rem] font-extrabold text-navy leading-tight tracking-tight">
-                This Is How We Structure the process
-              </h2>
-            </div>
-            <p className="max-w-md text-base sm:text-lead text-charcoal/80 leading-relaxed">
-              A transparent, proven four-stage roadmap from initial profile discovery through university selection, application, and visa grant.
-            </p>
-          </div>
-
-          {/* Interactive Gradient Cards in 2x2 Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-7 lg:gap-9 items-stretch">
-            <GradientCard
-              badgeText="Stage 01 • Week 1"
-              badgeColor="#F59E0B"
-              title="Profile Discovery & Assessment"
-              description="Comprehensive academic review, career mapping, budget feasibility, and personalized country evaluation."
-              imageUrl="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=600&q=80"
-              gradient="orange"
-            />
-
-            <GradientCard
-              badgeText="Stage 02 • Weeks 2 – 3"
-              badgeColor="#64748B"
-              title="Course & University Selection"
-              description="Unbiased shortlisting across verified institutions, intake calendars, eligibility criteria, and scholarship mapping."
-              imageUrl="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=600&q=80"
-              gradient="gray"
-            />
-
-            <GradientCard
-              badgeText="Stage 03 • Weeks 4 – 6"
-              badgeColor="#8B5CF6"
-              title="Application Dossier "
-              description="Statement of Purpose guidance, reference letter compilation, certified credential filing, and direct portal tracking."
-              imageUrl="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=600&q=80"
-              gradient="purple"
-            />
-
-            <GradientCard
-              badgeText="Stage 04 • Weeks 7 – 10"
-              badgeColor="#10B981"
-              title="Visa Filing & Travel Orientation"
-              description="Financial audit, mock visa interview rehearsal, embassy lodgement, accommodation guidance, and flight orientation."
-              imageUrl="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=600&q=80"
-              gradient="green"
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* 7 — Added Value Section: Institutional Commitments & Trust with Gradient Cards */}
+      {/* 6 — Added Value Section: Institutional Commitments & Trust with Gradient Cards */}
       <section id="commitments" className="section-y bg-[#FAF8F3]">
         <div className="shell">
           {/* Header */}
@@ -864,16 +812,16 @@ export default function AboutPage() {
               Why Students &amp; Clients Choose Shine Consultant
             </h2>
             <p className="mt-3.5 text-base sm:text-lead text-charcoal/80 leading-relaxed">
-              We operate an independent, student-first practice with verified standards.
+              We operate an independent, client-first practice with verified standards.
             </p>
           </div>
 
           {/* 4 Feature Columns using GradientCard */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
             <GradientCard
-              badgeText="Student-Centric"
+              badgeText="Client-Centric"
               badgeColor="#F59E0B"
-              title="Student-First Transparency"
+              title="Client-First Transparency"
               description="We do not steer students toward institutional quotas. Recommendations are grounded entirely in your academic profile, budget, and ambitions."
               ctaText="Advisory principles"
               ctaHref="#principles"
