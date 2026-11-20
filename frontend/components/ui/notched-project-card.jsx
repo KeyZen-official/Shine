@@ -237,10 +237,10 @@ export function NotchedDestinationDemo() {
       <NotchedProjectCard
         href="/destinations/australia"
         title="Australia"
-        description="Globally ranked Group of Eight institutions, generous post-study work rights, and unbeatable quality of life."
+        description="Over 300 institutions including 42 universities and Group of Eight, 2–4 year post-study work permits."
         image="/destinations/australia.jpg"
         badge="Oceania"
-        tags={["Group of Eight", "PR Available", "High Quality of Life"]}
+        tags={["Group of Eight", "2-4 Yr PSWP", "High Quality of Life"]}
         surface="#FFFFFF"
         accent="#D00100"
       />

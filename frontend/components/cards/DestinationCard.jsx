@@ -39,8 +39,8 @@ const DESTINATION_TAGS = {
 const DESTINATION_DESCRIPTIONS = {
   uk: 'World-renowned Russell Group universities, 18-month post-study work rights, and accelerated master’s programs.',
   canada: 'High-ranking research universities, welcoming multicultural cities, and clear post-graduation work permit pathways.',
-  australia: 'Globally celebrated Group of Eight institutions, generous post-study stay-back rights, and superior quality of living.',
-  usa: 'World-leading universities, flexible curricula, abundant research funding, and up to 3 years of STEM OPT.',
+  australia: 'Over 300 institutions including 42 universities and Group of Eight, 2–4 year post-study work permits, and superior quality of living.',
+  usa: 'Top 25 universities in global QS rankings, up to 3 years STEM OPT, and world-leading research and innovation.',
   germany: 'World-class tuition-free public universities, cutting-edge engineering and research, and 18-month job seeker visas.',
   ireland: 'The headquarters of global tech and pharma, 2-year post-study work rights, and English-speaking education.',
   'new-zealand': 'All 8 universities ranked in the global top 3%, excellent research standards, and welcoming student environment.',

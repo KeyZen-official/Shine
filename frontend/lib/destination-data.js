@@ -32,8 +32,13 @@ export const DESTINATION_DATA = {
       points: [
         {
                 "title": "Globally recognised universities",
-                "description": "A home to some of the world's leading institutions.",
+                "description": "Top 25 universities in global QS rankings, home to some of the world's leading institutions.",
                 "icon": "Award"
+        },
+        {
+                "title": "Up to 3 years OPT work rights",
+                "description": "Post-study Optional Practical Training (OPT) allowing up to 3 years of work experience for STEM graduates.",
+                "icon": "TrendingUp"
         },
         {
                 "title": "Wide range of academic programmes",
@@ -847,13 +852,13 @@ export const DESTINATION_DATA = {
       imageBadge: 'A Hub of Innovation, Research & Global Opportunities',
       points: [
         {
-                "title": "Group of Eight (Go8) excellence",
-                "description": "Seven Australian universities ranked in the top 100 worldwide.",
+                "title": "300+ institutions including Group of Eight",
+                "description": "42 Australian universities with 8 elite Group of Eight members ranked in the global top 100.",
                 "icon": "Award"
         },
         {
-                "title": "Post-study work rights",
-                "description": "Extended post-study work visas enabling international graduates to work in Australia.",
+                "title": "2 to 4 years post-study work permit",
+                "description": "Generous post-study work visas (PSWP) of 2 to 4 years enabling international graduates to work in Australia.",
                 "icon": "TrendingUp"
         },
         {
