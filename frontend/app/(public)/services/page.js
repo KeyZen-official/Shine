@@ -15,12 +15,10 @@ import {
 } from 'lucide-react';
 import {
   getContentCounts,
-  getServices,
   getSettings,
 } from '../../../lib/content';
 import { buildMetadata } from '../../../lib/seo';
 import { EditorialHero } from '../../../components/sections/EditorialHero';
-import { ServicesSection } from '../../../components/sections/ServicesSection';
 import { FinalCta } from '../../../components/sections/FinalCta';
 import { Button } from '../../../components/ui/Button';
 import { FINANCIAL_SERVICES_DISCLAIMER } from '../../../shared/constants';
@@ -28,7 +26,7 @@ import { FINANCIAL_SERVICES_DISCLAIMER } from '../../../shared/constants';
 export const metadata = buildMetadata({
   title: 'Overseas Education Services',
   description:
-    'Comprehensive overseas education and student advisory services: career counselling, university selection, application support, scholarships, visa assistance, and pre-departure briefings.',
+    'Comprehensive overseas education and client advisory services: career counselling, university selection, application support, scholarships, visa assistance, and pre-departure briefings.',
   path: '/services',
 });
 
@@ -71,7 +69,6 @@ const ADVISORY_PILLARS = [
  *   7. FinalCta — Closing consultation booking banner.
  */
 export default function ServicesPage() {
-  const services = getServices();
   const settings = getSettings();
   const counts = getContentCounts();
 
@@ -108,7 +105,7 @@ export default function ServicesPage() {
 
   const heroContent = {
     eyebrow: 'OVERSEAS EDUCATION SERVICES — SHINE CONSULTANT',
-    headline: 'End-to-End Overseas Education & Student Advisory Services.',
+    headline: 'End-to-End Overseas Education & Client Advisory Services.',
     supportingLine:
       'From career counselling and university selection to application filings, visa processing, pre-departure briefings and test preparation — Shine Consultant provides honest, transparent and dedicated support at every step of your international journey.',
     primaryCtaLabel: 'Book Free Consultation',
@@ -188,7 +185,7 @@ export default function ServicesPage() {
       </div>
 
       {/* 3 — Explore Our Service Areas */}
-      <section className="section-y bg-ivory border-t border-navy/10">
+      <section id="services" className="section-y bg-ivory border-t border-navy/10">
         <div className="shell">
           <header className="mb-10 max-w-prose lg:mb-12">
             <p className="eyebrow">Our Expertise</p>
@@ -271,9 +268,6 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
-
-      {/* 4 — Overseas Education Services: The signature component */}
-      <ServicesSection services={services} />
 
       {/* 4 — Our Advisory Commitments */}
       <section className="section-y bg-white border-t border-navy/10">
