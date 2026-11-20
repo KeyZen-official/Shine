@@ -217,7 +217,7 @@ export function NotchedDestinationDemo() {
       <NotchedProjectCard
         href="/destinations/uk"
         title="United Kingdom"
-        description="World-renowned Russell Group universities, 2-year post-study work visa, and centuries of academic prestige."
+        description="World-renowned Russell Group universities, 18-month post-study work visa, and centuries of academic prestige."
         image="/destinations/uk.jpg"
         badge="United Kingdom"
         tags={["Top 100 Unis", "18 Month PSW Visa", "Russell Group"]}

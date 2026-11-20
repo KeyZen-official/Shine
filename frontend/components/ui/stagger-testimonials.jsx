@@ -104,10 +104,10 @@ const TestimonialCard = ({ position, testimonial, handleMove, cardSize, onShowPr
       />
       <div
         className={cn(
-          'mb-4 flex h-12 w-12 items-center justify-center rounded-sm text-sm font-bold border',
+          'mb-4 flex h-12 w-12 items-center justify-center rounded-full overflow-hidden border',
           isCenter
-            ? 'bg-white/20 text-white border-white/30'
-            : 'bg-navy/10 text-navy border-navy/20',
+            ? 'border-white/30'
+            : 'border-navy/20',
         )}
         style={{
           boxShadow: isCenter
@@ -115,7 +115,20 @@ const TestimonialCard = ({ position, testimonial, handleMove, cardSize, onShowPr
             : '3px 3px 0px rgba(20,36,58,0.1)',
         }}
       >
-        {initials}
+        {testimonial.imgSrc ? (
+          <img
+            src={testimonial.imgSrc}
+            alt={testimonial.by}
+            className="h-full w-full object-cover"
+          />
+        ) : (
+          <span className={cn(
+            'text-sm font-bold',
+            isCenter ? 'text-white' : 'text-navy',
+          )}>
+            {initials}
+          </span>
+        )}
       </div>
       <h3
         className={cn(

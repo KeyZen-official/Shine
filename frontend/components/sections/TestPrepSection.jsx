@@ -58,7 +58,7 @@ export function TestPrepSection({ testPreparation = [] }) {
 
   const scroll = useCallback((direction) => {
     if (!scrollRef.current) return;
-    const cardWidth = 408; // card width + gap
+    const cardWidth = 320; // card width + gap
     scrollRef.current.scrollBy({ left: direction * cardWidth, behavior: 'smooth' });
   }, []);
 
@@ -110,7 +110,9 @@ export function TestPrepSection({ testPreparation = [] }) {
         </header>
       </div>
 
-      {/* Cards row — full-width, horizontally scrollable */}
+      {/* Cards row — full-width, horizontally scrollable.
+          First four (IELTS, PTE, TOEFL, GRE) are visible; GMAT & SAT
+          appear after a scroll click. */}
       <div
         ref={scrollRef}
         className="w-full overflow-x-auto no-scrollbar scroll-smooth"
@@ -132,12 +134,12 @@ export function TestPrepSection({ testPreparation = [] }) {
                   image={test.heroImage || config.fallbackImage || '/imagery/sat-hero.jpg'}
                   title={test.name}
                   description={test.summary || test.fullName || ''}
-                  width={388}
-                  height={396}
+                  width={300}
+                  height={340}
                   borderColor={config.borderColor}
                   borderBgColor="var(--border-bg-color)"
                   borderWidth={3}
-                  borderPadding={14}
+                  borderPadding={12}
                   cardBgColor="var(--card-bg-color)"
                   shadowColor="var(--shadow-color)"
                   textColor="var(--text-color)"
@@ -147,7 +149,7 @@ export function TestPrepSection({ testPreparation = [] }) {
                   effectBgColor={config.effectBgColor}
                   patternColor1="var(--pattern-color1)"
                   patternColor2="var(--pattern-color2)"
-                  contentPadding="14.3px 16px"
+                  contentPadding="12px 14px"
                 />
               </Link>
             );

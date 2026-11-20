@@ -78,14 +78,14 @@ export default function HomePage() {
     allDestinations > 0
       ? {
           value: '10+',
-          label: 'destinations',
-          srLabel: 'Study destinations',
+          label: 'Destinations',
+          srLabel: 'Study Destinations',
         }
       : null,
     services.length > 0
       ? {
           value: 6,
-          label: 'services',
+          label: 'Services',
           srLabel: 'Services',
         }
       : null,

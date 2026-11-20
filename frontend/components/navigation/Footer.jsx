@@ -114,8 +114,8 @@ export function Footer({
   const contact = {
     address: office.officeAddress,
     phone: office.phone,
-    officePhone: office.officePhone || '+91 73038 90969',
-    landline: office.landline || '022-2892 8911 / 22 / 33',
+    mobileNumbers: ['7303890969', '9137044882'],
+    officeNumbers: ['022-28928911', '022-28928922', '022-28928933'],
     email: office.email,
     whatsapp: office.whatsappNumber,
     mapEmbedUrl: office.mapEmbedUrl || 'https://maps.google.com/maps?q=Gold+Crest+Business+Center,+Lokmanya+Tilak+Road,+Borivali+West,+Mumbai+400092&t=&z=16&ie=UTF8&iwloc=&output=embed',
@@ -244,7 +244,7 @@ export function Footer({
             </FooterGroup>
           ) : null}
 
-          {contact.address || contact.phone || contact.officePhone || contact.landline || contact.email ? (
+          {contact.address || contact.mobileNumbers || contact.officeNumbers || contact.email ? (
             <FooterGroup title="Get in touch" defaultOpen={true}>
               <ul className="space-y-3.5">
                 {contact.address ? (
@@ -284,50 +284,48 @@ export function Footer({
                   </li>
                 ) : null}
 
-                {/* Office Number */}
-                {contact.officePhone ? (
+                {/* Mobile Numbers */}
+                {contact.mobileNumbers?.length > 0 ? (
                   <li className="flex gap-2.5 items-start">
                     <Phone className="mt-0.5 h-4 w-4 shrink-0 text-accent" aria-hidden="true" />
                     <div className="flex flex-col text-caption">
-                      <span className="text-micro font-semibold uppercase tracking-wider text-white/50">Office Number</span>
-                      <a
-                        href={`tel:${contact.officePhone.replace(/\s/g, '')}`}
-                        className="text-white/85 transition-colors hover:text-white"
-                      >
-                        {contact.officePhone}
-                      </a>
+                      <span className="text-micro font-semibold uppercase tracking-wider text-white/50">Mobile No</span>
+                      <span className="text-white/85">
+                        {contact.mobileNumbers.map((num, i) => (
+                          <span key={num}>
+                            <a
+                              href={`tel:${num}`}
+                              className="transition-colors hover:text-white"
+                            >
+                              {num}
+                            </a>
+                            {i < contact.mobileNumbers.length - 1 ? ' / ' : ''}
+                          </span>
+                        ))}
+                      </span>
                     </div>
                   </li>
                 ) : null}
 
-                {/* Landline Number */}
-                {contact.landline ? (
+                {/* Office Numbers */}
+                {contact.officeNumbers?.length > 0 ? (
                   <li className="flex gap-2.5 items-start">
                     <Phone className="mt-0.5 h-4 w-4 shrink-0 text-accent" aria-hidden="true" />
                     <div className="flex flex-col text-caption">
-                      <span className="text-micro font-semibold uppercase tracking-wider text-white/50">Landline Number</span>
-                      <a
-                        href="tel:02228928911"
-                        className="text-white/85 transition-colors hover:text-white"
-                      >
-                        {contact.landline}
-                      </a>
-                    </div>
-                  </li>
-                ) : null}
-
-                {/* Mobile / Direct */}
-                {contact.phone ? (
-                  <li className="flex gap-2.5 items-start">
-                    <Phone className="mt-0.5 h-4 w-4 shrink-0 text-accent" aria-hidden="true" />
-                    <div className="flex flex-col text-caption">
-                      <span className="text-micro font-semibold uppercase tracking-wider text-white/50">Mobile</span>
-                      <a
-                        href={`tel:${contact.phone.replace(/\s/g, '')}`}
-                        className="text-white/85 transition-colors hover:text-white"
-                      >
-                        {contact.phone}
-                      </a>
+                      <span className="text-micro font-semibold uppercase tracking-wider text-white/50">Office No</span>
+                      <span className="text-white/85">
+                        {contact.officeNumbers.map((num, i) => (
+                          <span key={num}>
+                            <a
+                              href={`tel:${num.replace(/-/g, '')}`}
+                              className="transition-colors hover:text-white"
+                            >
+                              {num}
+                            </a>
+                            {i < contact.officeNumbers.length - 1 ? ' / ' : ''}
+                          </span>
+                        ))}
+                      </span>
                     </div>
                   </li>
                 ) : null}

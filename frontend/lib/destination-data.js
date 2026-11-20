@@ -313,7 +313,7 @@ export const DESTINATION_DATA = {
                 "icon": "BookOpen"
         },
         {
-                "title": "Graduate Route (2-year PSW)",
+                "title": "Graduate Route (18-Month PSW)",
                 "description": "Post-study work rights to launch global careers in London and regional hubs.",
                 "icon": "TrendingUp"
         },
@@ -535,7 +535,7 @@ export const DESTINATION_DATA = {
       },
       {
             "question": "What is the UK Graduate Route (PSW) work visa?",
-            "answer": "The Graduate Route allows international students who successfully complete an eligible degree to stay and work in the UK for 2 years (3 years for doctoral graduates) without requiring initial company sponsorship."
+            "answer": "The Graduate Route allows international students who successfully complete an eligible degree to stay and work in the UK for 18 months (3 years for doctoral graduates) without requiring initial company sponsorship."
       },
       {
             "question": "Can international students work during studies in the UK?",
