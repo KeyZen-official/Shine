@@ -1,8 +1,8 @@
-"use client"
+'use client';
 
 import React, { useState, useEffect, useCallback } from 'react';
 import { ChevronLeft, ChevronRight, X, Image as ImageIcon } from 'lucide-react';
-import { cn } from '@/lib/utils';
+import { cn } from '../../lib/utils';
 
 const SQRT_5000 = Math.sqrt(5000);
 
@@ -64,7 +64,7 @@ export const TESTIMONIALS: TestimonialItem[] = [
     university: 'University of Wollongong',
     testimonial:
       'All the staff members are very cooperative and friendly. They guided me with ease during my entire process. A special thanks to the team for going through all the odds and helping us. I would recommend Shine Consulting to all students looking for Higher Studies.',
-    avatar: '/Reviews/madan-panth.jpg',
+    avatar: '/Reviews/madan.jpeg',
     imgSrc: '/Reviews/review-madan-panth.jpg',
   },
   {
@@ -81,60 +81,62 @@ export const TESTIMONIALS: TestimonialItem[] = [
   },
 ];
 
-const CountryFlag: React.FC<{ code: string; flag?: string; className?: string }> = ({
-  code,
-  flag,
-  className = 'h-3.5 w-5',
-}) => {
-  if (code === 'uk') {
-    return (
-      <span className={cn('inline-flex items-center overflow-hidden rounded-xs shrink-0', className)}>
-        <svg viewBox="0 0 60 30" className="h-full w-full">
-          <clipPath id="uk-flag-clip-ts"><path d="M0 0v30h60V0z"/></clipPath>
-          <path d="M0 0v30h60V0z" fill="#012169"/>
-          <path d="M0 0l60 30m0-30L0 30" stroke="#fff" strokeWidth={6}/>
-          <path d="M0 0l60 30m0-30L0 30" clipPath="url(#uk-flag-clip-ts)" stroke="#C8102E" strokeWidth={4}/>
-          <path d="M30 0v30M0 15h60" stroke="#fff" strokeWidth={10}/>
-          <path d="M30 0v30M0 15h60" stroke="#C8102E" strokeWidth={6}/>
-        </svg>
-      </span>
-    );
+  interface CountryFlagProps {
+    code: string;
+    flag?: string;
+    className?: string;
   }
-  if (code === 'australia') {
-    return (
-      <span className={cn('inline-flex items-center overflow-hidden rounded-xs shrink-0', className)}>
-        <svg viewBox="0 0 60 30" className="h-full w-full">
-          <rect width="60" height="30" fill="#00008B"/>
-          <g transform="scale(0.5)">
-            <path d="M0 0v30h60V0z" fill="#012169"/>
-            <path d="M0 0l60 30m0-30L0 30" stroke="#fff" strokeWidth={6}/>
-            <path d="M0 0l60 30m0-30L0 30" stroke="#C8102E" strokeWidth={4}/>
-            <path d="M30 0v30M0 15h60" stroke="#fff" strokeWidth={10}/>
-            <path d="M30 0v30M0 15h60" stroke="#C8102E" strokeWidth={6}/>
-          </g>
-          <circle cx="15" cy="22" r="3" fill="#fff"/>
-          <circle cx="45" cy="6" r="1.5" fill="#fff"/>
-          <circle cx="39" cy="12" r="1.5" fill="#fff"/>
-          <circle cx="51" cy="11" r="1.5" fill="#fff"/>
-          <circle cx="47" cy="22" r="1.5" fill="#fff"/>
-          <circle cx="43" cy="16" r="1" fill="#fff"/>
-        </svg>
-      </span>
-    );
-  }
-  if (code === 'germany') {
-    return (
-      <span className={cn('inline-flex items-center overflow-hidden rounded-xs shrink-0', className)}>
-        <svg viewBox="0 0 60 30" className="h-full w-full">
-          <rect width="60" height="10" y="0" fill="#000"/>
-          <rect width="60" height="10" y="10" fill="#DD0000"/>
-          <rect width="60" height="10" y="20" fill="#FFCE00"/>
-        </svg>
-      </span>
-    );
-  }
-  return <span className="text-xs leading-none">{flag || '🌍'}</span>;
-};
+
+  function CountryFlag({ code, flag, className = 'h-3.5 w-5' }: CountryFlagProps) {
+    if (code === 'uk') {
+      return (
+        <span className={cn('inline-flex items-center overflow-hidden rounded-xs shrink-0', className)}>
+          <svg viewBox="0 0 60 30" className="h-full w-full">
+            <clipPath id="uk-flag-clip-ts"><path d="M0 0v30h60V0z" /></clipPath>
+            <path d="M0 0v30h60V0z" fill="#012169" />
+            <path d="M0 0l60 30m0-30L0 30" stroke="#fff" strokeWidth={6} />
+            <path d="M0 0l60 30m0-30L0 30" clipPath="url(#uk-flag-clip-ts)" stroke="#C8102E" strokeWidth={4} />
+            <path d="M30 0v30M0 15h60" stroke="#fff" strokeWidth={10} />
+            <path d="M30 0v30M0 15h60" stroke="#C8102E" strokeWidth={6} />
+          </svg>
+        </span>
+      );
+    }
+    if (code === 'australia') {
+      return (
+        <span className={cn('inline-flex items-center overflow-hidden rounded-xs shrink-0', className)}>
+          <svg viewBox="0 0 60 30" className="h-full w-full">
+            <rect width="60" height="30" fill="#00008B" />
+            <g transform="scale(0.5)">
+              <path d="M0 0v30h60V0z" fill="#012169" />
+              <path d="M0 0l60 30m0-30L0 30" stroke="#fff" strokeWidth={6} />
+              <path d="M0 0l60 30m0-30L0 30" stroke="#C8102E" strokeWidth={4} />
+              <path d="M30 0v30M0 15h60" stroke="#fff" strokeWidth={10} />
+              <path d="M30 0v30M0 15h60" stroke="#C8102E" strokeWidth={6} />
+            </g>
+            <circle cx="15" cy="22" r="3" fill="#fff" />
+            <circle cx="45" cy="6" r="1.5" fill="#fff" />
+            <circle cx="39" cy="12" r="1.5" fill="#fff" />
+            <circle cx="51" cy="11" r="1.5" fill="#fff" />
+            <circle cx="47" cy="22" r="1.5" fill="#fff" />
+            <circle cx="43" cy="16" r="1" fill="#fff" />
+          </svg>
+        </span>
+      );
+    }
+    if (code === 'germany') {
+      return (
+        <span className={cn('inline-flex items-center overflow-hidden rounded-xs shrink-0', className)}>
+          <svg viewBox="0 0 60 30" className="h-full w-full">
+            <rect width="60" height="10" y="0" fill="#000" />
+            <rect width="60" height="10" y="10" fill="#DD0000" />
+            <rect width="60" height="10" y="20" fill="#FFCE00" />
+          </svg>
+        </span>
+      );
+    }
+    return <span className="text-xs leading-none">{flag || '🌍'}</span>;
+}
 
 interface TestimonialCardProps {
   position: number;
@@ -144,13 +146,13 @@ interface TestimonialCardProps {
   onShowProof: (src: string) => void;
 }
 
-const TestimonialCard: React.FC<TestimonialCardProps> = ({
-  position,
-  testimonial,
-  handleMove,
-  cardSize,
-  onShowProof,
-}) => {
+  function TestimonialCard({
+    position,
+    testimonial,
+    handleMove,
+    cardSize,
+    onShowProof,
+}: TestimonialCardProps) {
   const isCenter = position === 0;
 
   return (
@@ -269,7 +271,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
       </div>
     </div>
   );
-};
+}
 
 export interface StaggerTestimonialsProps {
   items?: TestimonialItem[];

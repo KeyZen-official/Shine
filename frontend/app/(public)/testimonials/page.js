@@ -6,7 +6,6 @@ import {
 } from 'lucide-react';
 import { buildMetadata } from '../../../lib/seo';
 import { getSettings } from '../../../lib/content';
-import { pickImage } from '../../../lib/media';
 import { EditorialHero } from '../../../components/sections/EditorialHero';
 import { SectionShell } from '../../../components/ui/SectionShell';
 import { FinalCta } from '../../../components/sections/FinalCta';
@@ -56,10 +55,18 @@ export default function TestimonialsPage() {
     .slice()
     .sort((a, b) => (a.displayOrder ?? 0) - (b.displayOrder ?? 0));
 
-  const heroImage = pickImage(null, {
-    fallbackKey: 'study',
-    alt: 'Students at Shine Consultant office — testimonials',
-  });
+  const heroImage = {
+    fallbackUrl: '/imagery/counsellor-consultation.jpg',
+    alt: 'Students and clients in an educational advisory session with Shine Consultant',
+    width: 2560,
+    height: 1024,
+    variants: {
+      w360: '/imagery/counsellor-consultation.jpg',
+      w768: '/imagery/counsellor-consultation.jpg',
+      w1024: '/imagery/counsellor-consultation.jpg',
+      w1920: '/imagery/counsellor-consultation.jpg',
+    },
+  };
 
   const heroContent = {
     eyebrow: 'CLIENT STORIES — TESTIMONIALS',
@@ -71,8 +78,8 @@ export default function TestimonialsPage() {
   };
 
   const stats = [
-    { value: '5★', label: 'Google rating', srLabel: 'Google rating' },
-    { value: '10+', label: 'years experience', srLabel: 'Years of experience', featureLabel: 'years' },
+    { value: '5★', label: 'Google Rating', srLabel: 'Google rating' },
+    { value: '10+', label: 'Years Experience', srLabel: 'Years of experience', featureLabel: 'years' },
   ];
 
   return (
@@ -83,6 +90,7 @@ export default function TestimonialsPage() {
         stats={stats}
         socialLinks={socialLinks}
         image={heroImage}
+        brandTagline="Honest, Unbiased & Professional Guidance"
       />
 
       {/* 2 — Quick Pillars Strip */}

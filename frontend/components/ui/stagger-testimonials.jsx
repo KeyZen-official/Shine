@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useCallback } from 'react';
 import { ChevronLeft, ChevronRight, X, Image as ImageIcon } from 'lucide-react';
-import { cn } from '@/lib/utils';
+import { cn } from '../../lib/utils';
 
 const SQRT_5000 = Math.sqrt(5000);
 
@@ -52,7 +52,7 @@ export const TESTIMONIALS = [
     university: 'University of Wollongong',
     testimonial:
       'All the staff members are very cooperative and friendly. They guided me with ease during my entire process. A special thanks to the team for going through all the odds and helping us. I would recommend Shine Consulting to all students looking for Higher Studies.',
-    avatar: '/Reviews/madan-panth.jpg',
+    avatar: '/Reviews/madan.jpeg',
     imgSrc: '/Reviews/review-madan-panth.jpg',
   },
   {
