@@ -162,14 +162,14 @@ const TestimonialCard = ({ position, testimonial, handleMove, cardSize, onShowPr
       <div className="flex items-center justify-between gap-3 mb-3 pr-8">
         <div
           className={cn(
-            'relative h-13 w-13 sm:h-14 sm:w-14 shrink-0 rounded-full overflow-hidden border-2 shadow-sm',
-            isCenter ? 'border-white/50 ring-2 ring-white/20' : 'border-navy/20 ring-2 ring-navy/10',
+            'relative h-16 w-16 sm:h-20 sm:w-20 shrink-0 rounded-full overflow-hidden border-[2.5px] shadow-md',
+            isCenter ? 'border-white/60 ring-2 ring-white/25' : 'border-navy/25 ring-2 ring-navy/10',
           )}
         >
           <img
             src={testimonial.avatar || testimonial.imgSrc}
             alt={testimonial.by}
-            className="h-full w-full object-cover object-top"
+            className="h-full w-full object-cover object-center"
           />
         </div>
 
