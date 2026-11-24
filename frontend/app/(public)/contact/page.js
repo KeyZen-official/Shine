@@ -5,7 +5,6 @@ import {
   MessageCircle,
   Phone,
   ArrowRight,
-  CheckCircle2,
 } from 'lucide-react';
 import {
   getContact,
@@ -20,7 +19,6 @@ import { EnquiryForm } from '../../../components/forms/EnquiryForm';
 import { ContactCard } from '../../../components/ui/contact-card';
 import { EditorialHero } from '../../../components/sections/EditorialHero';
 import { formatBusinessHours, whatsappHref } from '../../../lib/format';
-import { Button } from '../../../components/ui/Button';
 
 export const metadata = buildMetadata({
   title: 'Contact Shine Consultant',
@@ -140,11 +138,6 @@ export default function ContactPage() {
       label: 'Services',
       srLabel: 'Services',
     },
-    {
-      value: 6,
-      label: 'Programmes',
-      srLabel: 'Coaching programmes',
-    },
   ];
 
   const heroContent = {
@@ -207,225 +200,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* ── 5. Office Details & Book Consultation ───────────────────────── */}
-      <section className="section-y bg-white border-t border-navy/10">
-        <div className="shell">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
-
-            {/* Office Info */}
-            <div>
-              <div className="inline-flex items-center gap-2 mb-4">
-                <span className="font-heading text-xs font-bold uppercase tracking-[0.16em] text-accent">
-                  FIND US
-                </span>
-                <span className="h-[2px] w-8 rounded-full bg-accent inline-block" />
-              </div>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-navy tracking-tight mb-6">
-                Visit Our Office
-              </h2>
-              <p className="text-sm text-charcoal/80 leading-relaxed mb-8 max-w-lg">
-                Our counsellors are available in person at our headquarters. Walk-in
-                appointments are welcome during business hours; for a guaranteed session, please
-                book a free consultation in advance.
-              </p>
-
-              <dl className="space-y-6">
-                {address && (
-                  <div className="flex gap-4">
-                    <span className="mt-0.5 flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#EAF5F1] text-accent">
-                      <MapPin className="h-5 w-5 stroke-[2]" aria-hidden="true" />
-                    </span>
-                    <div>
-                      <dt className="font-heading text-xs font-bold uppercase tracking-[0.1em] text-navy mb-1">
-                        {primary?.label ?? 'Office'}
-                      </dt>
-                      <dd className="text-sm text-charcoal/80 whitespace-pre-line leading-relaxed">
-                        {address}
-                      </dd>
-                    </div>
-                  </div>
-                )}
-
-                {(phone || alternatePhone) && (
-                  <div className="flex gap-4">
-                    <span className="mt-0.5 flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#EAF5F1] text-accent">
-                      <Phone className="h-5 w-5 stroke-[2]" aria-hidden="true" />
-                    </span>
-                    <div>
-                      <dt className="font-heading text-xs font-bold uppercase tracking-[0.1em] text-navy mb-1">
-                        Phone
-                      </dt>
-                      {phone && (
-                        <dd>
-                          <a
-                            href={`tel:${phone.replace(/\s/g, '')}`}
-                            className="text-sm font-semibold text-navy underline underline-offset-2 hover:text-accent transition-colors"
-                          >
-                            {phone}
-                          </a>
-                        </dd>
-                      )}
-                      {alternatePhone && (
-                        <dd className="mt-1 text-sm text-charcoal/70">
-                          <span className="text-xs font-semibold uppercase tracking-wide text-charcoal/50">
-                            Landline:{' '}
-                          </span>
-                          {alternatePhone}
-                        </dd>
-                      )}
-                    </div>
-                  </div>
-                )}
-
-                {email && (
-                  <div className="flex gap-4">
-                    <span className="mt-0.5 flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#EAF5F1] text-accent">
-                      <Mail className="h-5 w-5 stroke-[2]" aria-hidden="true" />
-                    </span>
-                    <div>
-                      <dt className="font-heading text-xs font-bold uppercase tracking-[0.1em] text-navy mb-1">
-                        Email
-                      </dt>
-                      <dd>
-                        <a
-                          href={`mailto:${email}`}
-                          className="break-all text-sm font-semibold text-navy underline underline-offset-2 hover:text-accent transition-colors"
-                        >
-                          {email}
-                        </a>
-                      </dd>
-                    </div>
-                  </div>
-                )}
-
-                {whatsappHref(whatsapp, primary.whatsappMessage) && (
-                  <div className="flex gap-4">
-                    <span className="mt-0.5 flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#EAF5F1] text-accent">
-                      <MessageCircle className="h-5 w-5 stroke-[2]" aria-hidden="true" />
-                    </span>
-                    <div>
-                      <dt className="font-heading text-xs font-bold uppercase tracking-[0.1em] text-navy mb-1">
-                        WhatsApp
-                      </dt>
-                      <dd>
-                        <a
-                          href={whatsappHref(whatsapp, primary.whatsappMessage)}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-sm font-semibold text-navy underline underline-offset-2 hover:text-accent transition-colors"
-                        >
-                          Message a counsellor directly
-                        </a>
-                      </dd>
-                    </div>
-                  </div>
-                )}
-
-                {hours.length > 0 && (
-                  <div className="flex gap-4">
-                    <span className="mt-0.5 flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#EAF5F1] text-accent">
-                      <Clock className="h-5 w-5 stroke-[2]" aria-hidden="true" />
-                    </span>
-                    <div className="min-w-0 flex-1">
-                      <dt className="font-heading text-xs font-bold uppercase tracking-[0.1em] text-navy mb-2">
-                        Business Hours
-                      </dt>
-                      <dd>
-                        <ul className="divide-y divide-navy/10 rounded-xl border border-navy/10 bg-[#FAF9F5] overflow-hidden">
-                          {hours.map((entry) => (
-                            <li
-                              key={entry.day}
-                              className="flex items-center justify-between gap-4 px-4 py-2.5 text-xs"
-                            >
-                              <span className="text-charcoal/70">{entry.day}</span>
-                              <span className="font-heading font-semibold text-navy">
-                                {entry.value}
-                              </span>
-                            </li>
-                          ))}
-                        </ul>
-                      </dd>
-                    </div>
-                  </div>
-                )}
-              </dl>
-            </div>
-
-            {/* Book Consultation Prompt */}
-            <div className="rounded-3xl border border-navy/10 bg-navy on-navy p-8 sm:p-10 relative overflow-hidden">
-              {/* Background dots */}
-              <div
-                aria-hidden="true"
-                className="pointer-events-none absolute inset-0 opacity-[0.05]"
-                style={{
-                  backgroundImage:
-                    'radial-gradient(circle, #ffffff 1px, transparent 1px)',
-                  backgroundSize: '28px 28px',
-                }}
-              />
-              <span
-                aria-hidden="true"
-                className="absolute top-0 inset-x-0 h-1 bg-accent rounded-t-3xl"
-              />
-
-              <div className="relative">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-accent/20 text-accent text-xs font-heading font-bold mb-6">
-                  FREE CONSULTATION
-                </span>
-
-                <h3 className="text-2xl sm:text-3xl font-extrabold text-white leading-tight mb-4">
-                  Prefer to Talk It Through in Person?
-                </h3>
-
-                <p className="text-sm text-white/75 leading-relaxed mb-6 max-w-md">
-                  Book a thirty-minute session at our office or over a call. Bring
-                  your transcripts, your questions and nothing else — we handle the rest.
-                </p>
-
-                <ul className="space-y-3 mb-8">
-                  {[
-                    'Detailed academic profile review',
-                    'Country and university shortlist',
-                    'Test score requirements explained',
-                    'Visa pathway overview',
-                    'Realistic timeline for your intake',
-                  ].map((item) => (
-                    <li key={item} className="flex items-center gap-2.5 text-sm text-white/80">
-                      <CheckCircle2
-                        className="h-4 w-4 shrink-0 text-accent"
-                        aria-hidden="true"
-                      />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-
-                <div className="flex flex-col sm:flex-row gap-3">
-                  <Button
-                    href="/book-consultation"
-                    variant="primary"
-                    size="lg"
-                    className="font-heading font-bold"
-                  >
-                    Book Free Consultation
-                    <ArrowRight className="h-4 w-4" aria-hidden="true" />
-                  </Button>
-                  <Button
-                    href="/services"
-                    variant="inverse"
-                    size="lg"
-                    className="font-heading font-bold"
-                  >
-                    View Overseas Education Services
-                  </Button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── 6. Map ──────────────────────────────────────────────────────── */}
+      {/* ── 3. Map ──────────────────────────────────────────────────────── */}
       {mapEmbedUrl ? (
         <section aria-labelledby="map-heading" className="bg-[#FAF9F5] border-t border-navy/10">
           <div className="shell py-14 lg:py-20">

@@ -212,5 +212,44 @@
         }
       ]
     }
+  },
+  {
+    "id": "update-migration-pr-pathways",
+    "slug": "skilled-migration-pr-pathways-guide",
+    "title": "Skilled Migration & Permanent Residency Pathways for Canada, Australia and New Zealand",
+    "status": "published",
+    "category": "Migration Updates",
+    "publishedAt": "2025-02-18",
+    "readingTime": "5 min read",
+    "featured": false,
+    "featuredImage": "/destinations/canada.jpg",
+    "featuredImageAlt": "Global skilled migration, PR points assessment and immigration pathways",
+    "shortDescription": "Strategic insights on Express Entry CRS cutoffs, Australian Subclass 189/190 points thresholds, and New Zealand Green List opportunities.",
+    "seo": {
+      "title": "Skilled Migration & PR Pathways Guide | Shine Consultant",
+      "description": "Comprehensive guide to points-based permanent residency, skilled migration eligibility, and documentation for Canada, Australia, and New Zealand.",
+      "ogImage": "/destinations/canada.jpg"
+    },
+    "content": {
+      "summary": "Navigating skilled migration programs requires precision in credential assessment, language benchmark testing, and category selection. Here is an overview of recent changes and strategic pathways across key migration destinations.",
+      "sections": [
+        {
+          "heading": "Canada Express Entry & Category-Based Selection",
+          "body": "Immigration, Refugees and Citizenship Canada (IRCC) continues category-based draws targeting STEM professionals, healthcare specialists, trade occupations, and French speakers alongside general rounds. Prospective applicants must ensure Educational Credential Assessments (ECA) and language test results (IELTS General Training or PTE Core) are prepared well in advance to maximize Comprehensive Ranking System (CRS) points."
+        },
+        {
+          "heading": "Australia General Skilled Migration (Subclass 189, 190, 491)",
+          "body": "Australia's points test requires at least 65 points, but competitive invitations often require 85+ points depending on the occupation code. Securing a positive skills assessment from assessing bodies such as ACS, Engineers Australia, or VETASSESS, combined with state nomination sponsorship, provides a proven route to Australian permanent residency."
+        },
+        {
+          "heading": "New Zealand Skilled Migrant Category (SMC) & Green List",
+          "body": "New Zealand's 6-point system offers streamlined residency for skilled individuals working in recognized roles on the Green List or holding registered professional credentials. With clear criteria based on qualifications, earnings, and New Zealand work experience, qualified professionals can plan their relocation with confidence."
+        },
+        {
+          "heading": "Structured Migration Advisory by Shine Consultant",
+          "body": "Our migration counselling team reviews occupational eligibility, coordinates credential evaluation filings, and guides applicants through every step of points calculation and Expression of Interest (EOI) lodgement to avoid procedural pitfalls."
+        }
+      ]
+    }
   }
 ]

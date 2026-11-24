@@ -210,7 +210,22 @@ function renderRows(fields) {
  */
 export async function notify({ subject, heading, fields, replyTo, body }) {
   const resend = getResend();
-  const to = process.env.ADMIN_NOTIFICATION_EMAIL ?? 'enquiry@shineconsultant.co.in';
+  const defaultRecipients = [
+    'enquiry@shineconsultant.co.in',
+    'shineconsultancy25@gmail.com',
+  ];
+
+  const adminEnv = process.env.ADMIN_NOTIFICATION_EMAIL;
+  let to = adminEnv
+    ? adminEnv.split(',').map((e) => e.trim()).filter(Boolean)
+    : defaultRecipients;
+
+  if (!to.includes('enquiry@shineconsultant.co.in')) {
+    to.push('enquiry@shineconsultant.co.in');
+  }
+  if (!to.includes('shineconsultancy25@gmail.com')) {
+    to.push('shineconsultancy25@gmail.com');
+  }
 
   if (!resend) {
     // Logged, not silently dropped, so a misconfigured deployment is
@@ -228,7 +243,7 @@ export async function notify({ subject, heading, fields, replyTo, body }) {
   try {
     const { error } = await resend.emails.send({
       from,
-      to: [to],
+      to,
       replyTo: replyTo || undefined,
       subject,
       text: [

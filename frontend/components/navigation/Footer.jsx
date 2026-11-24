@@ -181,13 +181,27 @@ export function Footer({
 
           <FooterGroup title="Quick links">
             <ul>
-              {FOOTER_QUICK_LINKS.map((link) => (
-                <li key={link.href}>
-                  <Link href={link.href} className={LINK}>
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
+              {FOOTER_QUICK_LINKS.map((link) => {
+                const isExternal = link.href.startsWith('http') || link.external;
+                return (
+                  <li key={link.href}>
+                    {isExternal ? (
+                      <a
+                        href={link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={LINK}
+                      >
+                        {link.label}
+                      </a>
+                    ) : (
+                      <Link href={link.href} className={LINK}>
+                        {link.label}
+                      </Link>
+                    )}
+                  </li>
+                );
+              })}
             </ul>
           </FooterGroup>
 
@@ -233,13 +247,27 @@ export function Footer({
 
           <FooterGroup title="Additional services">
             <ul>
-              {FOOTER_ADDITIONAL_SERVICES.map((item) => (
-                <li key={item.label}>
-                  <Link href={item.href} className={LINK}>
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
+              {FOOTER_ADDITIONAL_SERVICES.map((item) => {
+                const isExternal = item.href.startsWith('http') || item.external;
+                return (
+                  <li key={item.label}>
+                    {isExternal ? (
+                      <a
+                        href={item.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={LINK}
+                      >
+                        {item.label}
+                      </a>
+                    ) : (
+                      <Link href={item.href} className={LINK}>
+                        {item.label}
+                      </Link>
+                    )}
+                  </li>
+                );
+              })}
             </ul>
           </FooterGroup>
 

@@ -9,6 +9,16 @@ const nextConfig = {
   // is needed.
   images: { unoptimized: true },
 
+  async redirects() {
+    return [
+      {
+        source: '/forex-exchange',
+        destination: 'https://www.thomascook.in/foreign-exchange/forex-rate-card',
+        permanent: false,
+      },
+    ];
+  },
+
   async headers() {
     return [
       {

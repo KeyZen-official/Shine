@@ -60,13 +60,18 @@ export default function LatestPage() {
     { label: 'Latest Updates', href: '/latest' },
   ];
 
+  const heroContent = {
+    ...sections.hero,
+    headline: 'Your Global Journey Starts Here.',
+  };
+
   return (
     <>
       <JsonLd data={breadcrumbJsonLd(breadcrumbs)} />
 
       {/* Signature EditorialHero matching Home Page */}
       <EditorialHero
-        content={sections.hero}
+        content={heroContent}
         stats={stats}
         socialLinks={socialLinks}
         image={heroImage}
@@ -75,12 +80,10 @@ export default function LatestPage() {
       <LatestClient initialUpdates={updates} categories={categories} />
 
       <CtaStrip
-        title="Need personalized guidance for your study abroad plans?"
-        description="Our senior counsellors in Mumbai provide unbiased, end-to-end guidance from university shortlisting to visa documentation."
+        title="Need personalized guidance?"
+        description="Our senior counsellors in Mumbai provide unbiased, end-to-end guidance for all our services."
         primaryLabel="Book Free Consultation"
         primaryHref="/book-consultation"
-        secondaryLabel="Explore Study Destinations"
-        secondaryHref="/destinations"
       />
     </>
   );

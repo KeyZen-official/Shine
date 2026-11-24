@@ -2,7 +2,8 @@
 'use client';
 
 import React, { useState, useEffect, useCallback } from 'react';
-import { ChevronLeft, ChevronRight, X, Image as ImageIcon } from 'lucide-react';
+import Link from 'next/link';
+import { ChevronLeft, ChevronRight, X, Image as ImageIcon, ArrowRight } from 'lucide-react';
 import { cn } from '../../lib/utils';
 
 const SQRT_5000 = Math.sqrt(5000);
@@ -16,6 +17,7 @@ export interface TestimonialItem {
   flag: string;
   university: string;
   avatar: string;
+  avatarPosition?: string;
   imgSrc: string;
 }
 
@@ -30,6 +32,7 @@ export const TESTIMONIALS: TestimonialItem[] = [
     testimonial:
       'I had a really good experience with Shine Consultant. They supported and guided me at every step and also helped me decide which country would be best for my studies and future growth. They were always in touch and regularly followed up.',
     avatar: '/Reviews/ashwin.jpeg',
+    avatarPosition: 'center 15%',
     imgSrc: '/Reviews/review-ashwin-singh.jpg',
   },
   {
@@ -42,6 +45,7 @@ export const TESTIMONIALS: TestimonialItem[] = [
     testimonial:
       'Had a really great experience with Shine Consultant. They helped me sort out my entire UK university application and visa process in just 2 months. The team was extremely supportive, responsive, and professional throughout.',
     avatar: '/Reviews/krishnasagar.jpeg',
+    avatarPosition: 'center 15%',
     imgSrc: '/Reviews/review-krishnasagar-thakkar.jpg',
   },
   {
@@ -54,6 +58,7 @@ export const TESTIMONIALS: TestimonialItem[] = [
     testimonial:
       'I am extremely grateful to Shine Consultancy for their outstanding support in helping me secure admission to Macquarie University for my Master\'s in Information Systems and Management. From university selection to visa processing, they guided me every step of the way.',
     avatar: '/Reviews/Dolwin.jpeg',
+    avatarPosition: 'center 20%',
     imgSrc: '/Reviews/review-dolwin-menezes.jpg',
   },
   {
@@ -66,6 +71,7 @@ export const TESTIMONIALS: TestimonialItem[] = [
     testimonial:
       'All the staff members are very cooperative and friendly. They guided me with ease during my entire process. A special thanks to the team for going through all the odds and helping us. I would recommend Shine Consulting to all students looking for Higher Studies.',
     avatar: '/Reviews/madan.jpeg',
+    avatarPosition: 'center 15%',
     imgSrc: '/Reviews/review-madan-panth.jpg',
   },
   {
@@ -78,6 +84,7 @@ export const TESTIMONIALS: TestimonialItem[] = [
     testimonial:
       'I had an excellent experience with Shine Consultant Borivali. In my opinion, it is one of the best agencies for students who are planning to study abroad. The entire team is extremely professional, supportive, and genuinely cares about every student.',
     avatar: '/Reviews/parth-gala.jpeg',
+    avatarPosition: 'center 10%',
     imgSrc: '/Reviews/review-parth-gala.jpg',
   },
 ];
@@ -192,17 +199,18 @@ interface TestimonialCardProps {
       />
 
       {/* Top Header Row: Student Avatar + Country Badge */}
-      <div className="flex items-center justify-between gap-3 mb-3 pr-8">
+      <div className="flex items-center justify-between gap-3 mb-2.5 pr-6">
         <div
           className={cn(
-            'relative h-16 w-16 sm:h-20 sm:w-20 shrink-0 rounded-full overflow-hidden border-[2.5px] shadow-md',
-            isCenter ? 'border-white/60 ring-2 ring-white/25' : 'border-navy/25 ring-2 ring-navy/10',
+            'relative h-24 w-24 sm:h-28 sm:w-28 shrink-0 rounded-full overflow-hidden border-[3px] shadow-lg',
+            isCenter ? 'border-white/80 ring-2 ring-white/30' : 'border-navy/25 ring-2 ring-navy/10',
           )}
         >
           <img
             src={testimonial.avatar || testimonial.imgSrc}
             alt={testimonial.by}
-            className="h-full w-full object-cover object-center"
+            className="h-full w-full object-cover"
+            style={{ objectPosition: testimonial.avatarPosition || 'center 15%' }}
           />
         </div>
 
@@ -307,7 +315,7 @@ export function StaggerTestimonials({ items = TESTIMONIALS, className }: Stagger
   useEffect(() => {
     const updateSize = () => {
       const { matches } = window.matchMedia('(min-width: 640px)');
-      setCardSize(matches ? 365 : 290);
+      setCardSize(matches ? 385 : 310);
     };
 
     updateSize();
@@ -318,7 +326,7 @@ export function StaggerTestimonials({ items = TESTIMONIALS, className }: Stagger
   return (
     <div
       className={cn('relative w-full overflow-hidden', className)}
-      style={{ height: 600 }}
+      style={{ height: 650 }}
     >
       {testimonialsList.map((testimonial, index) => {
         const position =
@@ -336,21 +344,30 @@ export function StaggerTestimonials({ items = TESTIMONIALS, className }: Stagger
           />
         );
       })}
-      <div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 gap-2">
-        <button
-          onClick={() => handleMove(-1)}
-          className="flex h-10 w-10 items-center justify-center rounded-full border border-navy/20 bg-white text-navy transition-colors hover:bg-navy hover:text-white"
-          aria-label="Previous testimonial"
+      <div className="absolute bottom-3 left-1/2 flex -translate-x-1/2 flex-col sm:flex-row items-center gap-3 z-20">
+        <div className="flex items-center gap-2">
+          <button
+            onClick={() => handleMove(-1)}
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-navy/20 bg-white text-navy shadow-sm transition-colors hover:bg-navy hover:text-white"
+            aria-label="Previous testimonial"
+          >
+            <ChevronLeft className="h-5 w-5" />
+          </button>
+          <button
+            onClick={() => handleMove(1)}
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-navy/20 bg-white text-navy shadow-sm transition-colors hover:bg-navy hover:text-white"
+            aria-label="Next testimonial"
+          >
+            <ChevronRight className="h-5 w-5" />
+          </button>
+        </div>
+        <Link
+          href="/testimonials"
+          className="group inline-flex items-center gap-2 rounded-full border border-navy/20 bg-white px-5 py-2 font-heading text-xs sm:text-sm font-bold text-navy shadow-sm transition-all duration-300 hover:border-accent hover:bg-accent hover:text-white hover:shadow-md"
         >
-          <ChevronLeft className="h-5 w-5" />
-        </button>
-        <button
-          onClick={() => handleMove(1)}
-          className="flex h-10 w-10 items-center justify-center rounded-full border border-navy/20 bg-white text-navy transition-colors hover:bg-navy hover:text-white"
-          aria-label="Next testimonial"
-        >
-          <ChevronRight className="h-5 w-5" />
-        </button>
+          <span>View All Testimonials</span>
+          <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
+        </Link>
       </div>
       {/* Proof Lightbox Modal */}
       {proofImage && (
