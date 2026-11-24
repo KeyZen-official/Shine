@@ -53,11 +53,12 @@ export interface GradientCardProps extends React.HTMLAttributes<HTMLDivElement>,
   ctaText?: string;
   ctaHref?: string;
   imageUrl?: string;
+  imageClassName?: string;
   gradient?: "orange" | "gray" | "purple" | "green";
 }
 
 const GradientCard = React.forwardRef<HTMLDivElement, GradientCardProps>(
-  ({ className, gradient, badgeText, badgeColor, title, description, ctaText, ctaHref, imageUrl, ...props }, ref) => {
+  ({ className, gradient, badgeText, badgeColor, title, description, ctaText, ctaHref, imageUrl, imageClassName, ...props }, ref) => {
     
     // Animation variants for framer-motion
     const cardAnimation = {
@@ -94,7 +95,10 @@ const GradientCard = React.forwardRef<HTMLDivElement, GradientCardProps>(
               alt={`${title} background graphic`}
               variants={imageAnimation}
               transition={{ type: "spring", stiffness: 400, damping: 15 }}
-              className="absolute -right-1/4 -bottom-1/4 w-3/4 opacity-80 pointer-events-none dark:opacity-30 object-cover"
+              className={cn(
+                "absolute -right-1/4 -bottom-1/4 w-3/4 opacity-80 pointer-events-none dark:opacity-30 object-cover",
+                imageClassName
+              )}
             />
           )}
 

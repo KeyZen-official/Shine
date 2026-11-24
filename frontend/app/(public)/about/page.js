@@ -770,7 +770,8 @@ export default function AboutPage() {
               description="Unbiased university shortlisting, career mapping, and Submiting Applications."
               ctaText="Contact Us"
               ctaHref="/contact"
-              imageUrl="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=600&q=80"
+              imageUrl="/imagery/WhatsAppImage2026-11-24at1.13.58PM.png"
+              imageClassName="!bottom-0 !right-0 w-[58%] max-w-[220px] object-top"
               gradient="orange"
             />
 
@@ -779,7 +780,8 @@ export default function AboutPage() {
               badgeColor="#64748B"
               title="Admissions & Visa Manager"
               description="Rigorous document verification, financial audits, mock interview preparation, and compliance with foreign consular guidelines."
-              imageUrl="https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=600&q=80"
+              imageUrl="/imagery/dishaphoto.png"
+              imageClassName="!bottom-0 !right-0 w-[58%] max-w-[220px] object-top"
               gradient="gray"
             />
 
@@ -790,7 +792,8 @@ export default function AboutPage() {
               description="Subject-specialist coaching for IELTS, PTE, TOEFL, GRE, SAT and GMAT with certified trainers, mock drills, and error reviews."
               ctaText="Explore test preparation"
               ctaHref="/test-preparation"
-              imageUrl="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80"
+              imageUrl="/imagery/ripalmaam.jpg1.png"
+              imageClassName="!bottom-0 !right-0 w-[62%] max-w-[240px] object-top"
               gradient="purple"
             />
           </div>
