@@ -761,41 +761,109 @@ export default function AboutPage() {
             </p>
           </div>
 
-          {/* 3 Department Cards using GradientCard */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-7 items-stretch">
-            <GradientCard
-              badgeText="Advisory Practice"
-              badgeColor="#F59E0B"
-              title="Senior Admission and Visa Officer"
-              description="Unbiased university shortlisting, career mapping, and Submiting Applications."
-              ctaText="Contact Us"
-              ctaHref="/contact"
-              imageUrl="/imagery/WhatsAppImage2026-11-24at1.13.58PM.png"
-              imageClassName="!bottom-0 !right-0 w-[58%] max-w-[220px] object-top"
-              gradient="orange"
-            />
+          {/* 3 Specialist Cards with Zero Overlap (Dedicated Photo on Top, Clean Text Below) */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 items-stretch">
+            {/* Card 1: Senior Admission and Visa Officer */}
+            <div className="group flex flex-col justify-between rounded-2xl bg-white border border-navy/10 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <div className="relative aspect-[4/3] w-full overflow-hidden bg-slate-100">
+                <img
+                  src="/imagery/WhatsAppImage2026-11-24at1.13.58PM.png"
+                  alt="Senior Admission and Visa Officer"
+                  className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+              <div className="flex flex-col flex-1 justify-between p-6 sm:p-7">
+                <div>
+                  <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-amber-50 border border-amber-200/60 px-3 py-1 text-xs font-semibold text-amber-900 w-fit">
+                    <span className="h-2 w-2 rounded-full bg-[#F59E0B]" />
+                    Advisory Practice
+                  </div>
+                  <h3 className="font-heading text-lg sm:text-xl font-bold text-navy leading-snug">
+                    Senior Admission and Visa Officer
+                  </h3>
+                  <p className="mt-2.5 text-xs sm:text-sm text-charcoal/75 leading-relaxed">
+                    Unbiased university shortlisting, career mapping, and submitting applications.
+                  </p>
+                </div>
+                <div className="mt-5 pt-4 border-t border-navy/5">
+                  <Link
+                    href="/contact"
+                    className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-accent hover:text-accent-hover transition-colors"
+                  >
+                    Contact Us
+                    <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
+                  </Link>
+                </div>
+              </div>
+            </div>
 
-            <GradientCard
-              badgeText="Documentation & Compliance"
-              badgeColor="#64748B"
-              title="Admissions & Visa Manager"
-              description="Rigorous document verification, financial audits, mock interview preparation, and compliance with foreign consular guidelines."
-              imageUrl="/imagery/dishaphoto.png"
-              imageClassName="!bottom-0 !right-0 w-[58%] max-w-[220px] object-top"
-              gradient="gray"
-            />
+            {/* Card 2: Admissions & Visa Manager */}
+            <div className="group flex flex-col justify-between rounded-2xl bg-white border border-navy/10 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <div className="relative aspect-[4/3] w-full overflow-hidden bg-slate-100">
+                <img
+                  src="/imagery/dishaphoto.png"
+                  alt="Admissions & Visa Manager"
+                  className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+              <div className="flex flex-col flex-1 justify-between p-6 sm:p-7">
+                <div>
+                  <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-slate-100 border border-slate-200/60 px-3 py-1 text-xs font-semibold text-slate-800 w-fit">
+                    <span className="h-2 w-2 rounded-full bg-[#64748B]" />
+                    Documentation &amp; Compliance
+                  </div>
+                  <h3 className="font-heading text-lg sm:text-xl font-bold text-navy leading-snug">
+                    Admissions &amp; Visa Manager
+                  </h3>
+                  <p className="mt-2.5 text-xs sm:text-sm text-charcoal/75 leading-relaxed">
+                    Rigorous document verification, financial audits, mock interview preparation, and compliance with foreign counsellor guidelines.
+                  </p>
+                </div>
+                <div className="mt-5 pt-4 border-t border-navy/5">
+                  <Link
+                    href="/contact"
+                    className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-accent hover:text-accent-hover transition-colors"
+                  >
+                    Contact Us
+                    <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
+                  </Link>
+                </div>
+              </div>
+            </div>
 
-            <GradientCard
-              badgeText="Academic Training"
-              badgeColor="#8B5CF6"
-              title="Professional Test Trainers"
-              description="Subject-specialist coaching for IELTS, PTE, TOEFL, GRE, SAT and GMAT with certified trainers, mock drills, and error reviews."
-              ctaText="Explore test preparation"
-              ctaHref="/test-preparation"
-              imageUrl="/imagery/ripalmaam.jpg1.png"
-              imageClassName="!bottom-0 !right-0 w-[62%] max-w-[240px] object-top"
-              gradient="purple"
-            />
+            {/* Card 3: Professional Test Trainers */}
+            <div className="group flex flex-col justify-between rounded-2xl bg-white border border-navy/10 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <div className="relative aspect-[4/3] w-full overflow-hidden bg-slate-100">
+                <img
+                  src="/imagery/ripalmaam.jpg1.png"
+                  alt="Professional Test Trainers"
+                  className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+              <div className="flex flex-col flex-1 justify-between p-6 sm:p-7">
+                <div>
+                  <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-purple-50 border border-purple-200/60 px-3 py-1 text-xs font-semibold text-purple-900 w-fit">
+                    <span className="h-2 w-2 rounded-full bg-[#8B5CF6]" />
+                    Academic Training
+                  </div>
+                  <h3 className="font-heading text-lg sm:text-xl font-bold text-navy leading-snug">
+                    Professional Test Trainers
+                  </h3>
+                  <p className="mt-2.5 text-xs sm:text-sm text-charcoal/75 leading-relaxed">
+                    Subject-specialist coaching for IELTS, PTE, TOEFL, GRE, SAT and GMAT with certified trainers, mock drills, and error reviews.
+                  </p>
+                </div>
+                <div className="mt-5 pt-4 border-t border-navy/5">
+                  <Link
+                    href="/test-preparation"
+                    className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-accent hover:text-accent-hover transition-colors"
+                  >
+                    Explore test preparation
+                    <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
+                  </Link>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
