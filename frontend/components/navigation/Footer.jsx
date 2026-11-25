@@ -397,7 +397,11 @@ export function Footer({
         </div>
 
         <div className="mt-12 border-t border-white/10 pt-8">
-          <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+          <p className="max-w-prose text-micro leading-relaxed text-white/45">
+            Shine Consultant provides education and guidance services only and Shine Consultant has only one office location.
+          </p>
+
+          <div className="mt-6 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
             <p className="text-caption text-white/55">
               © {year} Shine Consultant. All rights reserved.
             </p>
