@@ -13,7 +13,6 @@ import {
 } from 'lucide-react';
 import { buildMetadata } from '../../../../lib/seo';
 import { getSettings } from '../../../../lib/content';
-import { pickImage } from '../../../../lib/media';
 import { EditorialHero } from '../../../../components/sections/EditorialHero';
 import { SectionShell } from '../../../../components/ui/SectionShell';
 import { FinalCta } from '../../../../components/sections/FinalCta';
@@ -51,10 +50,12 @@ export default function MigrationCounsellingPage() {
     .slice()
     .sort((a, b) => (a.displayOrder ?? 0) - (b.displayOrder ?? 0));
 
-  const heroImage = pickImage(null, {
-    fallbackKey: 'arrival',
-    alt: 'International migration — families settling abroad with Shine Consultant guidance',
-  });
+  const heroImage = {
+    fallbackUrl: '/imagery/counsellor-consultation.jpg',
+    alt: 'Migration counselling consultation with senior advisor — Shine Consultant',
+    width: 1200,
+    height: 750,
+  };
 
   const heroContent = {
     eyebrow: 'IMMIGRATION CONSULTANCY — MIGRATION',
@@ -79,7 +80,13 @@ export default function MigrationCounsellingPage() {
   return (
     <>
       {/* 1 — Hero */}
-      <EditorialHero content={heroContent} stats={stats} socialLinks={socialLinks} image={heroImage} />
+      <EditorialHero
+        content={heroContent}
+        stats={stats}
+        socialLinks={socialLinks}
+        image={heroImage}
+        heroImgClassName="object-[50%_15%] lg:object-[50%_15%]"
+      />
 
       {/* 2 — Quick Pillars */}
       <div className="border-y border-navy/10 bg-[#FAF8F3] py-6 sm:py-8">

@@ -55,6 +55,7 @@ export function TestProgrammeDetailLayout({
   data,
   socialLinks = [],
   heroImage,
+  heroBanner,
 }) {
   const {
     heroContent,
@@ -81,12 +82,13 @@ export function TestProgrammeDetailLayout({
         stats={heroStats}
         socialLinks={socialLinks}
         image={{
-          src: heroImage,
-          fallbackUrl: heroImage,
+          src: heroBanner?.src ?? heroImage,
+          fallbackUrl: heroBanner?.src ?? heroImage,
           alt: `${test.name} Preparation at Shine Consultant`,
-          width: 1920,
-          height: 1080,
+          width: heroBanner?.width ?? 1920,
+          height: heroBanner?.height ?? 1080,
         }}
+        heroImgClassName={heroBanner?.imgClass}
         brandTagline="Honest, Unbiased & Professional Guidance"
       />
 

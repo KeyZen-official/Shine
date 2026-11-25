@@ -10,7 +10,6 @@ import {
 } from 'lucide-react';
 import { buildMetadata } from '../../../../lib/seo';
 import { getSettings } from '../../../../lib/content';
-import { pickImage } from '../../../../lib/media';
 import { EditorialHero } from '../../../../components/sections/EditorialHero';
 import { SectionShell } from '../../../../components/ui/SectionShell';
 import { FinalCta } from '../../../../components/sections/FinalCta';
@@ -44,10 +43,12 @@ export default function CorporateTrainingPage() {
     .slice()
     .sort((a, b) => (a.displayOrder ?? 0) - (b.displayOrder ?? 0));
 
-  const heroImage = pickImage(null, {
-    fallbackKey: 'lecture',
-    alt: 'Corporate training session — professional development by Shine Consultant',
-  });
+  const heroImage = {
+    fallbackUrl: '/imagery/about-hero.jpg',
+    alt: 'Corporate training and business communication workshop — Shine Consultant',
+    width: 1376,
+    height: 768,
+  };
 
   const heroContent = {
     eyebrow: 'PROFESSIONAL TRAINING — CORPORATE',
@@ -72,7 +73,13 @@ export default function CorporateTrainingPage() {
   return (
     <>
       {/* 1 — Hero */}
-      <EditorialHero content={heroContent} stats={stats} socialLinks={socialLinks} image={heroImage} />
+      <EditorialHero
+        content={heroContent}
+        stats={stats}
+        socialLinks={socialLinks}
+        image={heroImage}
+        heroImgClassName="object-[50%_55%] lg:object-[50%_55%]"
+      />
 
       {/* 2 — Quick Pillars */}
       <div className="border-y border-navy/10 bg-[#FAF8F3] py-6 sm:py-8">

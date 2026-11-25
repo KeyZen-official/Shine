@@ -171,12 +171,13 @@ export default async function TestPreparationDetailPage({ params }) {
           stats={heroStats}
           socialLinks={socialLinks}
           image={{
-            src: '/imagery/ielts-hero.jpg',
-            fallbackUrl: '/imagery/ielts-hero.jpg',
+            src: '/imagery/ielts-hero-notched.jpg',
+            fallbackUrl: '/imagery/ielts-hero-notched.jpg',
             alt: 'Indian student holding IELTS preparation books in natural daylight with global landmarks',
-            width: 1920,
-            height: 1080,
+            width: 1376,
+            height: 860,
           }}
+          heroImgClassName="object-top lg:object-top"
           brandTagline="Honest, Unbiased & Professional Guidance"
         />
 
@@ -232,6 +233,13 @@ export default async function TestPreparationDetailPage({ params }) {
   /* PTE, TOEFL, GRE, GMAT: Full-Page Layout matching IELTS             */
   /* ------------------------------------------------------------------ */
   if (prepData) {
+    const HERO_BANNERS = {
+      pte: { src: '/imagery/pte-hero-notched.jpg', width: 1376, height: 860, imgClass: 'object-top lg:object-top' },
+      toefl: { src: '/imagery/toefl-hero-notched.jpg', width: 1376, height: 860, imgClass: 'object-top lg:object-top' },
+      gmat: { src: '/imagery/gmat-hero-notched.jpg', width: 1376, height: 860, imgClass: 'object-top lg:object-top' },
+      sat: { src: '/imagery/sat-hero-notched.jpg', width: 1376, height: 872, imgClass: 'object-top lg:object-top' },
+    };
+
     return (
       <>
         <JsonLd data={breadcrumbJsonLd(trail)} />
@@ -242,6 +250,7 @@ export default async function TestPreparationDetailPage({ params }) {
           data={prepData}
           socialLinks={socialLinks}
           heroImage={test.heroImage ?? `/imagery/${test.slug}-hero.jpg`}
+          heroBanner={HERO_BANNERS[slug]}
         />
       </>
     );

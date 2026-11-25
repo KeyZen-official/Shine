@@ -14,7 +14,6 @@ import {
 } from 'lucide-react';
 import { buildMetadata } from '../../../../lib/seo';
 import { getSettings } from '../../../../lib/content';
-import { pickImage } from '../../../../lib/media';
 import { EditorialHero } from '../../../../components/sections/EditorialHero';
 import { SectionShell } from '../../../../components/ui/SectionShell';
 import { FinalCta } from '../../../../components/sections/FinalCta';
@@ -49,10 +48,12 @@ export default function TestPreparationPage() {
     .slice()
     .sort((a, b) => (a.displayOrder ?? 0) - (b.displayOrder ?? 0));
 
-  const heroImage = pickImage(null, {
-    fallbackKey: 'study',
-    alt: 'Student preparing for standardised tests — Shine Consultant coaching',
-  });
+  const heroImage = {
+    fallbackUrl: '/imagery/ielts-about-library.jpg',
+    alt: 'Students preparing for IELTS and standardised tests in a modern library — Shine Consultant coaching',
+    width: 1200,
+    height: 896,
+  };
 
   const heroContent = {
     eyebrow: 'COACHING & TRAINING — TEST PREPARATION',
@@ -82,6 +83,7 @@ export default function TestPreparationPage() {
         stats={stats}
         socialLinks={socialLinks}
         image={heroImage}
+        heroImgClassName="object-[50%_38%] lg:object-[50%_38%]"
       />
 
       {/* 2 — Quick Pillars */}

@@ -22,7 +22,6 @@ import {
   FOOTER_QUICK_LINKS,
   LEGAL_LINKS,
 } from '../../lib/config';
-import { FINANCIAL_SERVICES_DISCLAIMER } from '../../shared/constants';
 import { whatsappHref } from '../../lib/format';
 import { cn } from '../../lib/utils';
 
@@ -81,9 +80,8 @@ function FooterGroup({ title, children, defaultOpen = false }) {
         >
           {title}
           <ChevronDown
-            className={`h-4 w-4 shrink-0 text-white/50 transition-transform duration-base ease-standard md:hidden ${
-              open ? 'rotate-180' : ''
-            }`}
+            className={`h-4 w-4 shrink-0 text-white/50 transition-transform duration-base ease-standard md:hidden ${open ? 'rotate-180' : ''
+              }`}
             aria-hidden="true"
           />
         </button>
@@ -160,10 +158,10 @@ export function Footer({
                         style={
                           brandColor
                             ? {
-                                background: brandColor.background || brandColor.bg,
-                                borderColor: brandColor.border || brandColor.bg,
-                                color: brandColor.text,
-                              }
+                              background: brandColor.background || brandColor.bg,
+                              borderColor: brandColor.border || brandColor.bg,
+                              color: brandColor.text,
+                            }
                             : undefined
                         }
                       >
@@ -399,11 +397,7 @@ export function Footer({
         </div>
 
         <div className="mt-12 border-t border-white/10 pt-8">
-          <p className="max-w-prose text-micro leading-relaxed text-white/45">
-            {FINANCIAL_SERVICES_DISCLAIMER}
-          </p>
-
-          <div className="mt-6 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+          <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
             <p className="text-caption text-white/55">
               © {year} Shine Consultant. All rights reserved.
             </p>

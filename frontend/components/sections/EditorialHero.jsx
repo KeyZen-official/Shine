@@ -96,7 +96,7 @@ export function EditorialHero(props) {
   );
 }
 
-function HeroContent({ content, stats = [], socialLinks = [], image, brandTagline }) {
+function HeroContent({ content, stats = [], socialLinks = [], image, brandTagline, heroImgClassName }) {
   const heroRef = useRef(null);
   const clipId = `hero-notch-${useId().replace(/:/g, '')}`;
 
@@ -213,7 +213,7 @@ function HeroContent({ content, stats = [], socialLinks = [], image, brandTaglin
                    * emptier decorative end of the picture instead. That is
                    * the right thing to lose.
                    */
-                  imgClassName="h-full w-full object-[35%_center] lg:object-center"
+                  imgClassName={heroImgClassName ? `h-full w-full ${heroImgClassName}` : 'h-full w-full object-[35%_center] lg:object-center'}
                   aspect="5 / 2"
                   /**
                    * The figure is the shell width (1280px) minus the
