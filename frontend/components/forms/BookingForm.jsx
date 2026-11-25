@@ -36,8 +36,8 @@ export function BookingForm({ countries = [] }) {
   const selectedCountries = Array.isArray(form.values.preferredCountry)
     ? form.values.preferredCountry
     : form.values.preferredCountry
-    ? [form.values.preferredCountry]
-    : [];
+      ? [form.values.preferredCountry]
+      : [];
 
   const toggleCountry = (countryName) => {
     const next = selectedCountries.includes(countryName)
@@ -157,11 +157,10 @@ export function BookingForm({ countries = [] }) {
                 type="button"
                 key={country.slug || country.name}
                 onClick={() => toggleCountry(country.name)}
-                className={`inline-flex items-center gap-1.5 rounded-full px-3.5 py-1.5 font-heading text-caption font-semibold transition-all duration-150 ${
-                  isSelected
+                className={`inline-flex items-center gap-1.5 rounded-full px-3.5 py-1.5 font-heading text-caption font-semibold transition-all duration-150 ${isSelected
                     ? 'bg-navy text-white shadow-sm ring-2 ring-accent'
                     : 'border border-navy/15 bg-white text-charcoal hover:border-navy/40 hover:bg-sage/20'
-                }`}
+                  }`}
               >
                 {isSelected && <Check className="h-3.5 w-3.5 text-accent" aria-hidden="true" />}
                 {country.name}

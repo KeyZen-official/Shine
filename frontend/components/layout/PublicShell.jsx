@@ -27,10 +27,11 @@ export function PublicShell({ children }) {
 
   return (
     <>
-      {/* First focusable element in the document. */}
+      {/* First focusable element in the document. Hidden until keyboard
+          focus, then pinned top-left so it cannot sit on top of content. */}
       <a
         href="#main-content"
-        className="sr-only z-50 focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:inline-flex focus:h-11 focus:items-center focus:rounded-md focus:bg-navy focus:px-5 focus:font-heading focus:text-caption focus:font-semibold focus:text-white"
+        className="fixed left-4 top-4 z-50 inline-flex h-11 items-center rounded-md bg-navy px-5 font-heading text-caption font-semibold text-white -translate-y-20 opacity-0 focus-visible:translate-y-0 focus-visible:opacity-100 transition-all duration-fast pointer-events-none focus-visible:pointer-events-auto"
       >
         Skip to main content
       </a>

@@ -16,6 +16,16 @@ const nextConfig = {
         destination: 'https://www.thomascook.in/foreign-exchange/forex-rate-card',
         permanent: false,
       },
+      {
+        source: '/latest-updates',
+        destination: '/latest',
+        permanent: true,
+      },
+      {
+        source: '/latest-updates/:slug',
+        destination: '/latest/:slug',
+        permanent: true,
+      },
     ];
   },
 

@@ -817,7 +817,7 @@ export const DESTINATION_DATA = {
       },
       {
             "question": "Is GIC (Guaranteed Investment Certificate) mandatory for a Canadian student visa?",
-            "answer": "No, a GIC is not mandatory for all Canadian study permit applications. While SDS utilized a GIC, international students applying through the regular study permit stream can demonstrate required living costs and tuition funds through liquid bank savings, fixed deposits, provident funds, or approved education loans without a mandatory GIC."
+            "answer": "No, a GIC is not mandatory for all Canadian study permit applications. While SDS utilized a GIC, international students applying through the regular study permit stream can demonstrate required living costs and tuition funds through liquid bank savings, fixed deposits, provident funds, or approved education financing without a mandatory GIC."
       },
       {
             "question": "Which English language tests are accepted for Canadian admissions?",

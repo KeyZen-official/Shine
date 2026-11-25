@@ -73,12 +73,7 @@ export const PRIMARY_NAV = [
 export const FOOTER_QUICK_LINKS = [
   { label: 'About us', href: '/about' },
   { label: 'Testimonials', href: '/testimonials' },
-  { label: 'Latest updates', href: '/latest-updates' },
-  {
-    label: 'Forex exchange',
-    href: 'https://www.thomascook.in/foreign-exchange/forex-rate-card',
-    external: true,
-  },
+  { label: 'Latest updates', href: '/latest' },
   { label: 'Contact us', href: '/contact' },
 ];
 
@@ -101,13 +96,17 @@ export const FOOTER_OVERSEAS_SERVICES = [
 ];
 
 export const FOOTER_ADDITIONAL_SERVICES = [
-  { label: 'Education Loan', href: '/contact?service=education-loan' },
+  { label: 'Education Loan', href: '/education-loan' },
   {
     label: 'Forex Support',
     href: 'https://www.thomascook.in/foreign-exchange/forex-rate-card',
     external: true,
   },
-  { label: 'Temporary Accommodation', href: '/contact?service=temporary-accommodation' },
+  {
+    label: 'Temporary Accommodation',
+    href: 'https://www.airbnb.co.in/?locale=en',
+    external: true,
+  },
 ];
 
 export const LEGAL_LINKS = [

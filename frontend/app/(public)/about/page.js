@@ -768,12 +768,15 @@ export default function AboutPage() {
               <div className="relative aspect-[4/3] w-full overflow-hidden bg-slate-100">
                 <img
                   src="/imagery/WhatsAppImage2026-11-24at1.13.58PM.png"
-                  alt="Senior Admission and Visa Officer"
+                  alt="Prachi Rathour — Senior Admission and Visa Officer"
                   className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
               <div className="flex flex-col flex-1 justify-between p-6 sm:p-7">
                 <div>
+                  <p className="mb-2.5 font-heading text-lg font-extrabold text-navy">
+                    Prachi Rathour
+                  </p>
                   <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-amber-50 border border-amber-200/60 px-3 py-1 text-xs font-semibold text-amber-900 w-fit">
                     <span className="h-2 w-2 rounded-full bg-[#F59E0B]" />
                     Advisory Practice
@@ -802,12 +805,15 @@ export default function AboutPage() {
               <div className="relative aspect-[4/3] w-full overflow-hidden bg-slate-100">
                 <img
                   src="/imagery/dishaphoto.png"
-                  alt="Admissions & Visa Manager"
+                  alt="Disha Mehta — Admissions & Visa Manager"
                   className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
               <div className="flex flex-col flex-1 justify-between p-6 sm:p-7">
                 <div>
+                  <p className="mb-2.5 font-heading text-lg font-extrabold text-navy">
+                    Disha Mehta
+                  </p>
                   <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-slate-100 border border-slate-200/60 px-3 py-1 text-xs font-semibold text-slate-800 w-fit">
                     <span className="h-2 w-2 rounded-full bg-[#64748B]" />
                     Documentation &amp; Compliance
@@ -836,12 +842,15 @@ export default function AboutPage() {
               <div className="relative aspect-[4/3] w-full overflow-hidden bg-slate-100">
                 <img
                   src="/imagery/ripalmaam.jpg1.png"
-                  alt="Professional Test Trainers"
+                  alt="Ripal Patel — Professional Test Trainers"
                   className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
               <div className="flex flex-col flex-1 justify-between p-6 sm:p-7">
                 <div>
+                  <p className="mb-2.5 font-heading text-lg font-extrabold text-navy">
+                    Ripal Patel
+                  </p>
                   <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-purple-50 border border-purple-200/60 px-3 py-1 text-xs font-semibold text-purple-900 w-fit">
                     <span className="h-2 w-2 rounded-full bg-[#8B5CF6]" />
                     Academic Training

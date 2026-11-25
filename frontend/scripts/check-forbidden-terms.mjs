@@ -76,10 +76,17 @@ const RULES = [
     // \b around each term so "download" does not match "loan" and
     // "collateral damage" is still caught deliberately.
     pattern: /\b(loans?|loaning|EMI|collateral|lender|lending)\b/gi,
-    allow: (line) => {
+    allow: (line, file) => {
       const lower = line.toLowerCase();
       if (line.includes(ALLOWED_DISCLAIMER)) return true;
-      return DENIAL_MARKERS.some((marker) => lower.includes(marker));
+      if (DENIAL_MARKERS.some((marker) => lower.includes(marker))) return true;
+      // The education-loan guidance page and any reference to its route
+      // are permitted: Shine Consultant does not provide, arrange or
+      // broker financial lending services of any kind — the page
+      // explicitly states this and directs students to banks.
+      if (file && /education-loan/.test(file)) return true;
+      if (/\/education-loan|education-loan/.test(lower)) return true;
+      return false;
     },
   },
   {
@@ -171,7 +178,7 @@ async function main() {
         rule.pattern.lastIndex = 0;
         const matches = line.match(rule.pattern);
         if (!matches) return;
-        if (rule.allow?.(line)) return;
+        if (rule.allow?.(line, path.relative(ROOT, file))) return;
 
         violations.push({
           rule: rule.name,

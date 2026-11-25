@@ -1,5 +1,5 @@
 import { siteConfig } from '../lib/config';
-import { getDestinations, getServices, getTestPreparation } from '../lib/content';
+import { getDestinations, getServices, getTestPreparation, getUpdates } from '../lib/content';
 
 /**
  * Built from the content files at build time.
@@ -25,6 +25,8 @@ export default function sitemap() {
     { path: '/book-consultation', changeFrequency: 'monthly', priority: 0.8 },
     { path: '/contact', changeFrequency: 'monthly', priority: 0.7 },
     { path: '/about', changeFrequency: 'monthly', priority: 0.6 },
+    { path: '/latest', changeFrequency: 'weekly', priority: 0.8 },
+    { path: '/education-loan', changeFrequency: 'monthly', priority: 0.5 },
     { path: '/privacy-policy', changeFrequency: 'yearly', priority: 0.2 },
     { path: '/terms-and-conditions', changeFrequency: 'yearly', priority: 0.2 },
     { path: '/accessibility', changeFrequency: 'yearly', priority: 0.2 },
@@ -46,6 +48,12 @@ export default function sitemap() {
       path: `/services/${s.slug}`,
       changeFrequency: 'monthly',
       priority: 0.6,
+    })),
+    ...getUpdates().map((u) => ({
+      path: `/latest/${u.slug}`,
+      changeFrequency: 'monthly',
+      priority: 0.6,
+      lastModified: u.publishedAt ? new Date(u.publishedAt) : now,
     })),
   ];
 
